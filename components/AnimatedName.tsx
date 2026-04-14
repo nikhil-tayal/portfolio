@@ -135,7 +135,7 @@ function SunMoonTittle({ ref, phase, visualTheme }: SunMoonProps) {
         times: [0, 0.45, 0.55, 1],
       },
     },
-  } as const;
+  };
 
   return (
     <span
