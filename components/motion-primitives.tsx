@@ -6,12 +6,11 @@ import { useRef } from "react";
 export const ease = [0.22, 1, 0.36, 1] as const;
 
 export const fadeUp: Variants = {
-  hidden: { opacity: 0, y: 24, filter: "blur(4px)" },
+  hidden: { opacity: 0, y: 28 },
   show: {
     opacity: 1,
     y: 0,
-    filter: "blur(0px)",
-    transition: { duration: 0.8, ease },
+    transition: { duration: 0.75, ease },
   },
 };
 
@@ -23,7 +22,7 @@ export const stagger: Variants = {
 };
 
 export const fadeChild: Variants = {
-  hidden: { opacity: 0, y: 18 },
+  hidden: { opacity: 0, y: 20 },
   show: { opacity: 1, y: 0, transition: { duration: 0.6, ease } },
 };
 
@@ -44,7 +43,7 @@ type RevealProps = HTMLMotionProps<"div"> & {
 export function Reveal({
   children,
   variants = fadeUp,
-  amount = 0.25,
+  amount = 0.2,
   once = true,
   ...rest
 }: RevealProps) {
@@ -65,7 +64,7 @@ export function Reveal({
 
 export function StaggerGroup({
   children,
-  amount = 0.2,
+  amount = 0.15,
   once = true,
   ...rest
 }: RevealProps) {

@@ -13,6 +13,20 @@ export const profile = {
     "I've shipped 10+ React applications and REST APIs serving 2M monthly visitors, architected a booking platform handling 500+ reservations a month, and built fintech portals processing over $2M in transactions. Lately I've been obsessed with generative AI — running ComfyUI on serverless GPUs, wiring LLMs into products, and shipping a virtual try-on SaaS to real merchants.",
 };
 
+// ----- Showcase items per company -----
+// To add media:
+//   screenshot → put the image in /public/screenshots/ and set the path here, e.g. "/screenshots/helitaxii-dashboard.jpg"
+//   loomUrl    → paste the full Loom share URL, e.g. "https://www.loom.com/share/abc123..."
+//   liveUrl    → the live product URL
+
+export type ShowcaseItem = {
+  name: string;
+  brief: string;
+  screenshot?: string;
+  loomUrl?: string;
+  liveUrl?: string;
+};
+
 export type Experience = {
   company: string;
   role: string;
@@ -21,6 +35,7 @@ export type Experience = {
   subtitle?: string;
   bullets: string[];
   tech: string[];
+  showcase?: ShowcaseItem[];
 };
 
 export const experience: Experience[] = [
@@ -38,6 +53,29 @@ export const experience: Experience[] = [
       "Implemented inspection scheduling with template-driven forms and CSV bulk import, reducing data entry time by 70%.",
     ],
     tech: ["React.js", "Next.js", "React Native", "NestJS", "Node.js", "TypeScript", "MongoDB", "AWS S3", "Webpack"],
+    showcase: [
+      {
+        name: "Helitaxii — Booking Platform",
+        brief: "Central reservation system with live inventory, Razorpay payments, and B2B portal for 10+ travel agents.",
+        screenshot: undefined,   // e.g. "/screenshots/thumby-helitaxii.jpg"
+        loomUrl: undefined,      // e.g. "https://www.loom.com/share/..."
+        liveUrl: undefined,
+      },
+      {
+        name: "CAMO Winglet — Maintenance Logbook",
+        brief: "DGCA-compliant digital logbook for 12+ aircraft, replacing 100% of paper-based records.",
+        screenshot: undefined,
+        loomUrl: undefined,
+        liveUrl: undefined,
+      },
+      {
+        name: "Ground Staff App",
+        brief: "React Native app for QR check-ins and on-ground booking management at 5 helipads.",
+        screenshot: undefined,
+        loomUrl: undefined,
+        liveUrl: undefined,
+      },
+    ],
   },
   {
     company: "PhysicsWallah",
@@ -50,6 +88,22 @@ export const experience: Experience[] = [
       "Designed a centralized notification microservice (NestJS, MongoDB, Redis) cutting delivery time by 30% and server load by 40%.",
     ],
     tech: ["React.js", "Next.js", "NestJS", "MongoDB", "Redis", "TypeScript"],
+    showcase: [
+      {
+        name: "PW Gulf — Edtech App",
+        brief: "Regional edtech platform with 8 modules, growing DAU by 25% in 3 months.",
+        screenshot: undefined,
+        loomUrl: undefined,
+        liveUrl: undefined,
+      },
+      {
+        name: "Notification Microservice",
+        brief: "Centralized NestJS + Redis service cutting notification delivery time by 30%.",
+        screenshot: undefined,
+        loomUrl: undefined,
+        liveUrl: undefined,
+      },
+    ],
   },
   {
     company: "Drip Capital",
@@ -63,6 +117,29 @@ export const experience: Experience[] = [
       "Hit 80% test coverage (Jest, Mocha), reducing production bugs by 35%; published a reusable UI library to npm adopted across 4 teams.",
     ],
     tech: ["React.js", "TypeScript", "Redux", "Jest", "Mocha", "Webpack"],
+    showcase: [
+      {
+        name: "Trade360",
+        brief: "Cross-border collaboration platform for 200+ exporters and importers with 15+ API integrations.",
+        screenshot: undefined,
+        loomUrl: undefined,
+        liveUrl: undefined,
+      },
+      {
+        name: "Drip Switch",
+        brief: "USD transaction portal processing $2M+ in 2 months with 40% payment efficiency lift.",
+        screenshot: undefined,
+        loomUrl: undefined,
+        liveUrl: undefined,
+      },
+      {
+        name: "Container Tracker",
+        brief: "Real-time tracking app handling 10,000+ monthly API requests across 3 shipping corridors.",
+        screenshot: undefined,
+        loomUrl: undefined,
+        liveUrl: undefined,
+      },
+    ],
   },
   {
     company: "Credochain",
@@ -74,6 +151,22 @@ export const experience: Experience[] = [
       "Built an underwriter dashboard powering real-time credit decisions for 2,500+ active users with rich data visualization.",
     ],
     tech: ["React.js", "React Native", "Redux", "Highcharts"],
+    showcase: [
+      {
+        name: "PEMANT",
+        brief: "Digital credit line app adopted by 7,000+ MSMEs with 3 distinct user role flows.",
+        screenshot: undefined,
+        loomUrl: undefined,
+        liveUrl: undefined,
+      },
+      {
+        name: "Underwriter Dashboard",
+        brief: "Real-time credit decisions for 2,500+ active users with Highcharts data visualizations.",
+        screenshot: undefined,
+        loomUrl: undefined,
+        liveUrl: undefined,
+      },
+    ],
   },
   {
     company: "Cyber Group",
@@ -84,6 +177,15 @@ export const experience: Experience[] = [
       "Built an HRMS mobile app in React Native with push notifications and biometric auth for 50+ employees, collaborating with an 8-person cross-functional team.",
     ],
     tech: ["React Native"],
+    showcase: [
+      {
+        name: "HRMS Mobile App",
+        brief: "React Native app with push notifications and biometric auth for 50+ employees.",
+        screenshot: undefined,
+        loomUrl: undefined,
+        liveUrl: undefined,
+      },
+    ],
   },
 ];
 

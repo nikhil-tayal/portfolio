@@ -1,27 +1,25 @@
 @import "tailwindcss";
 
 :root {
-  --paper: #f2ede3;
-  --paper-deep: #ece5d6;
-  --ink: #17140f;
-  --ink-soft: #3a342a;
-  --ink-muted: #706652;
-  --rule: #2a251d26;
-  --accent: #b8492b;
-  --accent-soft: #d96a43;
-  --noise-opacity: 0.04;
+  --paper: #F5F5FA;
+  --paper-deep: #EBEBF2;
+  --ink: #12121E;
+  --ink-soft: #44445A;
+  --ink-muted: #8A8AA8;
+  --rule: rgba(18, 18, 30, 0.09);
+  --accent: #2563EB;
+  --accent-soft: #4F81F5;
 }
 
 .dark {
-  --paper: #0e0c0a;
-  --paper-deep: #14110d;
-  --ink: #f1ecdf;
-  --ink-soft: #d6cdb8;
-  --ink-muted: #8a8069;
-  --rule: #f1ecdf1f;
-  --accent: #e07149;
-  --accent-soft: #f19068;
-  --noise-opacity: 0.06;
+  --paper: #08080F;
+  --paper-deep: #101018;
+  --ink: #E2E2F0;
+  --ink-soft: #9090B0;
+  --ink-muted: #4A4A68;
+  --rule: rgba(226, 226, 240, 0.07);
+  --accent: #5080F0;
+  --accent-soft: #7BA0FF;
 }
 
 @theme inline {
@@ -33,7 +31,6 @@
   --color-rule: var(--rule);
   --color-accent: var(--accent);
   --color-accent-soft: var(--accent-soft);
-  --font-serif: var(--font-fraunces);
   --font-sans: var(--font-geist);
   --font-mono: var(--font-geist-mono);
 }
@@ -49,37 +46,18 @@ body {
 
 body {
   font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
-  font-feature-settings: "ss01", "cv11";
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
 
 ::selection {
   background: var(--accent);
-  color: var(--paper);
-}
-
-.font-serif {
-  font-family: var(--font-serif), ui-serif, Georgia, serif;
-  font-optical-sizing: auto;
+  color: #fff;
 }
 
 .font-mono {
   font-family: var(--font-mono), ui-monospace, SFMono-Regular, monospace;
-}
-
-.grain {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 100;
-  opacity: var(--noise-opacity);
-  mix-blend-mode: multiply;
-  background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.7 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
-}
-
-.dark .grain {
-  mix-blend-mode: screen;
+  font-feature-settings: "tnum";
 }
 
 .rule-top {
@@ -91,14 +69,13 @@ body {
 }
 
 .marker {
-  font-feature-settings: "tnum";
   font-variant-numeric: tabular-nums;
 }
 
 @keyframes rise {
   from {
     opacity: 0;
-    transform: translate3d(0, 14px, 0);
+    transform: translate3d(0, 16px, 0);
   }
   to {
     opacity: 1;
@@ -108,21 +85,6 @@ body {
 
 .rise {
   animation: rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
-}
-
-@keyframes pulse-dot {
-  0%, 100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.55;
-    transform: scale(0.92);
-  }
-}
-
-.pulse-dot {
-  animation: pulse-dot 2.4s ease-in-out infinite;
 }
 
 .link-underline {
@@ -157,8 +119,7 @@ html {
   html {
     scroll-behavior: auto;
   }
-  .rise,
-  .pulse-dot {
+  .rise {
     animation: none;
   }
 }

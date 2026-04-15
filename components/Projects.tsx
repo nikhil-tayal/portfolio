@@ -1,7 +1,6 @@
 "use client";
 
 import { ArrowUpRight, Film, Globe } from "lucide-react";
-import { SectionLabel } from "./SectionLabel";
 import { projects } from "@/lib/data";
 import { Reveal, StaggerGroup, fadeChild, motion } from "./motion-primitives";
 
@@ -9,6 +8,12 @@ const statusLabel: Record<string, string> = {
   live: "Live",
   "in-development": "In development",
   archived: "Archived",
+};
+
+const statusColor: Record<string, string> = {
+  live: "bg-accent",
+  "in-development": "bg-ink-soft",
+  archived: "bg-ink-muted/50",
 };
 
 function GithubMark({ className }: { className?: string }) {
@@ -26,122 +31,109 @@ function GithubMark({ className }: { className?: string }) {
 
 export function Projects() {
   return (
-    <section id="projects" className="px-6 py-28 md:px-12 md:py-40">
-      <div className="mx-auto grid max-w-[1400px] grid-cols-12 gap-6">
-        <Reveal className="col-span-12 md:col-span-2">
-          <SectionLabel index="03" title="Selected work" />
+    <section id="projects" className="px-6 py-28 md:px-16 md:py-36">
+      <div className="mx-auto max-w-[1320px]">
+        <Reveal>
+          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-ink-muted">
+            Projects
+          </p>
         </Reveal>
 
-        <div className="col-span-12 md:col-span-10">
-          <Reveal>
-            <h2 className="font-serif text-[clamp(2.5rem,6vw,5rem)] font-light leading-[0.98] tracking-[-0.02em] text-ink">
-              Things I've shipped
-              <br />
-              <span className="italic text-ink-soft">or still shipping.</span>
-            </h2>
-          </Reveal>
-          <Reveal>
-            <p className="mt-6 max-w-xl text-sm leading-relaxed text-ink-muted">
-              Live links and walkthrough videos are being added. Drop me an email
-              if you'd like a private demo of anything here.
-            </p>
-          </Reveal>
+        <Reveal>
+          <h2 className="mt-4 text-[clamp(2rem,4.5vw,3.5rem)] font-light leading-tight tracking-[-0.02em] text-ink">
+            Selected work
+          </h2>
+        </Reveal>
 
-          <StaggerGroup
-            amount={0.05}
-            className="mt-16 flex flex-col gap-px bg-rule"
-          >
-            {projects.map((p, i) => (
-              <motion.article
-                key={p.name}
-                variants={fadeChild}
-                whileHover="hover"
-                className="group relative grid grid-cols-12 gap-6 overflow-hidden bg-paper p-6 transition-colors hover:bg-paper-deep md:p-10"
-              >
-                <motion.span
-                  aria-hidden
-                  variants={{
-                    hover: { scaleX: 1 },
-                  }}
-                  initial={{ scaleX: 0 }}
-                  transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-                  className="pointer-events-none absolute inset-x-0 bottom-0 h-px origin-left bg-accent"
-                />
+        <Reveal>
+          <p className="mt-4 max-w-md text-[14px] leading-relaxed text-ink-muted">
+            Live links and walkthroughs are being added. Email me for a
+            private demo of anything here.
+          </p>
+        </Reveal>
 
-                <div className="col-span-12 flex items-start justify-between md:col-span-3">
-                  <div>
-                    <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-ink-muted">
-                      {String(i + 1).padStart(2, "0")} / {p.period}
-                    </div>
-                    <div className="mt-4 inline-flex items-center gap-1.5 font-mono text-[10px] uppercase tracking-[0.18em]">
-                      <span
-                        className={`h-1.5 w-1.5 rounded-full ${
-                          p.status === "live"
-                            ? "bg-accent"
-                            : p.status === "in-development"
-                              ? "bg-ink-soft"
-                              : "bg-ink-muted/50"
-                        }`}
-                      />
-                      <span className="text-ink-muted">
-                        {statusLabel[p.status]}
-                      </span>
-                    </div>
+        <StaggerGroup
+          amount={0.05}
+          className="mt-14 flex flex-col gap-px bg-rule"
+        >
+          {projects.map((p) => (
+            <motion.article
+              key={p.name}
+              variants={fadeChild}
+              className="group relative grid grid-cols-12 gap-6 overflow-hidden bg-paper p-6 transition-colors hover:bg-paper-deep md:p-10"
+            >
+              <div className="col-span-12 flex items-start justify-between md:col-span-3">
+                <div>
+                  <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-ink-muted">
+                    {p.period}
+                  </div>
+                  <div className="mt-4 inline-flex items-center gap-1.5 font-mono text-[9px] uppercase tracking-[0.18em]">
+                    <span
+                      className={`h-1.5 w-1.5 rounded-full ${statusColor[p.status]}`}
+                    />
+                    <span className="text-ink-muted">
+                      {statusLabel[p.status]}
+                    </span>
                   </div>
                 </div>
+              </div>
 
-                <div className="col-span-12 md:col-span-9">
-                  <div className="flex flex-wrap items-baseline gap-x-5 gap-y-2">
-                    <h3 className="font-serif text-[clamp(1.75rem,3vw,2.75rem)] font-light tracking-[-0.01em] text-ink">
-                      {p.name}
-                    </h3>
-                    <p className="font-serif text-lg italic text-ink-muted">
-                      — {p.tagline}
-                    </p>
-                  </div>
-
-                  <p className="mt-5 max-w-3xl text-[15px] leading-relaxed text-ink-soft">
-                    {p.description}
+              <div className="col-span-12 md:col-span-9">
+                <div className="flex flex-wrap items-baseline gap-x-4 gap-y-1.5">
+                  <h3 className="text-[clamp(1.4rem,2.5vw,2.2rem)] font-light tracking-[-0.02em] text-ink">
+                    {p.name}
+                  </h3>
+                  <p className="text-base text-ink-muted">
+                    — {p.tagline}
                   </p>
-
-                  <div className="mt-6 flex flex-wrap gap-x-4 gap-y-1.5 font-mono text-[10px] uppercase tracking-[0.18em] text-ink-muted">
-                    {p.tech.map((t) => (
-                      <span key={t}>{t}</span>
-                    ))}
-                  </div>
-
-                  <div className="mt-8 flex flex-wrap items-center gap-5">
-                    <ProjectLink
-                      href={p.liveUrl}
-                      icon={<Globe className="h-3.5 w-3.5" strokeWidth={1.5} />}
-                      label="Live"
-                    />
-                    <ProjectLink
-                      href={p.loomUrl}
-                      icon={<Film className="h-3.5 w-3.5" strokeWidth={1.5} />}
-                      label="Walkthrough"
-                    />
-                    <ProjectLink
-                      href={p.githubUrl}
-                      icon={<GithubMark className="h-3.5 w-3.5" />}
-                      label="Code"
-                    />
-                  </div>
                 </div>
 
-                <motion.div
-                  variants={{
-                    hover: { x: 4, y: -4, color: "var(--accent)" },
-                  }}
-                  transition={{ type: "spring", stiffness: 400, damping: 20 }}
-                  className="absolute right-6 top-6 text-ink-muted/60 md:right-10 md:top-10"
-                >
-                  <ArrowUpRight className="h-5 w-5" strokeWidth={1.25} />
-                </motion.div>
-              </motion.article>
-            ))}
-          </StaggerGroup>
-        </div>
+                <p className="mt-4 max-w-3xl text-[14px] leading-relaxed text-ink-soft">
+                  {p.description}
+                </p>
+
+                <div className="mt-5 flex flex-wrap gap-1.5">
+                  {p.tech.map((t) => (
+                    <span
+                      key={t}
+                      className="rounded-full border border-rule px-2.5 py-0.5 font-mono text-[9px] uppercase tracking-[0.14em] text-ink-muted"
+                    >
+                      {t}
+                    </span>
+                  ))}
+                </div>
+
+                <div className="mt-7 flex flex-wrap items-center gap-5">
+                  <ProjectLink
+                    href={p.liveUrl}
+                    icon={<Globe className="h-3.5 w-3.5" strokeWidth={1.5} />}
+                    label="Live"
+                  />
+                  <ProjectLink
+                    href={p.loomUrl}
+                    icon={<Film className="h-3.5 w-3.5" strokeWidth={1.5} />}
+                    label="Walkthrough"
+                  />
+                  <ProjectLink
+                    href={p.githubUrl}
+                    icon={<GithubMark className="h-3.5 w-3.5" />}
+                    label="Code"
+                  />
+                </div>
+              </div>
+
+              <motion.div
+                variants={{
+                  hover: { x: 4, y: -4, color: "var(--accent)" },
+                }}
+                transition={{ type: "spring", stiffness: 380, damping: 20 }}
+                className="absolute right-6 top-6 text-ink-muted/50 md:right-10 md:top-10"
+              >
+                <ArrowUpRight className="h-5 w-5" strokeWidth={1.25} />
+              </motion.div>
+            </motion.article>
+          ))}
+        </StaggerGroup>
       </div>
     </section>
   );
@@ -160,7 +152,7 @@ function ProjectLink({
   const content = (
     <span
       className={`inline-flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.22em] ${
-        pending ? "text-ink-muted/60" : "text-ink"
+        pending ? "text-ink-muted/50" : "text-ink"
       }`}
     >
       {icon}

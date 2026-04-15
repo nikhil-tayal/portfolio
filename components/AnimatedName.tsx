@@ -104,9 +104,9 @@ function SunMoonTittle({ ref, phase, visualTheme }: SunMoonProps) {
   const isDark = visualTheme === "dark";
 
   const sunBg =
-    "radial-gradient(circle at 35% 35%, #fde9c8, #f4b87a 52%, #c85a3f 100%)";
+    "radial-gradient(circle at 35% 35%, #fff0c8, #f5b45a 52%, #c85020 100%)";
   const moonBg =
-    "radial-gradient(circle at 35% 30%, #f5f1e4, #d0c7b0 58%, #8d8470 100%)";
+    "radial-gradient(circle at 38% 30%, #EEF2FF, #C7D4F8 55%, #7890D0 100%)";
 
   const variants = {
     rising: {
@@ -143,30 +143,30 @@ function SunMoonTittle({ ref, phase, visualTheme }: SunMoonProps) {
       className="relative block"
       style={{ width: "0.14em", height: "0.14em" }}
     >
-      {/* soft halo around the tittle while resting */}
+      {/* Halo glow */}
       <motion.span
         aria-hidden
         animate={{
           opacity:
             phase === "resting"
               ? isDark
-                ? [0.3, 0.55, 0.3]
-                : [0.55, 0.85, 0.55]
+                ? [0.25, 0.5, 0.25]
+                : [0.5, 0.85, 0.5]
               : 0,
-          scale: [1, 1.18, 1],
+          scale: [1, 1.2, 1],
         }}
-        transition={{ duration: 4.2, ease: "easeInOut", repeat: Infinity }}
+        transition={{ duration: 4.5, ease: "easeInOut", repeat: Infinity }}
         className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full blur-md"
         style={{
           width: "0.55em",
           height: "0.55em",
           background: isDark
-            ? "radial-gradient(circle, rgba(230,225,210,0.55), transparent 70%)"
-            : "radial-gradient(circle, rgba(240,170,110,0.9), transparent 65%)",
+            ? "radial-gradient(circle, rgba(160,180,255,0.5), transparent 70%)"
+            : "radial-gradient(circle, rgba(245,160,80,0.85), transparent 65%)",
         }}
       />
 
-      {/* the disc itself */}
+      {/* The disc */}
       <motion.span
         ref={ref}
         initial={
@@ -178,8 +178,8 @@ function SunMoonTittle({ ref, phase, visualTheme }: SunMoonProps) {
         style={{
           background: isDark ? moonBg : sunBg,
           boxShadow: isDark
-            ? "inset -0.05em -0.02em 0.06em rgba(0,0,0,0.5), 0 0 0.18em rgba(240,235,220,0.4)"
-            : "0 0 0.22em 0.02em rgba(224,113,73,0.7), 0 0 0.08em rgba(253,224,180,0.95)",
+            ? "inset -0.05em -0.02em 0.06em rgba(0,0,0,0.45), 0 0 0.18em rgba(160,180,255,0.35)"
+            : "0 0 0.22em 0.02em rgba(200,100,40,0.65), 0 0 0.08em rgba(255,230,160,0.9)",
           transformOrigin: "center",
         }}
       />

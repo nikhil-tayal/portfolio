@@ -6,10 +6,10 @@ export function SectionLabel({
   title: string;
 }) {
   return (
-    <div className="flex items-baseline gap-4 font-mono text-[11px] uppercase tracking-[0.22em] text-ink-muted">
-      <span className="marker">{index}</span>
+    <div className="flex items-center gap-3 font-mono text-[10px] uppercase tracking-[0.24em] text-ink-muted">
+      <span className="marker shrink-0">{index}</span>
       <span className="h-px flex-1 bg-rule" aria-hidden />
-      <span>{title}</span>
+      <span className="shrink-0">{title}</span>
     </div>
   );
 }
