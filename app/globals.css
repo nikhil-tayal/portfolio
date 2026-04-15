@@ -1,164 +1,130 @@
 @import "tailwindcss";
 
+/* ─── Design Tokens ────────────────────────────────────────────── */
 :root {
-  --paper: #f2ede3;
-  --paper-deep: #ece5d6;
-  --ink: #17140f;
-  --ink-soft: #3a342a;
-  --ink-muted: #706652;
-  --rule: #2a251d26;
-  --accent: #b8492b;
-  --accent-soft: #d96a43;
-  --noise-opacity: 0.04;
+  --bg:              #0f0f0f;
+  --bg-card:         #141414;
+  --bg-card-hover:   #1a1a1a;
+  --text:            #e8e8e3;
+  --text-muted:      #888880;
+  --text-dim:        #4a4a46;
+  --accent:          #4a9eff;
+  --border:          #232323;
+  --border-strong:   #333330;
 }
 
-.dark {
-  --paper: #0e0c0a;
-  --paper-deep: #14110d;
-  --ink: #f1ecdf;
-  --ink-soft: #d6cdb8;
-  --ink-muted: #8a8069;
-  --rule: #f1ecdf1f;
-  --accent: #e07149;
-  --accent-soft: #f19068;
-  --noise-opacity: 0.06;
-}
-
+/* ─── Tailwind Theme Mapping ────────────────────────────────────── */
 @theme inline {
-  --color-paper: var(--paper);
-  --color-paper-deep: var(--paper-deep);
-  --color-ink: var(--ink);
-  --color-ink-soft: var(--ink-soft);
-  --color-ink-muted: var(--ink-muted);
-  --color-rule: var(--rule);
-  --color-accent: var(--accent);
-  --color-accent-soft: var(--accent-soft);
-  --font-serif: var(--font-fraunces);
-  --font-sans: var(--font-geist);
-  --font-mono: var(--font-geist-mono);
+  --color-bg:            var(--bg);
+  --color-bg-card:       var(--bg-card);
+  --color-bg-hover:      var(--bg-card-hover);
+  --color-text:          var(--text);
+  --color-muted:         var(--text-muted);
+  --color-dim:           var(--text-dim);
+  --color-accent:        var(--accent);
+  --color-border:        var(--border);
+  --color-border-strong: var(--border-strong);
+  --font-sans:           var(--font-geist);
 }
 
+/* ─── Base ─────────────────────────────────────────────────────── */
 html,
 body {
-  background: var(--paper);
-  color: var(--ink);
-  transition:
-    background-color 900ms cubic-bezier(0.22, 1, 0.36, 1),
-    color 900ms cubic-bezier(0.22, 1, 0.36, 1);
+  background: var(--bg);
+  color: var(--text);
 }
 
 body {
-  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
-  font-feature-settings: "ss01", "cv11";
+  font-family: var(--font-geist), ui-sans-serif, system-ui, sans-serif;
+  font-weight: 400;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 }
 
 ::selection {
   background: var(--accent);
-  color: var(--paper);
-}
-
-.font-serif {
-  font-family: var(--font-serif), ui-serif, Georgia, serif;
-  font-optical-sizing: auto;
-}
-
-.font-mono {
-  font-family: var(--font-mono), ui-monospace, SFMono-Regular, monospace;
-}
-
-.grain {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 100;
-  opacity: var(--noise-opacity);
-  mix-blend-mode: multiply;
-  background-image: url("data:image/svg+xml;utf8,<svg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.7 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
-}
-
-.dark .grain {
-  mix-blend-mode: screen;
-}
-
-.rule-top {
-  border-top: 1px solid var(--rule);
-}
-
-.rule-bottom {
-  border-bottom: 1px solid var(--rule);
-}
-
-.marker {
-  font-feature-settings: "tnum";
-  font-variant-numeric: tabular-nums;
-}
-
-@keyframes rise {
-  from {
-    opacity: 0;
-    transform: translate3d(0, 14px, 0);
-  }
-  to {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-.rise {
-  animation: rise 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
-}
-
-@keyframes pulse-dot {
-  0%, 100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.55;
-    transform: scale(0.92);
-  }
-}
-
-.pulse-dot {
-  animation: pulse-dot 2.4s ease-in-out infinite;
-}
-
-.link-underline {
-  background-image: linear-gradient(var(--ink), var(--ink));
-  background-position: 0 100%;
-  background-repeat: no-repeat;
-  background-size: 100% 1px;
-  transition: background-size 0.5s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.link-underline:hover {
-  background-size: 0 1px;
-}
-
-.link-underline-accent {
-  background-image: linear-gradient(var(--accent), var(--accent));
-  background-position: 0 100%;
-  background-repeat: no-repeat;
-  background-size: 0 1px;
-  transition: background-size 0.5s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-.link-underline-accent:hover {
-  background-size: 100% 1px;
+  color: var(--bg);
 }
 
 html {
   scroll-behavior: smooth;
 }
 
+/* ─── Page Load ─────────────────────────────────────────────────── */
+@keyframes page-enter {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-enter {
+  opacity: 0;
+  animation: page-enter 0.85s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.hero-enter-1 { animation-delay: 0ms;   }
+.hero-enter-2 { animation-delay: 80ms;  }
+.hero-enter-3 { animation-delay: 160ms; }
+.hero-enter-4 { animation-delay: 240ms; }
+
+/* ─── Scroll Reveal ──────────────────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity   0.65s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered children inside a reveal group */
+.reveal-group > * {
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity   0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal-group.visible > *:nth-child(1) { opacity: 1; transform: none; transition-delay: 0ms;   }
+.reveal-group.visible > *:nth-child(2) { opacity: 1; transform: none; transition-delay: 60ms;  }
+.reveal-group.visible > *:nth-child(3) { opacity: 1; transform: none; transition-delay: 120ms; }
+.reveal-group.visible > *:nth-child(4) { opacity: 1; transform: none; transition-delay: 180ms; }
+.reveal-group.visible > *:nth-child(5) { opacity: 1; transform: none; transition-delay: 240ms; }
+.reveal-group.visible > *:nth-child(6) { opacity: 1; transform: none; transition-delay: 300ms; }
+
+/* ─── Project Card Hover ─────────────────────────────────────────── */
+.project-card {
+  background: var(--bg-card);
+  transition: background-color 0.2s ease;
+}
+
+.project-card:hover {
+  background: var(--bg-card-hover);
+}
+
+/* ─── Reduced Motion ─────────────────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
+  .hero-enter,
+  .reveal,
+  .reveal-group > * {
+    opacity: 1;
+    transform: none;
+    animation: none;
+    transition: none;
+  }
+
   html {
     scroll-behavior: auto;
-  }
-  .rise,
-  .pulse-dot {
-    animation: none;
   }
 }

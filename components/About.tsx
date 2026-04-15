@@ -1,60 +1,114 @@
-"use client";
-
-import { SectionLabel } from "./SectionLabel";
-import { profile, education } from "@/lib/data";
-import { Reveal, StaggerGroup, fadeChild, motion } from "./motion-primitives";
+import { ScrollReveal } from "./ScrollReveal";
+import { skills } from "@/lib/data";
 
 export function About() {
   return (
-    <section id="about" className="px-6 py-28 md:px-12 md:py-40">
-      <div className="mx-auto grid max-w-[1400px] grid-cols-12 gap-6">
-        <Reveal className="col-span-12 md:col-span-2">
-          <SectionLabel index="01" title="About" />
-        </Reveal>
+    <section
+      id="about"
+      className="px-6 md:px-10 py-20 md:py-28"
+      style={{ borderTop: "1px solid var(--border)" }}
+    >
+      <div className="mx-auto w-full" style={{ maxWidth: "1040px" }}>
+        {/* Two-column layout on desktop */}
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 md:gap-16">
 
-        <div className="col-span-12 md:col-span-7 md:col-start-4">
-          <Reveal>
-            <p className="font-serif text-[clamp(1.75rem,3vw,2.6rem)] font-light leading-[1.2] tracking-[-0.01em] text-ink">
-              {profile.summary}
-            </p>
-          </Reveal>
+          {/* Left: Bio */}
+          <div className="md:col-span-7">
+            <ScrollReveal>
+              <p
+                className="text-muted text-xs uppercase mb-7"
+                style={{ letterSpacing: "0.1em" }}
+              >
+                About
+              </p>
+            </ScrollReveal>
 
-          <Reveal>
-            <p className="mt-10 max-w-2xl text-base leading-relaxed text-ink-soft">
-              {profile.longSummary}
-            </p>
-          </Reveal>
+            <ScrollReveal delay={50}>
+              <p
+                className="text-text leading-relaxed"
+                style={{ fontSize: "clamp(1rem, 1.8vw, 1.125rem)", lineHeight: 1.8 }}
+              >
+                Seven years building production web apps across fintech,
+                aviation, edtech, and e-commerce. Currently building{" "}
+                <span style={{ fontWeight: 500 }}>Lookify</span> (AI virtual
+                try-on SaaS for Shopify) and{" "}
+                <span style={{ fontWeight: 500 }}>EasySupply.in</span> (Meesho
+                seller automation). Previously SDE-2 at PhysicsWallah, and
+                software engineer at Drip Capital and Credochain. Available for
+                senior frontend or full-stack roles with high ownership close to
+                founders.
+              </p>
+            </ScrollReveal>
+          </div>
 
-          <StaggerGroup className="mt-14 grid grid-cols-1 gap-10 border-t border-rule pt-10 md:grid-cols-2">
-            <motion.div variants={fadeChild}>
-              <Detail label="Currently" value="Thumby Aviation · Growify · EasySupply.in" />
-            </motion.div>
-            <motion.div variants={fadeChild}>
-              <Detail label="Focus areas" value="UI systems · microservices · GenAI products" />
-            </motion.div>
-            <motion.div variants={fadeChild}>
-              <Detail
-                label="Education"
-                value={`${education.degree}, ${education.school.split(" (")[0]} — ${education.period}`}
-              />
-            </motion.div>
-            <motion.div variants={fadeChild}>
-              <Detail label="Based in" value={profile.location} />
-            </motion.div>
-          </StaggerGroup>
+          {/* Right: Detail sidebar */}
+          <div className="md:col-span-5">
+            <ScrollReveal delay={100} group>
+              <div
+                className="py-5"
+                style={{ borderTop: "1px solid var(--border)" }}
+              >
+                <p
+                  className="text-dim text-xs uppercase mb-2"
+                  style={{ letterSpacing: "0.1em" }}
+                >
+                  Currently
+                </p>
+                <p className="text-text text-sm leading-relaxed">
+                  Lookify · EasySupply.in
+                </p>
+              </div>
+
+              <div
+                className="py-5"
+                style={{ borderTop: "1px solid var(--border)" }}
+              >
+                <p
+                  className="text-dim text-xs uppercase mb-2"
+                  style={{ letterSpacing: "0.1em" }}
+                >
+                  Looking for
+                </p>
+                <p className="text-text text-sm leading-relaxed">
+                  Senior frontend / full-stack · High ownership
+                </p>
+              </div>
+
+              <div
+                className="py-5"
+                style={{ borderTop: "1px solid var(--border)" }}
+              >
+                <p
+                  className="text-dim text-xs uppercase mb-2"
+                  style={{ letterSpacing: "0.1em" }}
+                >
+                  Stack
+                </p>
+                <p
+                  className="text-muted text-sm leading-loose"
+                  style={{ wordBreak: "break-word" }}
+                >
+                  {skills}
+                </p>
+              </div>
+
+              <div
+                className="py-5"
+                style={{ borderTop: "1px solid var(--border)", borderBottom: "1px solid var(--border)" }}
+              >
+                <p
+                  className="text-dim text-xs uppercase mb-2"
+                  style={{ letterSpacing: "0.1em" }}
+                >
+                  Based in
+                </p>
+                <p className="text-text text-sm">Delhi, India</p>
+              </div>
+            </ScrollReveal>
+          </div>
+
         </div>
       </div>
     </section>
-  );
-}
-
-function Detail({ label, value }: { label: string; value: string }) {
-  return (
-    <div>
-      <div className="font-mono text-[10px] uppercase tracking-[0.22em] text-ink-muted">
-        {label}
-      </div>
-      <div className="mt-2 text-sm leading-relaxed text-ink">{value}</div>
-    </div>
   );
 }

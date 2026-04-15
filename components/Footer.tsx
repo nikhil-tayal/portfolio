@@ -3,26 +3,20 @@ import { profile } from "@/lib/data";
 export function Footer() {
   const year = new Date().getFullYear();
   return (
-    <footer className="border-t border-rule px-6 py-8 md:px-12">
-      <div className="mx-auto flex max-w-[1400px] flex-col items-start justify-between gap-3 font-mono text-[10px] uppercase tracking-[0.22em] text-ink-muted md:flex-row md:items-center">
-        <div className="flex flex-wrap items-center gap-3">
-          <span>
-            © {year} <span className="text-ink">{profile.name}</span>
-          </span>
-          <span className="hidden md:inline">·</span>
-          <span>Built with Next.js + Tailwind</span>
-        </div>
-        <div className="flex items-center gap-4">
-          <a href={profile.github} target="_blank" rel="noreferrer noopener" className="transition-colors hover:text-ink">
-            GitHub
-          </a>
-          <a href={profile.linkedin} target="_blank" rel="noreferrer noopener" className="transition-colors hover:text-ink">
-            LinkedIn
-          </a>
-          <a href={`mailto:${profile.email}`} className="transition-colors hover:text-ink">
-            Email
-          </a>
-        </div>
+    <footer
+      className="px-6 md:px-8 py-8"
+      style={{ borderTop: "1px solid var(--border)" }}
+    >
+      <div
+        className="mx-auto w-full flex items-center justify-between"
+        style={{ maxWidth: "960px" }}
+      >
+        <p className="text-dim" style={{ fontSize: "0.75rem" }}>
+          © {year} {profile.name}
+        </p>
+        <p className="text-dim" style={{ fontSize: "0.75rem" }}>
+          Delhi, India
+        </p>
       </div>
     </footer>
   );

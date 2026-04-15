@@ -1,58 +1,39 @@
 import type { Metadata } from "next";
-import { Fraunces, Geist, Geist_Mono } from "next/font/google";
+import { Geist } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/ThemeProvider";
-
-const fraunces = Fraunces({
-  variable: "--font-fraunces",
-  subsets: ["latin"],
-  axes: ["opsz", "SOFT"],
-  display: "swap",
-});
 
 const geist = Geist({
   variable: "--font-geist",
   subsets: ["latin"],
-  display: "swap",
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: ["400", "500", "600"],
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Nikhil Tayal — Senior Full-Stack Developer",
+  title: "Nikhil Sharma — Senior Full-Stack Developer",
   description:
-    "Seven years shipping production web apps across fintech, aviation, edtech and e-commerce. Currently building AI-powered products with ComfyUI and serverless GPUs.",
-  authors: [{ name: "Nikhil Tayal" }],
+    "Senior full-stack developer with 7+ years building end-to-end products — from database schema to deployed UI. Based in Delhi, India.",
+  authors: [{ name: "Nikhil Sharma" }],
   keywords: [
-    "Nikhil Tayal",
+    "Nikhil Sharma",
     "Full-Stack Developer",
-    "React.js",
+    "React",
     "Next.js",
     "NestJS",
     "TypeScript",
-    "Generative AI",
+    "MongoDB",
+    "Delhi",
   ],
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{ children: React.ReactNode }>) {
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <html
-      lang="en"
-      suppressHydrationWarning
-      className={`${fraunces.variable} ${geist.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full bg-paper text-ink">
-        <ThemeProvider>
-          <div className="grain" aria-hidden />
-          {children}
-        </ThemeProvider>
-      </body>
+    <html lang="en" className={geist.variable}>
+      <body className="bg-bg text-text min-h-screen">{children}</body>
     </html>
   );
 }
