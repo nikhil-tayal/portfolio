@@ -41,12 +41,12 @@ export function Hero() {
       >
         {/* Name */}
         <h1 className="text-[clamp(3.8rem,12vw,10.5rem)] font-light leading-[0.92] tracking-[-0.03em] text-ink">
-          <span className="block overflow-hidden">
+          <span className="block">
             <motion.span variants={titleLine} className="inline-block">
               <AnimatedName />
             </motion.span>
           </span>
-          <span className="block overflow-hidden">
+          <span className="block overflow-hidden pb-[0.15em]">
             <motion.span
               variants={titleLine}
               className="inline-block text-ink-soft"

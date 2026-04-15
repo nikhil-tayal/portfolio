@@ -1,39 +1,64 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useMotionValue, animate } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { useTheme } from "./ThemeProvider";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
-type Phase = "rising" | "resting" | "swapping";
-
 export function AnimatedName() {
   const { theme } = useTheme();
-  const [phase, setPhase] = useState<Phase>("rising");
-  const [visualTheme, setVisualTheme] = useState(theme);
-  const mounted = useRef(false);
+  const [visualTheme, setVisualTheme] = useState<"light" | "dark">(theme);
+  const [isResting, setIsResting] = useState(false);
+  const isReady = useRef(false);
+  const firstIRef = useRef<HTMLSpanElement>(null);
+  const secondIRef = useRef<HTMLSpanElement>(null);
   const sunRef = useRef<HTMLSpanElement>(null);
 
-  useEffect(() => {
-    const t = window.setTimeout(() => setPhase("resting"), 1950);
-    return () => window.clearTimeout(t);
-  }, []);
+  // x = horizontal offset from the second i's centre (negative = left = first i)
+  // y = vertical offset from the tittle's natural position
+  const x = useMotionValue(0);
+  const y = useMotionValue(0);
 
+  // Distance (px) between centres of the two i letters.
+  // Returns a negative number because the first i is to the left of the second.
+  const getDx = () => {
+    if (!firstIRef.current || !secondIRef.current) return 0;
+    const a = firstIRef.current.getBoundingClientRect();
+    const b = secondIRef.current.getBoundingClientRect();
+    return a.left + a.width / 2 - (b.left + b.width / 2);
+  };
+
+  // ── Initial rise ────────────────────────────────────────────────────────────
   useEffect(() => {
-    if (!mounted.current) {
-      mounted.current = true;
-      return;
-    }
-    setPhase("swapping");
-    const midway = window.setTimeout(() => setVisualTheme(theme), 600);
-    const done = window.setTimeout(() => setPhase("resting"), 1350);
+    // ThemeProvider's effect already ran (parent effects run first), so the
+    // dark class on <html> reflects the real starting theme.
+    const actual: "light" | "dark" = document.documentElement.classList.contains("dark")
+      ? "dark"
+      : "light";
+    setVisualTheme(actual);
+
+    // Park the sun at the correct i for the starting theme.
+    // Light = day = sun rests at first i (sunrise side, left).
+    // Dark  = night = moon rests at second i (sunset side, right).
+    x.set(actual === "light" ? getDx() : 0);
+
+    // Rise from ~70 % down the viewport up to resting position.
+    y.set(window.innerHeight * 0.7);
+    const ctrl = animate(y, 0, { duration: 1.95, ease });
+
+    const t = setTimeout(() => {
+      setIsResting(true);
+      isReady.current = true;
+    }, 1950);
+
     return () => {
-      window.clearTimeout(midway);
-      window.clearTimeout(done);
+      ctrl.stop();
+      clearTimeout(t);
     };
-  }, [theme]);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
+  // ── Track sun position for any CSS-var-driven glow effects ──────────────────
   useEffect(() => {
     const track = () => {
       if (!sunRef.current) return;
@@ -48,59 +73,50 @@ export function AnimatedName() {
       );
     };
     track();
-    const t = window.setTimeout(track, 2000);
+    const t = setTimeout(track, 2000);
     window.addEventListener("scroll", track, { passive: true });
     window.addEventListener("resize", track);
     return () => {
-      window.clearTimeout(t);
+      clearTimeout(t);
       window.removeEventListener("scroll", track);
       window.removeEventListener("resize", track);
     };
   }, []);
 
-  return (
-    <span className="relative inline-block">
-      <span>N</span>
-      <LetterI dot={<PlainTittle />} />
-      <span>k</span>
-      <span>h</span>
-      <LetterI dot={<SunMoonTittle ref={sunRef} phase={phase} visualTheme={visualTheme} />} />
-      <span>l</span>
-    </span>
-  );
-}
+  // ── Arc animation on theme change ───────────────────────────────────────────
+  useEffect(() => {
+    // Skip the very first run (initial mount / ThemeProvider hydration).
+    if (!isReady.current) return;
 
-function LetterI({ dot }: { dot: React.ReactNode }) {
-  return (
-    <span className="relative inline-block">
-      <span>ı</span>
-      <span
-        className="pointer-events-none absolute left-1/2 -translate-x-1/2"
-        style={{ top: "0.1em" }}
-      >
-        {dot}
-      </span>
-    </span>
-  );
-}
+    const dx = getDx();
+    // Arc height scales with distance between the two i's.
+    const arcH = Math.min(Math.max(Math.abs(dx) * 0.45, 40), 100);
 
-function PlainTittle() {
-  return (
-    <span
-      aria-hidden
-      className="block rounded-full bg-current"
-      style={{ width: "0.14em", height: "0.14em" }}
-    />
-  );
-}
+    setIsResting(false);
 
-type SunMoonProps = {
-  ref: React.Ref<HTMLSpanElement>;
-  phase: Phase;
-  visualTheme: "light" | "dark";
-};
+    // Day → Night  (light→dark): sun travels left→right, sunrise to sunset.
+    // Night → Day  (dark→light): moon travels right→left, sunset to sunrise.
+    const targetX = theme === "dark" ? 0 : dx;
+    const ctrl1 = animate(x, targetX, { duration: 1.4, ease: "linear" });
+    // y arcs above the text and returns to 0 — easeInOut per segment gives a
+    // smooth parabolic feel.
+    const ctrl2 = animate(y, [0, -arcH, 0], {
+      duration: 1.4,
+      ease: "easeInOut",
+    });
 
-function SunMoonTittle({ ref, phase, visualTheme }: SunMoonProps) {
+    // Switch sun ↔ moon appearance at the arc's peak.
+    const mid = setTimeout(() => setVisualTheme(theme), 700);
+    const done = setTimeout(() => setIsResting(true), 1450);
+
+    return () => {
+      ctrl1.stop();
+      ctrl2.stop();
+      clearTimeout(mid);
+      clearTimeout(done);
+    };
+  }, [theme]); // eslint-disable-line react-hooks/exhaustive-deps
+
   const isDark = visualTheme === "dark";
 
   const sunBg =
@@ -108,81 +124,88 @@ function SunMoonTittle({ ref, phase, visualTheme }: SunMoonProps) {
   const moonBg =
     "radial-gradient(circle at 38% 30%, #EEF2FF, #C7D4F8 55%, #7890D0 100%)";
 
-  const variants = {
-    rising: {
-      scale: [26, 26, 1],
-      y: ["72vh", "0vh", "0vh"],
-      opacity: [0, 1, 1],
-      transition: {
-        duration: 1.95,
-        ease,
-        times: [0, 0.78, 1],
-      },
-    },
-    resting: {
-      scale: 1,
-      y: 0,
-      opacity: 1,
-      transition: { duration: 0.4, ease },
-    },
-    swapping: {
-      scale: [1, 24, 24, 1],
-      y: 0,
-      opacity: 1,
-      transition: {
-        duration: 1.35,
-        ease,
-        times: [0, 0.45, 0.55, 1],
-      },
-    },
-  };
-
   return (
-    <span
-      aria-hidden
-      className="relative block"
-      style={{ width: "0.14em", height: "0.14em" }}
-    >
-      {/* Halo glow */}
-      <motion.span
-        aria-hidden
-        animate={{
-          opacity:
-            phase === "resting"
-              ? isDark
-                ? [0.25, 0.5, 0.25]
-                : [0.5, 0.85, 0.5]
-              : 0,
-          scale: [1, 1.2, 1],
-        }}
-        transition={{ duration: 4.5, ease: "easeInOut", repeat: Infinity }}
-        className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full blur-md"
-        style={{
-          width: "0.55em",
-          height: "0.55em",
-          background: isDark
-            ? "radial-gradient(circle, rgba(160,180,255,0.5), transparent 70%)"
-            : "radial-gradient(circle, rgba(245,160,80,0.85), transparent 65%)",
-        }}
-      />
+    <span className="relative inline-block">
+      <span>N</span>
+      {/* First i — no separate dot; the sun lands here in light/day mode */}
+      <span className="relative inline-block" ref={firstIRef}>
+        ı
+      </span>
+      <span>k</span>
+      <span>h</span>
+      {/* Second i — the sun/moon element lives here and travels via x motion value */}
+      <span className="relative inline-block" ref={secondIRef}>
+        ı
+        {/* The animated disc + halo.
+            `left: 50%` centres it on the second i; `x` then moves it
+            to whichever i it should rest at. */}
+        <motion.span
+          ref={sunRef}
+          aria-hidden
+          style={{
+            x,
+            y,
+            position: "absolute",
+            top: "0.1em",
+            left: "50%",
+            marginLeft: "-0.07em",
+            width: "0.14em",
+            height: "0.14em",
+            pointerEvents: "none",
+          }}
+        >
+          {/* Halo glow */}
+          <span
+            style={{
+              display: "block",
+              position: "absolute",
+              top: "50%",
+              left: "50%",
+              width: "0.55em",
+              height: "0.55em",
+              marginTop: "-0.275em",
+              marginLeft: "-0.275em",
+            }}
+          >
+            <motion.span
+              animate={{
+                opacity: isResting
+                  ? isDark
+                    ? [0.25, 0.5, 0.25]
+                    : [0.5, 0.85, 0.5]
+                  : 0,
+                scale: isResting ? [1, 1.2, 1] : 1,
+              }}
+              transition={{ duration: 4.5, ease: "easeInOut", repeat: Infinity }}
+              style={{
+                display: "block",
+                width: "100%",
+                height: "100%",
+                borderRadius: "50%",
+                filter: "blur(4px)",
+                background: isDark
+                  ? "radial-gradient(circle, rgba(160,180,255,0.5), transparent 70%)"
+                  : "radial-gradient(circle, rgba(245,160,80,0.85), transparent 65%)",
+              }}
+            />
+          </span>
 
-      {/* The disc */}
-      <motion.span
-        ref={ref}
-        initial={
-          phase === "rising" ? { scale: 26, y: "72vh", opacity: 0 } : false
-        }
-        animate={phase}
-        variants={variants}
-        className="relative block h-full w-full rounded-full"
-        style={{
-          background: isDark ? moonBg : sunBg,
-          boxShadow: isDark
-            ? "inset -0.05em -0.02em 0.06em rgba(0,0,0,0.45), 0 0 0.18em rgba(160,180,255,0.35)"
-            : "0 0 0.22em 0.02em rgba(200,100,40,0.65), 0 0 0.08em rgba(255,230,160,0.9)",
-          transformOrigin: "center",
-        }}
-      />
+          {/* Sun / Moon disc */}
+          <span
+            style={{
+              display: "block",
+              width: "100%",
+              height: "100%",
+              borderRadius: "50%",
+              background: isDark ? moonBg : sunBg,
+              boxShadow: isDark
+                ? "inset -0.05em -0.02em 0.06em rgba(0,0,0,0.45), 0 0 0.18em rgba(160,180,255,0.35)"
+                : "0 0 0.22em 0.02em rgba(200,100,40,0.65), 0 0 0.08em rgba(255,230,160,0.9)",
+            }}
+          />
+        </motion.span>
+      </span>
+      <span>l</span>
     </span>
   );
 }
