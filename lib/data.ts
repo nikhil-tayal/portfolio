@@ -14,15 +14,37 @@ export const profile = {
 };
 
 // ----- Showcase items per company -----
-// To add media:
-//   screenshot → put the image in /public/screenshots/ and set the path here, e.g. "/screenshots/helitaxii-dashboard.jpg"
-//   loomUrl    → paste the full Loom share URL, e.g. "https://www.loom.com/share/abc123..."
-//   liveUrl    → the live product URL
+// Each showcase is routed at /showcase/[slug]. Detail pages render the
+// workflow diagram, screenshots, and videos defined below.
+//
+// Drop media files under /public/showcases/<slug>/ and reference them as
+// absolute paths here, e.g. "/showcases/helitaxii/workflow.svg".
+//   screenshot  → card thumbnail on the home page
+//   workflow    → draw.io / architecture diagram (prefer svg)
+//   screenshots → gallery images for the detail page (optional `frame`
+//                 can be "mobile" or "browser" for chrome wrapping)
+//   loomUrl     → Loom share URL (embedded on the detail page)
+//   liveUrl     → the live product URL
+
+export type DeviceFrame = "mobile" | "browser" | "none";
+
+export type ShowcaseMedia = {
+  src: string;
+  caption?: string;
+  alt?: string;
+  width?: number;
+  height?: number;
+  frame?: DeviceFrame;
+};
 
 export type ShowcaseItem = {
+  slug: string;
   name: string;
   brief: string;
+  overview?: string;
   screenshot?: string;
+  workflow?: ShowcaseMedia;
+  screenshots?: ShowcaseMedia[];
   loomUrl?: string;
   liveUrl?: string;
 };
@@ -55,25 +77,54 @@ export const experience: Experience[] = [
     tech: ["React.js", "Next.js", "React Native", "NestJS", "Node.js", "TypeScript", "MongoDB", "AWS S3", "Webpack"],
     showcase: [
       {
+        slug: "helitaxii",
         name: "Helitaxii — Booking Platform",
         brief: "Central reservation system with live inventory, Razorpay payments, and B2B portal for 10+ travel agents.",
-        screenshot: undefined,   // e.g. "/screenshots/thumby-helitaxii.jpg"
-        loomUrl: undefined,      // e.g. "https://www.loom.com/share/..."
-        liveUrl: undefined,
+        overview:
+          "Helitaxii is the booking backbone behind Thumby Aviation — a single system that serves the public booking site, a B2B travel-agent portal, an internal ops console, and a React Native ground app. One live inventory model keeps seats consistent across 4 channels and 3 admin roles, with Razorpay capturing payments and a webhook-driven state machine finalising bookings.",
+        liveUrl: "https://helitaxii.com",
+        loomUrl: "https://www.loom.com/share/183a2f36b9d34fe18c4ea3539950959a",
+        workflow: {
+          src: "/showcases/helitaxii/workflow.svg",
+          caption: "Clients, API gateway and backing services",
+          alt: "Helitaxii system architecture — customer web, admin portal, ground app and B2B portal talking to a NestJS API backed by MongoDB, Razorpay, S3, SES and Redis",
+        },
+        screenshots: [
+          {
+            src: "/showcases/helitaxii/booking-home.svg",
+            caption: "Public booking landing",
+            alt: "Helitaxii public landing page with route search and popular routes",
+            width: 1600,
+            height: 1000,
+            frame: "browser",
+          },
+          {
+            src: "/showcases/helitaxii/admin-dashboard.svg",
+            caption: "Admin dashboard — live bookings",
+            alt: "Admin dashboard showing KPI tiles and recent bookings table",
+            width: 1600,
+            height: 1000,
+            frame: "browser",
+          },
+          {
+            src: "/showcases/helitaxii/ground-app.svg",
+            caption: "Ground staff check-in",
+            alt: "Mobile check-in screen with QR code and passenger details",
+            width: 390,
+            height: 844,
+            frame: "mobile",
+          },
+        ],
       },
       {
+        slug: "camo-winglet",
         name: "CAMO Winglet — Maintenance Logbook",
         brief: "DGCA-compliant digital logbook for 12+ aircraft, replacing 100% of paper-based records.",
-        screenshot: undefined,
-        loomUrl: undefined,
-        liveUrl: undefined,
       },
       {
+        slug: "ground-staff-app",
         name: "Ground Staff App",
         brief: "React Native app for QR check-ins and on-ground booking management at 5 helipads.",
-        screenshot: undefined,
-        loomUrl: undefined,
-        liveUrl: undefined,
       },
     ],
   },
@@ -90,18 +141,14 @@ export const experience: Experience[] = [
     tech: ["React.js", "Next.js", "NestJS", "MongoDB", "Redis", "TypeScript"],
     showcase: [
       {
+        slug: "pw-gulf",
         name: "PW Gulf — Edtech App",
         brief: "Regional edtech platform with 8 modules, growing DAU by 25% in 3 months.",
-        screenshot: undefined,
-        loomUrl: undefined,
-        liveUrl: undefined,
       },
       {
+        slug: "notification-microservice",
         name: "Notification Microservice",
         brief: "Centralized NestJS + Redis service cutting notification delivery time by 30%.",
-        screenshot: undefined,
-        loomUrl: undefined,
-        liveUrl: undefined,
       },
     ],
   },
@@ -119,25 +166,19 @@ export const experience: Experience[] = [
     tech: ["React.js", "TypeScript", "Redux", "Jest", "Mocha", "Webpack"],
     showcase: [
       {
+        slug: "trade360",
         name: "Trade360",
         brief: "Cross-border collaboration platform for 200+ exporters and importers with 15+ API integrations.",
-        screenshot: undefined,
-        loomUrl: undefined,
-        liveUrl: undefined,
       },
       {
+        slug: "drip-switch",
         name: "Drip Switch",
         brief: "USD transaction portal processing $2M+ in 2 months with 40% payment efficiency lift.",
-        screenshot: undefined,
-        loomUrl: undefined,
-        liveUrl: undefined,
       },
       {
+        slug: "container-tracker",
         name: "Container Tracker",
         brief: "Real-time tracking app handling 10,000+ monthly API requests across 3 shipping corridors.",
-        screenshot: undefined,
-        loomUrl: undefined,
-        liveUrl: undefined,
       },
     ],
   },
@@ -153,18 +194,14 @@ export const experience: Experience[] = [
     tech: ["React.js", "React Native", "Redux", "Highcharts"],
     showcase: [
       {
+        slug: "pemant",
         name: "PEMANT",
         brief: "Digital credit line app adopted by 7,000+ MSMEs with 3 distinct user role flows.",
-        screenshot: undefined,
-        loomUrl: undefined,
-        liveUrl: undefined,
       },
       {
+        slug: "underwriter-dashboard",
         name: "Underwriter Dashboard",
         brief: "Real-time credit decisions for 2,500+ active users with Highcharts data visualizations.",
-        screenshot: undefined,
-        loomUrl: undefined,
-        liveUrl: undefined,
       },
     ],
   },
@@ -179,11 +216,9 @@ export const experience: Experience[] = [
     tech: ["React Native"],
     showcase: [
       {
+        slug: "hrms-mobile-app",
         name: "HRMS Mobile App",
         brief: "React Native app with push notifications and biometric auth for 50+ employees.",
-        screenshot: undefined,
-        loomUrl: undefined,
-        liveUrl: undefined,
       },
     ],
   },
@@ -322,3 +357,25 @@ export const stats = [
   { value: "$2M+", label: "Transactions processed" },
   { value: "10+", label: "Production apps" },
 ];
+
+export type ShowcaseWithContext = {
+  item: ShowcaseItem;
+  company: string;
+  role: string;
+  period: string;
+};
+
+export function getAllShowcases(): ShowcaseWithContext[] {
+  return experience.flatMap((job) =>
+    (job.showcase ?? []).map((item) => ({
+      item,
+      company: job.company,
+      role: job.role,
+      period: job.period,
+    }))
+  );
+}
+
+export function getShowcaseBySlug(slug: string): ShowcaseWithContext | null {
+  return getAllShowcases().find((s) => s.item.slug === slug) ?? null;
+}

@@ -65,6 +65,13 @@ export function Hero() {
             {profile.summary}
           </p>
 
+          <p className="mt-5 text-[clamp(0.95rem,1.6vw,1.1rem)] leading-relaxed text-ink-soft">
+            Lately, deep into generative AI — running Dockerized ComfyUI on
+            serverless GPUs, building virtual try-on and image pipelines with
+            custom Python handlers, wiring LLMs into product workflows, and
+            automating real ops with computer vision.
+          </p>
+
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <motion.a
               whileHover={{ y: -2 }}

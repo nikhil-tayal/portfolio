@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" font-family="ui-sans-serif, system-ui, sans-serif">
+  <rect width="1600" height="1000" fill="#F5F5FA"/>
+
+  <!-- sidebar -->
+  <rect x="0" y="0" width="220" height="1000" fill="#FFFFFF"/>
+  <line x1="220" y1="0" x2="220" y2="1000" stroke="#12121E" stroke-opacity="0.08"/>
+  <text x="32" y="56" font-size="16" font-weight="600" fill="#12121E">Helitaxii</text>
+  <text x="32" y="76" font-size="10" letter-spacing="2" fill="#8A8AA8">ADMIN</text>
+
+  <g fill="#44445A" font-size="13">
+    <rect x="20" y="124" width="184" height="38" rx="8" fill="#EBEBF2"/>
+    <text x="40" y="148" fill="#12121E" font-weight="500">Dashboard</text>
+    <text x="40" y="196" fill="#44445A">Bookings</text>
+    <text x="40" y="232" fill="#44445A">Flights</text>
+    <text x="40" y="268" fill="#44445A">Inventory</text>
+    <text x="40" y="304" fill="#44445A">Customers</text>
+    <text x="40" y="340" fill="#44445A">Agents</text>
+    <text x="40" y="376" fill="#44445A">Reports</text>
+    <text x="40" y="412" fill="#44445A">Settings</text>
+  </g>
+
+  <!-- top bar -->
+  <line x1="220" y1="72" x2="1600" y2="72" stroke="#12121E" stroke-opacity="0.08"/>
+  <text x="260" y="46" font-size="18" font-weight="500" fill="#12121E">Dashboard</text>
+  <text x="260" y="64" font-size="12" fill="#8A8AA8">Fri, Apr 17</text>
+
+  <circle cx="1540" cy="36" r="18" fill="#EBEBF2"/>
+  <text x="1534" y="42" font-size="12" fill="#12121E">NT</text>
+
+  <!-- stat cards -->
+  <g>
+    <rect x="260" y="112" width="300" height="124" rx="14" fill="#FFFFFF" stroke="#12121E" stroke-opacity="0.08"/>
+    <text x="284" y="146" font-size="10" letter-spacing="2" fill="#8A8AA8">BOOKINGS TODAY</text>
+    <text x="284" y="196" font-size="40" font-weight="300" fill="#12121E">38</text>
+    <text x="284" y="222" font-size="12" fill="#2563EB">▲ 12% vs yesterday</text>
+
+    <rect x="580" y="112" width="300" height="124" rx="14" fill="#FFFFFF" stroke="#12121E" stroke-opacity="0.08"/>
+    <text x="604" y="146" font-size="10" letter-spacing="2" fill="#8A8AA8">GROSS REVENUE</text>
+    <text x="604" y="196" font-size="40" font-weight="300" fill="#12121E">₹ 14.2L</text>
+    <text x="604" y="222" font-size="12" fill="#2563EB">▲ 8% this week</text>
+
+    <rect x="900" y="112" width="300" height="124" rx="14" fill="#FFFFFF" stroke="#12121E" stroke-opacity="0.08"/>
+    <text x="924" y="146" font-size="10" letter-spacing="2" fill="#8A8AA8">SEAT UTILIZATION</text>
+    <text x="924" y="196" font-size="40" font-weight="300" fill="#12121E">72%</text>
+    <text x="924" y="222" font-size="12" fill="#8A8AA8">target 75%</text>
+
+    <rect x="1220" y="112" width="340" height="124" rx="14" fill="#FFFFFF" stroke="#12121E" stroke-opacity="0.08"/>
+    <text x="1244" y="146" font-size="10" letter-spacing="2" fill="#8A8AA8">PENDING CHECK-INS</text>
+    <text x="1244" y="196" font-size="40" font-weight="300" fill="#12121E">11</text>
+    <text x="1244" y="222" font-size="12" fill="#8A8AA8">across 4 helipads</text>
+  </g>
+
+  <!-- bookings table -->
+  <rect x="260" y="272" width="1300" height="664" rx="14" fill="#FFFFFF" stroke="#12121E" stroke-opacity="0.08"/>
+  <text x="288" y="312" font-size="16" fill="#12121E" font-weight="500">Recent bookings</text>
+  <text x="288" y="332" font-size="12" fill="#8A8AA8">All channels · last 24h</text>
+
+  <g font-size="11" letter-spacing="1.5" fill="#8A8AA8">
+    <text x="288" y="376">REF</text>
+    <text x="400" y="376">CUSTOMER</text>
+    <text x="620" y="376">ROUTE</text>
+    <text x="860" y="376">DEPARTS</text>
+    <text x="1060" y="376">SEATS</text>
+    <text x="1180" y="376">AMOUNT</text>
+    <text x="1360" y="376">STATUS</text>
+  </g>
+  <line x1="288" y1="390" x2="1532" y2="390" stroke="#12121E" stroke-opacity="0.08"/>
+
+  <g fill="#12121E" font-size="13">
+    <text x="288" y="422">HT-10921</text>
+    <text x="400" y="422">Anjali Verma</text>
+    <text x="620" y="422">DEL → SLV</text>
+    <text x="860" y="422">Today · 14:30</text>
+    <text x="1060" y="422">2</text>
+    <text x="1180" y="422">₹ 65,000</text>
+    <rect x="1360" y="408" width="72" height="22" rx="11" fill="#D4F4DD"/>
+    <text x="1372" y="424" font-size="11" fill="#0F7A3B" letter-spacing="1">PAID</text>
+
+    <text x="288" y="462">HT-10920</text>
+    <text x="400" y="462">Rohit Sharma</text>
+    <text x="620" y="462">DEL → CND</text>
+    <text x="860" y="462">Today · 16:00</text>
+    <text x="1060" y="462">3</text>
+    <text x="1180" y="462">₹ 84,600</text>
+    <rect x="1360" y="448" width="92" height="22" rx="11" fill="#FFF3D4"/>
+    <text x="1372" y="464" font-size="11" fill="#8A6100" letter-spacing="1">PENDING</text>
+
+    <text x="288" y="502">HT-10919</text>
+    <text x="400" y="502">Bhakti Patel</text>
+    <text x="620" y="502">MUM → PNQ</text>
+    <text x="860" y="502">Today · 09:15</text>
+    <text x="1060" y="502">1</text>
+    <text x="1180" y="502">₹ 18,900</text>
+    <rect x="1360" y="488" width="72" height="22" rx="11" fill="#D4F4DD"/>
+    <text x="1372" y="504" font-size="11" fill="#0F7A3B" letter-spacing="1">PAID</text>
+
+    <text x="288" y="542">HT-10918</text>
+    <text x="400" y="542">Deepak Rao</text>
+    <text x="620" y="542">DDN → KED</text>
+    <text x="860" y="542">Apr 18 · 06:30</text>
+    <text x="1060" y="542">2</text>
+    <text x="1180" y="542">₹ 1,56,000</text>
+    <rect x="1360" y="528" width="72" height="22" rx="11" fill="#D4F4DD"/>
+    <text x="1372" y="544" font-size="11" fill="#0F7A3B" letter-spacing="1">PAID</text>
+
+    <text x="288" y="582">HT-10917</text>
+    <text x="400" y="582">Kiran Malhotra</text>
+    <text x="620" y="582">CND → MAN</text>
+    <text x="860" y="582">Apr 18 · 11:10</text>
+    <text x="1060" y="582">4</text>
+    <text x="1180" y="582">₹ 1,64,800</text>
+    <rect x="1360" y="568" width="108" height="22" rx="11" fill="#FCE2E2"/>
+    <text x="1372" y="584" font-size="11" fill="#9A1B1B" letter-spacing="1">CANCELLED</text>
+
+    <text x="288" y="622">HT-10916</text>
+    <text x="400" y="622">Neha Kapoor</text>
+    <text x="620" y="622">MUM → PNQ</text>
+    <text x="860" y="622">Apr 19 · 07:45</text>
+    <text x="1060" y="622">2</text>
+    <text x="1180" y="622">₹ 37,800</text>
+    <rect x="1360" y="608" width="72" height="22" rx="11" fill="#D4F4DD"/>
+    <text x="1372" y="624" font-size="11" fill="#0F7A3B" letter-spacing="1">PAID</text>
+  </g>
+</svg>

@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" fill="none" font-family="ui-sans-serif, system-ui, sans-serif">
+  <rect width="1200" height="620" fill="#F5F5FA"/>
+
+  <!-- Clients column -->
+  <g>
+    <text x="100" y="56" font-size="11" letter-spacing="2.5" fill="#8A8AA8">CLIENTS</text>
+
+    <rect x="100" y="88" width="240" height="92" rx="14" fill="#FFFFFF" stroke="#12121E" stroke-opacity="0.12"/>
+    <text x="120" y="124" font-size="16" fill="#12121E" font-weight="500">Customer Web</text>
+    <text x="120" y="150" font-size="12" fill="#44445A">Next.js · Public booking</text>
+
+    <rect x="100" y="208" width="240" height="92" rx="14" fill="#FFFFFF" stroke="#12121E" stroke-opacity="0.12"/>
+    <text x="120" y="244" font-size="16" fill="#12121E" font-weight="500">Admin Portal</text>
+    <text x="120" y="270" font-size="12" fill="#44445A">React · Ops &amp; inventory</text>
+
+    <rect x="100" y="328" width="240" height="92" rx="14" fill="#FFFFFF" stroke="#12121E" stroke-opacity="0.12"/>
+    <text x="120" y="364" font-size="16" fill="#12121E" font-weight="500">Ground App</text>
+    <text x="120" y="390" font-size="12" fill="#44445A">React Native · QR check-in</text>
+
+    <rect x="100" y="448" width="240" height="92" rx="14" fill="#FFFFFF" stroke="#12121E" stroke-opacity="0.12"/>
+    <text x="120" y="484" font-size="16" fill="#12121E" font-weight="500">B2B Portal</text>
+    <text x="120" y="510" font-size="12" fill="#44445A">Travel agent dashboard</text>
+  </g>
+
+  <!-- API gateway -->
+  <g>
+    <text x="480" y="56" font-size="11" letter-spacing="2.5" fill="#8A8AA8">API GATEWAY</text>
+    <rect x="480" y="240" width="240" height="140" rx="14" fill="#12121E"/>
+    <text x="500" y="280" font-size="16" fill="#F5F5FA" font-weight="500">NestJS API</text>
+    <text x="500" y="306" font-size="12" fill="#B8B8D0">JWT · RBAC · rate limit</text>
+    <text x="500" y="326" font-size="12" fill="#B8B8D0">Booking · Inventory</text>
+    <text x="500" y="346" font-size="12" fill="#B8B8D0">Payments · Webhooks</text>
+  </g>
+
+  <!-- Services column -->
+  <g>
+    <text x="860" y="56" font-size="11" letter-spacing="2.5" fill="#8A8AA8">DATA &amp; SERVICES</text>
+
+    <rect x="860" y="88" width="240" height="80" rx="14" fill="#FFFFFF" stroke="#12121E" stroke-opacity="0.12"/>
+    <text x="880" y="122" font-size="15" fill="#12121E" font-weight="500">MongoDB Atlas</text>
+    <text x="880" y="146" font-size="12" fill="#44445A">Bookings · Users · Flights</text>
+
+    <rect x="860" y="188" width="240" height="80" rx="14" fill="#FFFFFF" stroke="#12121E" stroke-opacity="0.12"/>
+    <text x="880" y="222" font-size="15" fill="#12121E" font-weight="500">Razorpay</text>
+    <text x="880" y="246" font-size="12" fill="#44445A">Payments · HMAC webhooks</text>
+
+    <rect x="860" y="288" width="240" height="80" rx="14" fill="#FFFFFF" stroke="#12121E" stroke-opacity="0.12"/>
+    <text x="880" y="322" font-size="15" fill="#12121E" font-weight="500">AWS S3</text>
+    <text x="880" y="346" font-size="12" fill="#44445A">Tickets · PDFs · QR assets</text>
+
+    <rect x="860" y="388" width="240" height="80" rx="14" fill="#FFFFFF" stroke="#12121E" stroke-opacity="0.12"/>
+    <text x="880" y="422" font-size="15" fill="#12121E" font-weight="500">AWS SES</text>
+    <text x="880" y="446" font-size="12" fill="#44445A">Transactional email</text>
+
+    <rect x="860" y="488" width="240" height="80" rx="14" fill="#FFFFFF" stroke="#12121E" stroke-opacity="0.12"/>
+    <text x="880" y="522" font-size="15" fill="#12121E" font-weight="500">Redis</text>
+    <text x="880" y="546" font-size="12" fill="#44445A">Inventory locks · queues</text>
+  </g>
+
+  <!-- Connector lines, clients → gateway -->
+  <g stroke="#12121E" stroke-opacity="0.25" stroke-width="1.2" fill="none">
+    <path d="M340 134 L480 296"/>
+    <path d="M340 254 L480 304"/>
+    <path d="M340 374 L480 318"/>
+    <path d="M340 494 L480 326"/>
+  </g>
+
+  <!-- Connector lines, gateway → services -->
+  <g stroke="#12121E" stroke-opacity="0.25" stroke-width="1.2" fill="none">
+    <path d="M720 280 L860 128"/>
+    <path d="M720 294 L860 228"/>
+    <path d="M720 310 L860 328"/>
+    <path d="M720 326 L860 428"/>
+    <path d="M720 342 L860 528"/>
+  </g>
+</svg>

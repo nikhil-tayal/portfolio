@@ -14,12 +14,12 @@
 .dark {
   --paper: #08080F;
   --paper-deep: #101018;
-  --ink: #E2E2F0;
-  --ink-soft: #9090B0;
-  --ink-muted: #4A4A68;
-  --rule: rgba(226, 226, 240, 0.07);
-  --accent: #5080F0;
-  --accent-soft: #7BA0FF;
+  --ink: #F0F0FA;
+  --ink-soft: #B8B8D0;
+  --ink-muted: #8888A8;
+  --rule: rgba(226, 226, 240, 0.16);
+  --accent: #7BA0FF;
+  --accent-soft: #9BB8FF;
 }
 
 @theme inline {

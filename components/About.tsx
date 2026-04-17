@@ -15,7 +15,9 @@ export function About() {
 
         <Reveal>
           <p className="mt-6 max-w-2xl text-[clamp(1.4rem,2.4vw,2rem)] font-light leading-[1.3] tracking-[-0.01em] text-ink">
-            {profile.summary}
+            Full-stack by trade, systems-minded by instinct. I treat
+            interfaces and infrastructure as one problem, and spend most
+            of my time in the seams.
           </p>
         </Reveal>
 

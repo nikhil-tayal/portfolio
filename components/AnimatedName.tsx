@@ -3,6 +3,7 @@
 import { motion, useMotionValue, animate } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { useTheme } from "./ThemeProvider";
+import { OwlDisc } from "./Owl";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -119,24 +120,19 @@ export function AnimatedName() {
 
   const isDark = visualTheme === "dark";
 
-  const sunBg =
-    "radial-gradient(circle at 35% 35%, #fff0c8, #f5b45a 52%, #c85020 100%)";
-  const moonBg =
-    "radial-gradient(circle at 38% 30%, #EEF2FF, #C7D4F8 55%, #7890D0 100%)";
-
   return (
     <span className="relative inline-block">
       <span>N</span>
-      {/* First i — no separate dot; the sun lands here in light/day mode */}
+      {/* First i — no separate dot; the owl perches here in dark/night mode */}
       <span className="relative inline-block" ref={firstIRef}>
         ı
       </span>
       <span>k</span>
       <span>h</span>
-      {/* Second i — the sun/moon element lives here and travels via x motion value */}
+      {/* Second i — the owl lives here and travels via the x motion value */}
       <span className="relative inline-block" ref={secondIRef}>
         ı
-        {/* The animated disc + halo.
+        {/* The animated owl + halo.
             `left: 50%` centres it on the second i; `x` then moves it
             to whichever i it should rest at. */}
         <motion.span
@@ -146,35 +142,31 @@ export function AnimatedName() {
             x,
             y,
             position: "absolute",
-            top: "0.1em",
+            top: "-0.02em",
             left: "50%",
-            marginLeft: "-0.07em",
-            width: "0.14em",
-            height: "0.14em",
+            marginLeft: "-0.12em",
+            width: "0.24em",
+            height: "0.24em",
             pointerEvents: "none",
           }}
         >
-          {/* Halo glow */}
+          {/* Halo glow — warm amber when awake (night), cool/soft when sleeping (day) */}
           <span
             style={{
               display: "block",
               position: "absolute",
               top: "50%",
               left: "50%",
-              width: "0.55em",
-              height: "0.55em",
-              marginTop: "-0.275em",
-              marginLeft: "-0.275em",
+              width: "0.7em",
+              height: "0.7em",
+              marginTop: "-0.35em",
+              marginLeft: "-0.35em",
             }}
           >
             <motion.span
               animate={{
-                opacity: isResting
-                  ? isDark
-                    ? [0.25, 0.5, 0.25]
-                    : [0.5, 0.85, 0.5]
-                  : 0,
-                scale: isResting ? [1, 1.2, 1] : 1,
+                opacity: isResting ? (isDark ? [0.45, 0.75, 0.45] : [0.12, 0.22, 0.12]) : 0,
+                scale: isResting ? [1, 1.15, 1] : 1,
               }}
               transition={{ duration: 4.5, ease: "easeInOut", repeat: Infinity }}
               style={{
@@ -182,27 +174,16 @@ export function AnimatedName() {
                 width: "100%",
                 height: "100%",
                 borderRadius: "50%",
-                filter: "blur(4px)",
+                filter: "blur(5px)",
                 background: isDark
-                  ? "radial-gradient(circle, rgba(160,180,255,0.5), transparent 70%)"
-                  : "radial-gradient(circle, rgba(245,160,80,0.85), transparent 65%)",
+                  ? "radial-gradient(circle, rgba(245,180,90,0.85), transparent 65%)"
+                  : "radial-gradient(circle, rgba(18,18,30,0.35), transparent 70%)",
               }}
             />
           </span>
 
-          {/* Sun / Moon disc */}
-          <span
-            style={{
-              display: "block",
-              width: "100%",
-              height: "100%",
-              borderRadius: "50%",
-              background: isDark ? moonBg : sunBg,
-              boxShadow: isDark
-                ? "inset -0.05em -0.02em 0.06em rgba(0,0,0,0.45), 0 0 0.18em rgba(160,180,255,0.35)"
-                : "0 0 0.22em 0.02em rgba(200,100,40,0.65), 0 0 0.08em rgba(255,230,160,0.9)",
-            }}
-          />
+          {/* Owl silhouette */}
+          <OwlDisc awake={isDark} tone={isDark ? "dark" : "light"} />
         </motion.span>
       </span>
       <span>l</span>

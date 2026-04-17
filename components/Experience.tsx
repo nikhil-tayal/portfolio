@@ -1,6 +1,7 @@
 "use client";
 
-import { Globe, Play, ExternalLink } from "lucide-react";
+import Link from "next/link";
+import { ArrowUpRight, Play, ExternalLink } from "lucide-react";
 import { experience, type ShowcaseItem } from "@/lib/data";
 import { Reveal, StaggerGroup, fadeChild, motion } from "./motion-primitives";
 
@@ -135,109 +136,100 @@ function ShowcaseCard({ item, index }: { item: ShowcaseItem; index: number }) {
       transition={{ type: "spring", stiffness: 380, damping: 24 }}
       className="group overflow-hidden rounded-xl border border-rule bg-paper transition-shadow hover:shadow-[0_8px_28px_-4px_rgba(0,0,0,0.1)]"
     >
-      <div className="relative aspect-video w-full overflow-hidden bg-paper-deep">
-        {hasScreenshot ? (
-          <img
-            src={item.screenshot}
-            alt={item.name}
-            className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-          />
-        ) : (
-          <>
-            <div
-              className="absolute inset-0"
-              style={{ background: gradient }}
-              aria-hidden
+      <Link
+        href={`/showcase/${item.slug}`}
+        aria-label={`Open ${item.name} showcase`}
+        className="block focus:outline-none focus-visible:ring-2 focus-visible:ring-accent"
+      >
+        <div className="relative aspect-video w-full overflow-hidden bg-paper-deep">
+          {hasScreenshot ? (
+            <img
+              src={item.screenshot}
+              alt={item.name}
+              className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
             />
-            <svg className="absolute inset-0 h-full w-full opacity-[0.04]" aria-hidden>
-              <pattern
-                id={`dots-${index}`}
-                x="0"
-                y="0"
-                width="20"
-                height="20"
-                patternUnits="userSpaceOnUse"
+          ) : (
+            <>
+              <div
+                className="absolute inset-0"
+                style={{ background: gradient }}
+                aria-hidden
+              />
+              <svg className="absolute inset-0 h-full w-full opacity-[0.04]" aria-hidden>
+                <pattern
+                  id={`dots-${index}`}
+                  x="0"
+                  y="0"
+                  width="20"
+                  height="20"
+                  patternUnits="userSpaceOnUse"
+                >
+                  <circle cx="2" cy="2" r="1.5" fill="currentColor" />
+                </pattern>
+                <rect width="100%" height="100%" fill={`url(#dots-${index})`} />
+              </svg>
+              <span
+                className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 select-none text-[5rem] font-light leading-none text-ink opacity-[0.06]"
+                aria-hidden
               >
-                <circle cx="2" cy="2" r="1.5" fill="currentColor" />
-              </pattern>
-              <rect width="100%" height="100%" fill={`url(#dots-${index})`} />
-            </svg>
+                {item.name[0]}
+              </span>
+            </>
+          )}
+
+          {hasLoom && (
             <span
-              className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 select-none text-[5rem] font-light leading-none text-ink opacity-[0.06]"
               aria-hidden
+              className={`absolute inset-0 flex items-center justify-center transition-opacity ${
+                hasScreenshot
+                  ? "bg-ink/0 opacity-0 group-hover:bg-ink/20 group-hover:opacity-100"
+                  : "opacity-100"
+              }`}
             >
-              {item.name[0]}
+              <span className="flex h-11 w-11 items-center justify-center rounded-full bg-paper shadow-md transition-transform group-hover:scale-[1.05]">
+                <Play
+                  className="h-4 w-4 translate-x-0.5 text-accent"
+                  fill="currentColor"
+                  strokeWidth={0}
+                />
+              </span>
             </span>
-            {!hasLoom && (
-              <span className="absolute bottom-3 right-3 font-mono text-[9px] uppercase tracking-[0.18em] text-ink-muted/40">
-                Media soon
+          )}
+        </div>
+
+        <div className="p-4">
+          <h4 className="flex items-center justify-between gap-3 text-[13px] font-medium leading-snug text-ink">
+            <span className="min-w-0 flex-1 truncate" title={item.name}>
+              {item.name}
+            </span>
+            <ArrowUpRight
+              className="h-3.5 w-3.5 flex-shrink-0 text-ink-muted transition-transform duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:text-accent"
+              strokeWidth={2}
+            />
+          </h4>
+          <p className="mt-1 text-[12px] leading-relaxed text-ink-muted">
+            {item.brief}
+          </p>
+
+          <div className="mt-3 flex items-center gap-3">
+            <span className="font-mono text-[9px] uppercase tracking-[0.18em] text-ink-muted">
+              View showcase
+            </span>
+            {hasLoom && (
+              <span className="inline-flex items-center gap-1 font-mono text-[9px] uppercase tracking-[0.18em] text-ink-muted">
+                <Play className="h-2.5 w-2.5" fill="currentColor" strokeWidth={0} />
+                Walkthrough
               </span>
             )}
-          </>
-        )}
-
-        {hasLoom && (
-          <a
-            href={item.loomUrl}
-            target="_blank"
-            rel="noreferrer noopener"
-            aria-label={`Watch ${item.name} walkthrough`}
-            className={`absolute inset-0 flex items-center justify-center transition-opacity ${
-              hasScreenshot
-                ? "bg-ink/0 opacity-0 group-hover:bg-ink/20 group-hover:opacity-100"
-                : "opacity-100"
-            }`}
-          >
-            <motion.div
-              whileHover={{ scale: 1.08 }}
-              whileTap={{ scale: 0.96 }}
-              className="flex h-11 w-11 items-center justify-center rounded-full bg-paper shadow-md"
-            >
-              <Play
-                className="h-4 w-4 translate-x-0.5 text-accent"
-                fill="currentColor"
-                strokeWidth={0}
-              />
-            </motion.div>
-          </a>
-        )}
-      </div>
-
-      <div className="p-4">
-        <h4 className="text-[13px] font-medium leading-snug text-ink">
-          {item.name}
-        </h4>
-        <p className="mt-1 text-[12px] leading-relaxed text-ink-muted">
-          {item.brief}
-        </p>
-
-        {(hasLoom || hasLive) && (
-          <div className="mt-3 flex items-center gap-4">
-            {hasLoom && (
-              <a
-                href={item.loomUrl}
-                target="_blank"
-                rel="noreferrer noopener"
-                className="inline-flex items-center gap-1.5 font-mono text-[9px] uppercase tracking-[0.18em] text-ink-muted transition-colors hover:text-accent"
-              >
-                <Play className="h-2.5 w-2.5" fill="currentColor" strokeWidth={0} />
-                Video walkthrough
-              </a>
-            )}
             {hasLive && (
-              <a
-                href={item.liveUrl}
-                target="_blank"
-                rel="noreferrer noopener"
-                className="inline-flex items-center gap-1.5 font-mono text-[9px] uppercase tracking-[0.18em] text-ink-muted transition-colors hover:text-accent"
-              >
+              <span className="inline-flex items-center gap-1 font-mono text-[9px] uppercase tracking-[0.18em] text-ink-muted">
                 <ExternalLink className="h-2.5 w-2.5" strokeWidth={2} />
                 Live
-              </a>
+              </span>
             )}
           </div>
-        )}
-      </div>
+        </div>
+      </Link>
     </motion.div>
   );
 }

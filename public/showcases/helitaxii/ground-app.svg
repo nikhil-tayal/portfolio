@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 844" font-family="ui-sans-serif, system-ui, sans-serif">
+  <rect width="390" height="844" fill="#F5F5FA"/>
+
+  <!-- status bar -->
+  <text x="28" y="34" font-size="13" fill="#12121E" font-weight="600">9:41</text>
+  <g fill="#12121E">
+    <rect x="330" y="24" width="14" height="10" rx="1"/>
+    <rect x="348" y="22" width="16" height="12" rx="2" opacity="0.3"/>
+    <rect x="350" y="24" width="8" height="8"/>
+  </g>
+
+  <!-- header -->
+  <text x="28" y="92" font-size="12" letter-spacing="2" fill="#8A8AA8">DELHI HELIPAD</text>
+  <text x="28" y="124" font-size="26" fill="#12121E" font-weight="500">Check-in</text>
+  <text x="28" y="150" font-size="13" fill="#44445A">Flight HT-10921 · 14:30</text>
+
+  <!-- QR card -->
+  <rect x="28" y="186" width="334" height="334" rx="22" fill="#FFFFFF" stroke="#12121E" stroke-opacity="0.08"/>
+  <g transform="translate(74, 232)" shape-rendering="crispEdges" fill="#12121E">
+    <!-- QR-ish pattern -->
+    <rect x="0" y="0" width="60" height="60"/>
+    <rect x="10" y="10" width="40" height="40" fill="#FFFFFF"/>
+    <rect x="22" y="22" width="16" height="16"/>
+
+    <rect x="182" y="0" width="60" height="60"/>
+    <rect x="192" y="10" width="40" height="40" fill="#FFFFFF"/>
+    <rect x="204" y="22" width="16" height="16"/>
+
+    <rect x="0" y="182" width="60" height="60"/>
+    <rect x="10" y="192" width="40" height="40" fill="#FFFFFF"/>
+    <rect x="22" y="204" width="16" height="16"/>
+
+    <!-- scatter -->
+    <rect x="76" y="8" width="12" height="12"/>
+    <rect x="96" y="8" width="20" height="12"/>
+    <rect x="124" y="8" width="12" height="12"/>
+    <rect x="148" y="8" width="28" height="12"/>
+
+    <rect x="76" y="28" width="28" height="12"/>
+    <rect x="112" y="28" width="12" height="12"/>
+    <rect x="140" y="28" width="20" height="12"/>
+    <rect x="164" y="28" width="12" height="12"/>
+
+    <rect x="76" y="48" width="12" height="12"/>
+    <rect x="100" y="48" width="28" height="12"/>
+    <rect x="136" y="48" width="12" height="12"/>
+    <rect x="156" y="48" width="20" height="12"/>
+
+    <rect x="0" y="76" width="12" height="20"/>
+    <rect x="20" y="76" width="20" height="12"/>
+    <rect x="48" y="76" width="12" height="20"/>
+    <rect x="72" y="76" width="20" height="12"/>
+    <rect x="100" y="76" width="12" height="20"/>
+    <rect x="124" y="76" width="28" height="12"/>
+    <rect x="160" y="76" width="12" height="20"/>
+    <rect x="184" y="76" width="20" height="12"/>
+    <rect x="212" y="76" width="12" height="20"/>
+    <rect x="232" y="76" width="12" height="12"/>
+
+    <rect x="0" y="104" width="20" height="12"/>
+    <rect x="28" y="104" width="12" height="12"/>
+    <rect x="48" y="104" width="28" height="12"/>
+    <rect x="84" y="104" width="12" height="12"/>
+    <rect x="104" y="104" width="20" height="12"/>
+    <rect x="132" y="104" width="12" height="12"/>
+    <rect x="152" y="104" width="20" height="12"/>
+    <rect x="180" y="104" width="12" height="12"/>
+    <rect x="204" y="104" width="28" height="12"/>
+
+    <rect x="0" y="128" width="12" height="20"/>
+    <rect x="20" y="128" width="28" height="12"/>
+    <rect x="56" y="128" width="12" height="12"/>
+    <rect x="76" y="128" width="20" height="12"/>
+    <rect x="104" y="128" width="12" height="20"/>
+    <rect x="124" y="128" width="20" height="12"/>
+    <rect x="152" y="128" width="12" height="12"/>
+    <rect x="172" y="128" width="28" height="12"/>
+    <rect x="208" y="128" width="12" height="20"/>
+    <rect x="228" y="128" width="12" height="12"/>
+
+    <rect x="0" y="156" width="20" height="12"/>
+    <rect x="28" y="156" width="12" height="12"/>
+    <rect x="48" y="156" width="12" height="12"/>
+    <rect x="68" y="156" width="28" height="12"/>
+    <rect x="104" y="156" width="12" height="12"/>
+    <rect x="124" y="156" width="20" height="12"/>
+    <rect x="152" y="156" width="12" height="12"/>
+    <rect x="172" y="156" width="28" height="12"/>
+    <rect x="208" y="156" width="12" height="12"/>
+    <rect x="228" y="156" width="20" height="12"/>
+
+    <rect x="76" y="184" width="12" height="12"/>
+    <rect x="96" y="184" width="20" height="12"/>
+    <rect x="124" y="184" width="28" height="12"/>
+    <rect x="160" y="184" width="12" height="12"/>
+    <rect x="180" y="184" width="20" height="12"/>
+    <rect x="208" y="184" width="12" height="12"/>
+    <rect x="228" y="184" width="20" height="12"/>
+
+    <rect x="76" y="204" width="28" height="12"/>
+    <rect x="112" y="204" width="12" height="12"/>
+    <rect x="132" y="204" width="20" height="12"/>
+    <rect x="160" y="204" width="12" height="12"/>
+    <rect x="180" y="204" width="28" height="12"/>
+    <rect x="216" y="204" width="12" height="12"/>
+    <rect x="236" y="204" width="12" height="12"/>
+
+    <rect x="76" y="224" width="12" height="12"/>
+    <rect x="96" y="224" width="20" height="12"/>
+    <rect x="124" y="224" width="12" height="12"/>
+    <rect x="144" y="224" width="28" height="12"/>
+    <rect x="180" y="224" width="20" height="12"/>
+    <rect x="208" y="224" width="12" height="12"/>
+    <rect x="228" y="224" width="20" height="12"/>
+  </g>
+
+  <!-- passenger info -->
+  <text x="28" y="556" font-size="11" letter-spacing="2" fill="#8A8AA8">PASSENGER</text>
+  <text x="28" y="586" font-size="20" fill="#12121E" font-weight="500">Anjali Verma</text>
+  <text x="28" y="610" font-size="13" fill="#44445A">ID · AP4829017 · 2 seats</text>
+
+  <!-- route -->
+  <rect x="28" y="644" width="334" height="80" rx="14" fill="#FFFFFF" stroke="#12121E" stroke-opacity="0.08"/>
+  <text x="52" y="680" font-size="20" fill="#12121E" font-weight="500">DEL</text>
+  <text x="52" y="704" font-size="11" fill="#8A8AA8">Delhi Helipad</text>
+
+  <line x1="118" y1="680" x2="270" y2="680" stroke="#12121E" stroke-opacity="0.25" stroke-dasharray="3 4"/>
+  <circle cx="194" cy="680" r="8" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5"/>
+
+  <text x="312" y="680" font-size="20" fill="#12121E" font-weight="500">SLV</text>
+  <text x="290" y="704" font-size="11" fill="#8A8AA8">Shimla · 55m</text>
+
+  <!-- CTA -->
+  <rect x="28" y="752" width="334" height="58" rx="29" fill="#12121E"/>
+  <text x="140" y="788" font-size="13" fill="#F5F5FA" letter-spacing="2">CONFIRM CHECK-IN</text>
+</svg>

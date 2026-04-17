@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <style>
+    .body { fill: #12121E; }
+    .disc { fill: #F5F5FA; }
+    .accent { fill: #2563EB; }
+    @media (prefers-color-scheme: dark) {
+      .body { fill: #F0F0FA; }
+      .disc { fill: #08080F; }
+      .accent { fill: #7BA0FF; }
+    }
+  </style>
+  <path class="body" d="M14 20 L17 8 L23 17 Z" />
+  <path class="body" d="M50 20 L47 8 L41 17 Z" />
+  <path class="body" d="M32 12 C18 12 10 22 10 34 C10 47 19 56 32 56 C45 56 54 47 54 34 C54 22 46 12 32 12 Z" />
+  <circle class="disc" cx="22" cy="29" r="8" />
+  <circle class="disc" cx="42" cy="29" r="8" />
+  <circle class="accent" cx="22" cy="29" r="3.5" />
+  <circle class="accent" cx="42" cy="29" r="3.5" />
+  <path class="accent" d="M32 35 L28 41 L36 41 Z" />
+</svg>
