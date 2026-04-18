@@ -142,7 +142,7 @@ export function AnimatedName() {
             x,
             y,
             position: "absolute",
-            top: "-0.02em",
+            top: "-0.08em",
             left: "50%",
             marginLeft: "-0.12em",
             width: "0.24em",
