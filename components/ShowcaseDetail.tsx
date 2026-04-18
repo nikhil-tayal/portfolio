@@ -177,7 +177,7 @@ export function ShowcaseDetail({ showcase, prev, next }: Props) {
                 className="mt-8 grid grid-cols-1 gap-5 md:grid-cols-2"
               >
                 {item.screenshots.map((shot, i) => (
-                  <motion.div key={i} variants={fadeChild}>
+                  <motion.div key={i} variants={fadeChild} className={shot.span === "full" ? "md:col-span-2" : ""}>
                     <ScreenshotCard
                       shot={shot}
                       index={i}

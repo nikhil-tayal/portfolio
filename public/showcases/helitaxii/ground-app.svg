@@ -1,136 +1,116 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 390 844" font-family="ui-sans-serif, system-ui, sans-serif">
-  <rect width="390" height="844" fill="#F5F5FA"/>
+  <rect width="390" height="844" fill="#F0F4FF"/>
 
   <!-- status bar -->
-  <text x="28" y="34" font-size="13" fill="#12121E" font-weight="600">9:41</text>
-  <g fill="#12121E">
-    <rect x="330" y="24" width="14" height="10" rx="1"/>
-    <rect x="348" y="22" width="16" height="12" rx="2" opacity="0.3"/>
-    <rect x="350" y="24" width="8" height="8"/>
+  <rect x="0" y="0" width="390" height="44" fill="#0F2167"/>
+  <text x="28" y="28" font-size="13" fill="#FFFFFF" font-weight="600">9:41</text>
+  <g fill="#FFFFFF">
+    <rect x="330" y="17" width="14" height="10" rx="1"/>
+    <rect x="348" y="15" width="16" height="12" rx="2" opacity="0.4"/>
+    <rect x="350" y="17" width="8" height="8"/>
   </g>
 
-  <!-- header -->
-  <text x="28" y="92" font-size="12" letter-spacing="2" fill="#8A8AA8">DELHI HELIPAD</text>
-  <text x="28" y="124" font-size="26" fill="#12121E" font-weight="500">Check-in</text>
-  <text x="28" y="150" font-size="13" fill="#44445A">Flight HT-10921 · 14:30</text>
+  <!-- nav bar -->
+  <rect x="0" y="44" width="390" height="56" fill="#0F2167"/>
+  <text x="28" y="66" font-size="11" letter-spacing="2" fill="#8BAED4">DELHI HELIPAD</text>
+  <text x="28" y="88" font-size="20" fill="#FFFFFF" font-weight="500">Check-in</text>
 
-  <!-- QR card -->
-  <rect x="28" y="186" width="334" height="334" rx="22" fill="#FFFFFF" stroke="#12121E" stroke-opacity="0.08"/>
-  <g transform="translate(74, 232)" shape-rendering="crispEdges" fill="#12121E">
-    <!-- QR-ish pattern -->
-    <rect x="0" y="0" width="60" height="60"/>
-    <rect x="10" y="10" width="40" height="40" fill="#FFFFFF"/>
-    <rect x="22" y="22" width="16" height="16"/>
+  <!-- tab bar -->
+  <rect x="0" y="100" width="390" height="40" fill="#1E3A8A"/>
+  <rect x="0" y="100" width="130" height="40" fill="#2563EB"/>
+  <text x="65" y="125" text-anchor="middle" font-size="12" fill="#FFFFFF" font-weight="500">Scan QR</text>
+  <text x="195" y="125" text-anchor="middle" font-size="12" fill="#8BAED4">Bookings</text>
+  <text x="325" y="125" text-anchor="middle" font-size="12" fill="#8BAED4">Report</text>
 
-    <rect x="182" y="0" width="60" height="60"/>
-    <rect x="192" y="10" width="40" height="40" fill="#FFFFFF"/>
-    <rect x="204" y="22" width="16" height="16"/>
+  <!-- flight chip -->
+  <rect x="28" y="156" width="334" height="48" rx="10" fill="#FFFFFF" stroke="#E0E7FF" stroke-width="1"/>
+  <text x="50" y="176" font-size="11" fill="#6B8CC9">FLIGHT</text>
+  <text x="50" y="194" font-size="14" fill="#0F2167" font-weight="500">HT-10921 · Gauchar → Badrinath · 14:30</text>
 
-    <rect x="0" y="182" width="60" height="60"/>
-    <rect x="10" y="192" width="40" height="40" fill="#FFFFFF"/>
-    <rect x="22" y="204" width="16" height="16"/>
+  <!-- QR scan card -->
+  <rect x="28" y="220" width="334" height="320" rx="16" fill="#FFFFFF" stroke="#E0E7FF" stroke-width="1"/>
+  <text x="195" y="254" text-anchor="middle" font-size="11" letter-spacing="2" fill="#6B8CC9">SCAN PASSENGER QR</text>
 
-    <!-- scatter -->
-    <rect x="76" y="8" width="12" height="12"/>
-    <rect x="96" y="8" width="20" height="12"/>
-    <rect x="124" y="8" width="12" height="12"/>
-    <rect x="148" y="8" width="28" height="12"/>
+  <!-- QR pattern -->
+  <g transform="translate(94, 268)" shape-rendering="crispEdges" fill="#0F2167">
+    <rect x="0" y="0" width="56" height="56"/>
+    <rect x="8" y="8" width="40" height="40" fill="#FFFFFF"/>
+    <rect x="18" y="18" width="20" height="20"/>
 
-    <rect x="76" y="28" width="28" height="12"/>
-    <rect x="112" y="28" width="12" height="12"/>
-    <rect x="140" y="28" width="20" height="12"/>
-    <rect x="164" y="28" width="12" height="12"/>
+    <rect x="146" y="0" width="56" height="56"/>
+    <rect x="154" y="8" width="40" height="40" fill="#FFFFFF"/>
+    <rect x="164" y="18" width="20" height="20"/>
 
-    <rect x="76" y="48" width="12" height="12"/>
-    <rect x="100" y="48" width="28" height="12"/>
-    <rect x="136" y="48" width="12" height="12"/>
-    <rect x="156" y="48" width="20" height="12"/>
+    <rect x="0" y="146" width="56" height="56"/>
+    <rect x="8" y="154" width="40" height="40" fill="#FFFFFF"/>
+    <rect x="18" y="164" width="20" height="20"/>
 
-    <rect x="0" y="76" width="12" height="20"/>
-    <rect x="20" y="76" width="20" height="12"/>
-    <rect x="48" y="76" width="12" height="20"/>
-    <rect x="72" y="76" width="20" height="12"/>
-    <rect x="100" y="76" width="12" height="20"/>
-    <rect x="124" y="76" width="28" height="12"/>
-    <rect x="160" y="76" width="12" height="20"/>
-    <rect x="184" y="76" width="20" height="12"/>
-    <rect x="212" y="76" width="12" height="20"/>
-    <rect x="232" y="76" width="12" height="12"/>
+    <rect x="64" y="8" width="10" height="10"/>
+    <rect x="80" y="8" width="18" height="10"/>
+    <rect x="104" y="8" width="10" height="10"/>
+    <rect x="120" y="8" width="16" height="10"/>
 
-    <rect x="0" y="104" width="20" height="12"/>
-    <rect x="28" y="104" width="12" height="12"/>
-    <rect x="48" y="104" width="28" height="12"/>
-    <rect x="84" y="104" width="12" height="12"/>
-    <rect x="104" y="104" width="20" height="12"/>
-    <rect x="132" y="104" width="12" height="12"/>
-    <rect x="152" y="104" width="20" height="12"/>
-    <rect x="180" y="104" width="12" height="12"/>
-    <rect x="204" y="104" width="28" height="12"/>
+    <rect x="64" y="24" width="22" height="10"/>
+    <rect x="94" y="24" width="10" height="10"/>
+    <rect x="112" y="24" width="18" height="10"/>
+    <rect x="136" y="24" width="10" height="10"/>
 
-    <rect x="0" y="128" width="12" height="20"/>
-    <rect x="20" y="128" width="28" height="12"/>
-    <rect x="56" y="128" width="12" height="12"/>
-    <rect x="76" y="128" width="20" height="12"/>
-    <rect x="104" y="128" width="12" height="20"/>
-    <rect x="124" y="128" width="20" height="12"/>
-    <rect x="152" y="128" width="12" height="12"/>
-    <rect x="172" y="128" width="28" height="12"/>
-    <rect x="208" y="128" width="12" height="20"/>
-    <rect x="228" y="128" width="12" height="12"/>
+    <rect x="64" y="40" width="10" height="10"/>
+    <rect x="82" y="40" width="22" height="10"/>
+    <rect x="112" y="40" width="10" height="10"/>
+    <rect x="128" y="40" width="16" height="10"/>
 
-    <rect x="0" y="156" width="20" height="12"/>
-    <rect x="28" y="156" width="12" height="12"/>
-    <rect x="48" y="156" width="12" height="12"/>
-    <rect x="68" y="156" width="28" height="12"/>
-    <rect x="104" y="156" width="12" height="12"/>
-    <rect x="124" y="156" width="20" height="12"/>
-    <rect x="152" y="156" width="12" height="12"/>
-    <rect x="172" y="156" width="28" height="12"/>
-    <rect x="208" y="156" width="12" height="12"/>
-    <rect x="228" y="156" width="20" height="12"/>
+    <rect x="0" y="64" width="10" height="16"/>
+    <rect x="16" y="64" width="16" height="10"/>
+    <rect x="40" y="64" width="10" height="16"/>
+    <rect x="64" y="64" width="16" height="10"/>
+    <rect x="88" y="64" width="10" height="16"/>
+    <rect x="106" y="64" width="22" height="10"/>
+    <rect x="136" y="64" width="10" height="16"/>
+    <rect x="154" y="64" width="16" height="10"/>
+    <rect x="178" y="64" width="24" height="10"/>
 
-    <rect x="76" y="184" width="12" height="12"/>
-    <rect x="96" y="184" width="20" height="12"/>
-    <rect x="124" y="184" width="28" height="12"/>
-    <rect x="160" y="184" width="12" height="12"/>
-    <rect x="180" y="184" width="20" height="12"/>
-    <rect x="208" y="184" width="12" height="12"/>
-    <rect x="228" y="184" width="20" height="12"/>
+    <rect x="0" y="88" width="16" height="10"/>
+    <rect x="22" y="88" width="10" height="10"/>
+    <rect x="40" y="88" width="22" height="10"/>
+    <rect x="70" y="88" width="10" height="10"/>
+    <rect x="88" y="88" width="16" height="10"/>
+    <rect x="112" y="88" width="10" height="10"/>
+    <rect x="128" y="88" width="16" height="10"/>
+    <rect x="152" y="88" width="10" height="10"/>
+    <rect x="168" y="88" width="22" height="10"/>
 
-    <rect x="76" y="204" width="28" height="12"/>
-    <rect x="112" y="204" width="12" height="12"/>
-    <rect x="132" y="204" width="20" height="12"/>
-    <rect x="160" y="204" width="12" height="12"/>
-    <rect x="180" y="204" width="28" height="12"/>
-    <rect x="216" y="204" width="12" height="12"/>
-    <rect x="236" y="204" width="12" height="12"/>
+    <rect x="64" y="154" width="10" height="10"/>
+    <rect x="80" y="154" width="16" height="10"/>
+    <rect x="104" y="154" width="22" height="10"/>
+    <rect x="134" y="154" width="10" height="10"/>
+    <rect x="150" y="154" width="16" height="10"/>
+    <rect x="174" y="154" width="28" height="10"/>
 
-    <rect x="76" y="224" width="12" height="12"/>
-    <rect x="96" y="224" width="20" height="12"/>
-    <rect x="124" y="224" width="12" height="12"/>
-    <rect x="144" y="224" width="28" height="12"/>
-    <rect x="180" y="224" width="20" height="12"/>
-    <rect x="208" y="224" width="12" height="12"/>
-    <rect x="228" y="224" width="20" height="12"/>
+    <rect x="64" y="170" width="22" height="10"/>
+    <rect x="94" y="170" width="10" height="10"/>
+    <rect x="112" y="170" width="16" height="10"/>
+    <rect x="136" y="170" width="10" height="10"/>
+    <rect x="154" y="170" width="22" height="10"/>
+    <rect x="184" y="170" width="18" height="10"/>
   </g>
 
-  <!-- passenger info -->
-  <text x="28" y="556" font-size="11" letter-spacing="2" fill="#8A8AA8">PASSENGER</text>
-  <text x="28" y="586" font-size="20" fill="#12121E" font-weight="500">Anjali Verma</text>
-  <text x="28" y="610" font-size="13" fill="#44445A">ID · AP4829017 · 2 seats</text>
+  <!-- scan hint -->
+  <text x="195" y="520" text-anchor="middle" font-size="12" fill="#6B8CC9">Point camera at boarding pass QR</text>
 
-  <!-- route -->
-  <rect x="28" y="644" width="334" height="80" rx="14" fill="#FFFFFF" stroke="#12121E" stroke-opacity="0.08"/>
-  <text x="52" y="680" font-size="20" fill="#12121E" font-weight="500">DEL</text>
-  <text x="52" y="704" font-size="11" fill="#8A8AA8">Delhi Helipad</text>
+  <!-- passenger info card -->
+  <rect x="28" y="556" width="334" height="116" rx="12" fill="#FFFFFF" stroke="#E0E7FF" stroke-width="1"/>
+  <text x="50" y="582" font-size="10" letter-spacing="2" fill="#6B8CC9">PASSENGER</text>
+  <text x="50" y="606" font-size="18" fill="#0F2167" font-weight="500">Anjali Verma</text>
+  <text x="50" y="626" font-size="12" fill="#6B8CC9">ID · AP4829017 · 2 seats</text>
+  <text x="50" y="644" font-size="12" fill="#6B8CC9">Ref: HT-10921 · DEL → SLV</text>
+  <rect x="282" y="572" width="60" height="24" rx="12" fill="#DCFCE7"/>
+  <text x="296" y="589" font-size="10" fill="#15803D" letter-spacing="1">VALID</text>
 
-  <line x1="118" y1="680" x2="270" y2="680" stroke="#12121E" stroke-opacity="0.25" stroke-dasharray="3 4"/>
-  <circle cx="194" cy="680" r="8" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5"/>
+  <!-- CTA button -->
+  <rect x="28" y="692" width="334" height="52" rx="26" fill="#0F2167"/>
+  <text x="195" y="724" text-anchor="middle" font-size="13" fill="#FFFFFF" letter-spacing="2">CONFIRM CHECK-IN</text>
 
-  <text x="312" y="680" font-size="20" fill="#12121E" font-weight="500">SLV</text>
-  <text x="290" y="704" font-size="11" fill="#8A8AA8">Shimla · 55m</text>
-
-  <!-- CTA -->
-  <rect x="28" y="752" width="334" height="58" rx="29" fill="#12121E"/>
-  <text x="140" y="788" font-size="13" fill="#F5F5FA" letter-spacing="2">CONFIRM CHECK-IN</text>
+  <!-- home indicator -->
+  <rect x="155" y="762" width="80" height="4" rx="2" fill="#0F2167" opacity="0.2"/>
 </svg>

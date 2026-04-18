@@ -1,76 +1,113 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" fill="none" font-family="ui-sans-serif, system-ui, sans-serif">
-  <rect width="1200" height="620" fill="#F5F5FA"/>
-
-  <!-- Clients column -->
-  <g>
-    <text x="100" y="56" font-size="11" letter-spacing="2.5" fill="#8A8AA8">CLIENTS</text>
-
-    <rect x="100" y="88" width="240" height="92" rx="14" fill="#FFFFFF" stroke="#12121E" stroke-opacity="0.12"/>
-    <text x="120" y="124" font-size="16" fill="#12121E" font-weight="500">Customer Web</text>
-    <text x="120" y="150" font-size="12" fill="#44445A">Next.js · Public booking</text>
-
-    <rect x="100" y="208" width="240" height="92" rx="14" fill="#FFFFFF" stroke="#12121E" stroke-opacity="0.12"/>
-    <text x="120" y="244" font-size="16" fill="#12121E" font-weight="500">Admin Portal</text>
-    <text x="120" y="270" font-size="12" fill="#44445A">React · Ops &amp; inventory</text>
-
-    <rect x="100" y="328" width="240" height="92" rx="14" fill="#FFFFFF" stroke="#12121E" stroke-opacity="0.12"/>
-    <text x="120" y="364" font-size="16" fill="#12121E" font-weight="500">Ground App</text>
-    <text x="120" y="390" font-size="12" fill="#44445A">React Native · QR check-in</text>
-
-    <rect x="100" y="448" width="240" height="92" rx="14" fill="#FFFFFF" stroke="#12121E" stroke-opacity="0.12"/>
-    <text x="120" y="484" font-size="16" fill="#12121E" font-weight="500">B2B Portal</text>
-    <text x="120" y="510" font-size="12" fill="#44445A">Travel agent dashboard</text>
-  </g>
-
-  <!-- API gateway -->
-  <g>
-    <text x="480" y="56" font-size="11" letter-spacing="2.5" fill="#8A8AA8">API GATEWAY</text>
-    <rect x="480" y="240" width="240" height="140" rx="14" fill="#12121E"/>
-    <text x="500" y="280" font-size="16" fill="#F5F5FA" font-weight="500">NestJS API</text>
-    <text x="500" y="306" font-size="12" fill="#B8B8D0">JWT · RBAC · rate limit</text>
-    <text x="500" y="326" font-size="12" fill="#B8B8D0">Booking · Inventory</text>
-    <text x="500" y="346" font-size="12" fill="#B8B8D0">Payments · Webhooks</text>
-  </g>
-
-  <!-- Services column -->
-  <g>
-    <text x="860" y="56" font-size="11" letter-spacing="2.5" fill="#8A8AA8">DATA &amp; SERVICES</text>
-
-    <rect x="860" y="88" width="240" height="80" rx="14" fill="#FFFFFF" stroke="#12121E" stroke-opacity="0.12"/>
-    <text x="880" y="122" font-size="15" fill="#12121E" font-weight="500">MongoDB Atlas</text>
-    <text x="880" y="146" font-size="12" fill="#44445A">Bookings · Users · Flights</text>
-
-    <rect x="860" y="188" width="240" height="80" rx="14" fill="#FFFFFF" stroke="#12121E" stroke-opacity="0.12"/>
-    <text x="880" y="222" font-size="15" fill="#12121E" font-weight="500">Razorpay</text>
-    <text x="880" y="246" font-size="12" fill="#44445A">Payments · HMAC webhooks</text>
-
-    <rect x="860" y="288" width="240" height="80" rx="14" fill="#FFFFFF" stroke="#12121E" stroke-opacity="0.12"/>
-    <text x="880" y="322" font-size="15" fill="#12121E" font-weight="500">AWS S3</text>
-    <text x="880" y="346" font-size="12" fill="#44445A">Tickets · PDFs · QR assets</text>
-
-    <rect x="860" y="388" width="240" height="80" rx="14" fill="#FFFFFF" stroke="#12121E" stroke-opacity="0.12"/>
-    <text x="880" y="422" font-size="15" fill="#12121E" font-weight="500">AWS SES</text>
-    <text x="880" y="446" font-size="12" fill="#44445A">Transactional email</text>
-
-    <rect x="860" y="488" width="240" height="80" rx="14" fill="#FFFFFF" stroke="#12121E" stroke-opacity="0.12"/>
-    <text x="880" y="522" font-size="15" fill="#12121E" font-weight="500">Redis</text>
-    <text x="880" y="546" font-size="12" fill="#44445A">Inventory locks · queues</text>
-  </g>
-
-  <!-- Connector lines, clients → gateway -->
-  <g stroke="#12121E" stroke-opacity="0.25" stroke-width="1.2" fill="none">
-    <path d="M340 134 L480 296"/>
-    <path d="M340 254 L480 304"/>
-    <path d="M340 374 L480 318"/>
-    <path d="M340 494 L480 326"/>
-  </g>
-
-  <!-- Connector lines, gateway → services -->
-  <g stroke="#12121E" stroke-opacity="0.25" stroke-width="1.2" fill="none">
-    <path d="M720 280 L860 128"/>
-    <path d="M720 294 L860 228"/>
-    <path d="M720 310 L860 328"/>
-    <path d="M720 326 L860 428"/>
-    <path d="M720 342 L860 528"/>
-  </g>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1654 1169" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif">
+<defs>
+  <marker id="ah-g"  viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#666666"/></marker>
+  <marker id="ah-b"  viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#6c8ebf"/></marker>
+  <marker id="ah-gr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#82b366"/></marker>
+  <marker id="ah-r"  viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#b85450"/></marker>
+</defs>
+<rect width="1654" height="1169" fill="white"/>
+<line x1="40" y1="488" x2="1614" y2="488" stroke="#ccc" stroke-width="1" stroke-dasharray="6 4"/>
+<text x="40" y="34" font-size="13" font-weight="bold" fill="#333">SYSTEM ARCHITECTURE</text>
+<text x="40" y="516" font-size="13" font-weight="bold" fill="#333">USER JOURNEY — CUSTOMER BOOKING</text>
+<text x="40" y="70" font-size="9" font-style="italic" fill="#aaa">Client Layer</text>
+<text x="40" y="222" font-size="9" font-style="italic" fill="#aaa">API Layer</text>
+<text x="40" y="375" font-size="9" font-style="italic" fill="#aaa">Services &amp; Storage</text>
+<rect x="130" y="58" width="155" height="55" rx="6" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+<text x="207.5" y="80.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Customer Web</text>
+<text x="207.5" y="95.5" text-anchor="middle" font-size="10" fill="#555">Next.js</text>
+<rect x="325" y="58" width="155" height="55" rx="6" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+<text x="402.5" y="80.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">B2B Agent Portal</text>
+<text x="402.5" y="95.5" text-anchor="middle" font-size="10" fill="#555">Next.js · 10+ agents</text>
+<rect x="520" y="58" width="155" height="55" rx="6" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+<text x="597.5" y="80.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Admin Console</text>
+<text x="597.5" y="95.5" text-anchor="middle" font-size="10" fill="#555">Next.js · 3 roles</text>
+<rect x="715" y="58" width="155" height="55" rx="6" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+<text x="792.5" y="80.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Ground Staff App</text>
+<text x="792.5" y="95.5" text-anchor="middle" font-size="10" fill="#555">React Native · 15 staff</text>
+<rect x="330" y="208" width="250" height="55" rx="6" fill="#fff2cc" stroke="#d6b656" stroke-width="1.5"/>
+<text x="455" y="230.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">NestJS API</text>
+<text x="455" y="245.5" text-anchor="middle" font-size="10" fill="#555">REST · JWT Auth · Role Guards</text>
+<rect x="110" y="369" width="120" height="47" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+<ellipse cx="170" cy="369" rx="59" ry="9" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+<ellipse cx="170" cy="416" rx="59" ry="9" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+<text x="170" y="387.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">MongoDB</text>
+<text x="170" y="402.5" text-anchor="middle" font-size="10" fill="#555">Primary DB</text>
+<rect x="265" y="360" width="130" height="65" rx="6" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+<text x="330" y="387.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Razorpay</text>
+<text x="330" y="402.5" text-anchor="middle" font-size="10" fill="#555">Payments · 200+/mo</text>
+<rect x="430" y="360" width="120" height="65" rx="6" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+<text x="490" y="387.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">AWS S3</text>
+<text x="490" y="402.5" text-anchor="middle" font-size="10" fill="#555">File Storage</text>
+<rect x="585" y="360" width="130" height="65" rx="6" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+<text x="650" y="387.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">AWS SES</text>
+<text x="650" y="402.5" text-anchor="middle" font-size="10" fill="#555">Email Confirmations</text>
+<rect x="750" y="369" width="120" height="47" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+<ellipse cx="810" cy="369" rx="59" ry="9" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+<ellipse cx="810" cy="416" rx="59" ry="9" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+<text x="810" y="387.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Redis</text>
+<text x="810" y="402.5" text-anchor="middle" font-size="10" fill="#555">Cache · Sessions</text>
+<rect x="265" y="448" width="130" height="26" rx="4" fill="#f8cecc" stroke="#b85450" stroke-width="1"/>
+<text x="330" y="465" text-anchor="middle" font-size="9" fill="#666">Webhook · State Machine</text>
+<line x1="207" y1="113" x2="455" y2="208" stroke="#6c8ebf" stroke-width="1.5" marker-end="url(#ah-b)"/>
+<line x1="402" y1="113" x2="455" y2="208" stroke="#6c8ebf" stroke-width="1.5" marker-end="url(#ah-b)"/>
+<line x1="597" y1="113" x2="455" y2="208" stroke="#6c8ebf" stroke-width="1.5" marker-end="url(#ah-b)"/>
+<line x1="792" y1="113" x2="455" y2="208" stroke="#6c8ebf" stroke-width="1.5" marker-end="url(#ah-b)"/>
+<path d="M455,263 L455,311 L170,311 L170,360" fill="none" stroke="#82b366" stroke-width="1.5" marker-end="url(#ah-gr)"/>
+<path d="M455,263 L455,311 L330,311 L330,360" fill="none" stroke="#82b366" stroke-width="1.5" marker-end="url(#ah-gr)"/>
+<path d="M455,263 L455,311 L490,311 L490,360" fill="none" stroke="#82b366" stroke-width="1.5" marker-end="url(#ah-gr)"/>
+<path d="M455,263 L455,311 L650,311 L650,360" fill="none" stroke="#82b366" stroke-width="1.5" marker-end="url(#ah-gr)"/>
+<path d="M455,263 L455,311 L810,311 L810,360" fill="none" stroke="#82b366" stroke-width="1.5" marker-end="url(#ah-gr)"/>
+<line x1="330" y1="425" x2="330" y2="448" stroke="#b85450" stroke-width="1.5" marker-end="url(#ah-r)"/>
+<ellipse cx="100" cy="585.5" rx="60" ry="27.5" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+<text x="100" y="580.5" text-anchor="middle" font-size="10" fill="#333">Customer visits</text>
+<text x="100" y="595.5" text-anchor="middle" font-size="10" fill="#333">helitaxii.com</text>
+<rect x="200" y="558" width="130" height="55" rx="6" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+<text x="265" y="580.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Select route</text>
+<text x="265" y="595.5" text-anchor="middle" font-size="10" fill="#555">date &amp; seats</text>
+<rect x="370" y="558" width="130" height="55" rx="6" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+<text x="435" y="580.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">View available</text>
+<text x="435" y="595.5" text-anchor="middle" font-size="10" fill="#555">flights &amp; prices</text>
+<rect x="540" y="558" width="130" height="55" rx="6" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+<text x="605" y="580.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Enter passenger</text>
+<text x="605" y="595.5" text-anchor="middle" font-size="10" fill="#555">details</text>
+<rect x="710" y="558" width="130" height="55" rx="6" fill="#fff2cc" stroke="#d6b656" stroke-width="1.5"/>
+<text x="775" y="580.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Razorpay</text>
+<text x="775" y="595.5" text-anchor="middle" font-size="10" fill="#555">Checkout</text>
+<polygon points="943,548 998,585.5 943,623 888,585.5" fill="#fff2cc" stroke="#d6b656" stroke-width="1.5"/>
+<text x="943" y="580.5" text-anchor="middle" font-size="10" fill="#333">Payment</text>
+<text x="943" y="595.5" text-anchor="middle" font-size="10" fill="#333">success?</text>
+<rect x="882" y="668" width="125" height="50" rx="6" fill="#f8cecc" stroke="#b85450" stroke-width="1.5"/>
+<text x="944.5" y="688" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Show error</text>
+<text x="944.5" y="703" text-anchor="middle" font-size="10" fill="#555">retry payment</text>
+<rect x="1050" y="558" width="130" height="55" rx="6" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+<text x="1115" y="580.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Booking confirmed</text>
+<text x="1115" y="595.5" text-anchor="middle" font-size="10" fill="#555">+ unique ID</text>
+<rect x="1050" y="668" width="130" height="50" rx="6" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+<text x="1115" y="688" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Confirmation email</text>
+<text x="1115" y="703" text-anchor="middle" font-size="10" fill="#555">sent via SES</text>
+<rect x="1230" y="558" width="130" height="55" rx="6" fill="#f5f5f5" stroke="#666666" stroke-width="1.5"/>
+<text x="1295" y="580.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Customer arrives</text>
+<text x="1295" y="595.5" text-anchor="middle" font-size="10" fill="#555">at helipad</text>
+<rect x="1230" y="668" width="130" height="50" rx="6" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+<text x="1295" y="688" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Staff scans QR</text>
+<text x="1295" y="703" text-anchor="middle" font-size="10" fill="#555">via ground app</text>
+<ellipse cx="1480" cy="687.5" rx="60" ry="27.5" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+<text x="1480" y="682.5" text-anchor="middle" font-size="10" fill="#333">Check-in</text>
+<text x="1480" y="697.5" text-anchor="middle" font-size="10" fill="#333">complete ✓</text>
+<line x1="160" y1="585.5" x2="200" y2="585.5" stroke="#666666" stroke-width="1.5" marker-end="url(#ah-g)"/>
+<line x1="330" y1="585.5" x2="370" y2="585.5" stroke="#666666" stroke-width="1.5" marker-end="url(#ah-g)"/>
+<line x1="500" y1="585.5" x2="540" y2="585.5" stroke="#666666" stroke-width="1.5" marker-end="url(#ah-g)"/>
+<line x1="670" y1="585.5" x2="710" y2="585.5" stroke="#666666" stroke-width="1.5" marker-end="url(#ah-g)"/>
+<line x1="840" y1="585.5" x2="888" y2="585.5" stroke="#666666" stroke-width="1.5" marker-end="url(#ah-g)"/>
+<line x1="943" y1="623" x2="943" y2="668" stroke="#b85450" stroke-width="1.5" marker-end="url(#ah-r)"/>
+<text x="948" y="649.5" font-size="9" fill="#b85450">No</text>
+<line x1="998" y1="585.5" x2="1050" y2="585.5" stroke="#82b366" stroke-width="1.5" marker-end="url(#ah-gr)"/>
+<text x="1024" y="580.5" text-anchor="middle" font-size="9" fill="#82b366">Yes</text>
+<line x1="1115" y1="613" x2="1115" y2="668" stroke="#666666" stroke-width="1.5" marker-end="url(#ah-g)"/>
+<line x1="1180" y1="585.5" x2="1230" y2="585.5" stroke="#666666" stroke-width="1.5" marker-end="url(#ah-g)"/>
+<line x1="1295" y1="613" x2="1295" y2="668" stroke="#666666" stroke-width="1.5" marker-end="url(#ah-g)"/>
+<line x1="1360" y1="693" x2="1420" y2="693" stroke="#82b366" stroke-width="1.5" marker-end="url(#ah-gr)"/>
+<path d="M944,718 L944,745 L775,745 L775,558" fill="none" stroke="#b85450" stroke-width="1.5" stroke-dasharray="4 2" marker-end="url(#ah-r)"/>
+<text x="860" y="757" text-anchor="middle" font-size="9" fill="#b85450">retry</text>
 </svg>

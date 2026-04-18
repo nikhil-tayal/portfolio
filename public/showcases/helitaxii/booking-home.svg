@@ -1,71 +1,79 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" font-family="ui-sans-serif, system-ui, sans-serif">
-  <rect width="1600" height="1000" fill="#F5F5FA"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" font-family="ui-sans-serif, system-ui, sans-serif">
+  <!-- hero background -->
+  <rect width="1600" height="900" fill="#1A2B4A"/>
+  <rect width="1600" height="900" fill="url(#heroGrad)" opacity="0.7"/>
+  <defs>
+    <linearGradient id="heroGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#0A1628" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#0A1628" stop-opacity="0.85"/>
+    </linearGradient>
+  </defs>
 
   <!-- top nav -->
-  <rect x="0" y="0" width="1600" height="72" fill="#FFFFFF"/>
-  <line x1="0" y1="72" x2="1600" y2="72" stroke="#12121E" stroke-opacity="0.08"/>
-  <text x="80" y="44" font-size="20" font-weight="600" fill="#12121E">Helitaxii</text>
-  <g fill="#44445A" font-size="13">
-    <text x="780" y="44">Flights</text>
-    <text x="880" y="44">Charter</text>
-    <text x="980" y="44">Pilgrimage</text>
-    <text x="1100" y="44">About</text>
-    <text x="1180" y="44">Contact</text>
-  </g>
-  <rect x="1420" y="22" width="110" height="32" rx="16" fill="#12121E"/>
-  <text x="1443" y="43" font-size="12" fill="#F5F5FA" letter-spacing="1">BOOK NOW</text>
+  <rect x="0" y="0" width="1600" height="68" fill="#0F2167" opacity="0.95"/>
+  <text x="80" y="42" font-size="20" font-weight="700" fill="#FFFFFF" letter-spacing="-0.5">HeliTaxii</text>
+  <text x="120" y="56" font-size="9" fill="#8BAED4" letter-spacing="1">A THUMBY AVIATION SERVICE</text>
+  <!-- THUMBY badge right -->
+  <rect x="1460" y="14" width="110" height="40" rx="4" fill="#FFFFFF" opacity="0.12"/>
+  <text x="1515" y="40" text-anchor="middle" font-size="11" font-weight="700" fill="#FFFFFF" letter-spacing="2">THUMBY</text>
 
-  <!-- hero copy -->
-  <text x="80" y="212" font-size="72" font-weight="300" fill="#12121E" letter-spacing="-1.5">Sky is the new</text>
-  <text x="80" y="296" font-size="72" font-weight="300" fill="#12121E" letter-spacing="-1.5">shortcut.</text>
-  <text x="80" y="356" font-size="18" fill="#44445A">Charter, scheduled and pilgrimage helicopter flights across India.</text>
+  <!-- hero text -->
+  <text x="80" y="200" font-size="42" font-weight="600" fill="#FFFFFF">Fly with Thumby Aviation</text>
 
-  <!-- search card -->
-  <rect x="80" y="420" width="1440" height="148" rx="18" fill="#FFFFFF" stroke="#12121E" stroke-opacity="0.08"/>
+  <!-- tabs -->
+  <rect x="80" y="250" width="240" height="38" rx="4" fill="#FFFFFF" opacity="0.15"/>
+  <text x="200" y="275" text-anchor="middle" font-size="13" fill="#FFFFFF" font-weight="500">Regional Connectivity Service</text>
+  <rect x="328" y="250" width="200" height="38" rx="0" fill="none"/>
+  <text x="428" y="275" text-anchor="middle" font-size="13" fill="#FFFFFF" font-weight="600">Badrinath Shuttle</text>
+  <line x1="328" y1="288" x2="528" y2="288" stroke="#FFFFFF" stroke-width="2"/>
 
-  <g fill="#8A8AA8" font-size="11" letter-spacing="1.5">
-    <text x="116" y="460">FROM</text>
-    <text x="480" y="460">TO</text>
-    <text x="840" y="460">DATE</text>
-    <text x="1140" y="460">PASSENGERS</text>
-  </g>
-  <g fill="#12121E" font-size="20" font-weight="500">
-    <text x="116" y="500">Delhi · DEL</text>
-    <text x="480" y="500">Shimla · SLV</text>
-    <text x="840" y="500">Apr 22, 2026</text>
-    <text x="1140" y="500">2 adults</text>
-  </g>
-  <line x1="440" y1="442" x2="440" y2="542" stroke="#12121E" stroke-opacity="0.08"/>
-  <line x1="800" y1="442" x2="800" y2="542" stroke="#12121E" stroke-opacity="0.08"/>
-  <line x1="1100" y1="442" x2="1100" y2="542" stroke="#12121E" stroke-opacity="0.08"/>
-  <rect x="1360" y="464" width="140" height="56" rx="28" fill="#2563EB"/>
-  <text x="1400" y="500" font-size="13" fill="#FFFFFF" letter-spacing="2">SEARCH</text>
+  <!-- booking widget -->
+  <rect x="80" y="308" width="660" height="88" rx="10" fill="#FFFFFF"/>
 
-  <!-- popular routes -->
-  <text x="80" y="660" font-size="11" letter-spacing="2.5" fill="#8A8AA8">POPULAR ROUTES</text>
+  <!-- From -->
+  <text x="108" y="336" font-size="10" letter-spacing="1.5" fill="#9CA3AF">FROM</text>
+  <text x="108" y="360" font-size="16" font-weight="500" fill="#111827">Gauchar</text>
+  <line x1="200" y1="318" x2="200" y2="386" stroke="#E5E7EB" stroke-width="1"/>
 
-  <g>
-    <rect x="80" y="684" width="340" height="220" rx="16" fill="#FFFFFF" stroke="#12121E" stroke-opacity="0.08"/>
-    <rect x="80" y="684" width="340" height="120" rx="16" fill="#EBEBF2"/>
-    <text x="112" y="838" font-size="18" fill="#12121E" font-weight="500">Delhi → Shimla</text>
-    <text x="112" y="864" font-size="13" fill="#44445A">55 min · from ₹32,500</text>
-  </g>
-  <g>
-    <rect x="444" y="684" width="340" height="220" rx="16" fill="#FFFFFF" stroke="#12121E" stroke-opacity="0.08"/>
-    <rect x="444" y="684" width="340" height="120" rx="16" fill="#EBEBF2"/>
-    <text x="476" y="838" font-size="18" fill="#12121E" font-weight="500">Mumbai → Pune</text>
-    <text x="476" y="864" font-size="13" fill="#44445A">30 min · from ₹18,900</text>
-  </g>
-  <g>
-    <rect x="808" y="684" width="340" height="220" rx="16" fill="#FFFFFF" stroke="#12121E" stroke-opacity="0.08"/>
-    <rect x="808" y="684" width="340" height="120" rx="16" fill="#EBEBF2"/>
-    <text x="840" y="838" font-size="18" fill="#12121E" font-weight="500">Dehradun → Kedarnath</text>
-    <text x="840" y="864" font-size="13" fill="#44445A">45 min · from ₹78,000</text>
-  </g>
-  <g>
-    <rect x="1172" y="684" width="348" height="220" rx="16" fill="#FFFFFF" stroke="#12121E" stroke-opacity="0.08"/>
-    <rect x="1172" y="684" width="348" height="120" rx="16" fill="#EBEBF2"/>
-    <text x="1204" y="838" font-size="18" fill="#12121E" font-weight="500">Chandigarh → Manali</text>
-    <text x="1204" y="864" font-size="13" fill="#44445A">40 min · from ₹41,200</text>
-  </g>
+  <!-- To -->
+  <text x="220" y="336" font-size="10" letter-spacing="1.5" fill="#9CA3AF">TO</text>
+  <text x="220" y="360" font-size="16" font-weight="500" fill="#111827">Badrinath</text>
+  <line x1="340" y1="318" x2="340" y2="386" stroke="#E5E7EB" stroke-width="1"/>
+
+  <!-- Date -->
+  <text x="360" y="336" font-size="10" letter-spacing="1.5" fill="#9CA3AF">DEPARTURE DATE</text>
+  <text x="360" y="360" font-size="16" font-weight="500" fill="#111827">24 Apr 2026</text>
+  <line x1="520" y1="318" x2="520" y2="386" stroke="#E5E7EB" stroke-width="1"/>
+
+  <!-- Seats -->
+  <text x="540" y="336" font-size="10" letter-spacing="1.5" fill="#9CA3AF">SEATS</text>
+  <text x="540" y="360" font-size="16" font-weight="500" fill="#111827">1</text>
+
+  <!-- Result cards -->
+  <!-- Card 1 -->
+  <rect x="80" y="420" width="660" height="100" rx="10" fill="#FFFFFF"/>
+  <text x="110" y="455" font-size="15" font-weight="600" fill="#111827">Gauchar to Badrinath and return</text>
+  <text x="110" y="476" font-size="12" fill="#6B7280">Gauchar to Badrinath (10:00 AM – 02:00 PM)</text>
+  <text x="110" y="496" font-size="11" fill="#2563EB">Afternoon slot · Day return</text>
+  <text x="560" y="460" font-size="20" font-weight="600" fill="#2563EB">₹ 22,000</text>
+  <rect x="560" y="470" width="72" height="30" rx="5" fill="#16A34A"/>
+  <text x="596" y="491" text-anchor="middle" font-size="12" fill="#FFFFFF" font-weight="500">Book</text>
+  <rect x="638" y="470" width="90" height="30" rx="5" fill="none" stroke="#D1D5DB" stroke-width="1"/>
+  <text x="683" y="491" text-anchor="middle" font-size="12" fill="#6B7280">Learn More</text>
+
+  <!-- Card 2 -->
+  <rect x="80" y="534" width="660" height="100" rx="10" fill="#FFFFFF"/>
+  <text x="110" y="569" font-size="15" font-weight="600" fill="#111827">Gauchar to Badrinath and return</text>
+  <text x="110" y="590" font-size="12" fill="#6B7280">Gauchar to Badrinath (01:00 PM – 05:00 PM · Night Halt)</text>
+  <text x="110" y="610" font-size="11" fill="#2563EB">Evening slot · Overnight</text>
+  <text x="560" y="574" font-size="20" font-weight="600" fill="#2563EB">₹ 22,000</text>
+  <rect x="560" y="584" width="72" height="30" rx="5" fill="#16A34A"/>
+  <text x="596" y="605" text-anchor="middle" font-size="12" fill="#FFFFFF" font-weight="500">Book</text>
+  <rect x="638" y="584" width="90" height="30" rx="5" fill="none" stroke="#D1D5DB" stroke-width="1"/>
+  <text x="683" y="605" text-anchor="middle" font-size="12" fill="#6B7280">Learn More</text>
+
+  <!-- footer -->
+  <rect x="0" y="700" width="1600" height="200" fill="#1F2937"/>
+  <text x="800" y="780" text-anchor="middle" font-size="12" fill="#9CA3AF">© 2025 Thumby Aviation Pvt. Ltd — All Rights Reserved</text>
+  <text x="800" y="810" text-anchor="middle" font-size="12" fill="#6B7280">info@helitaxii.com · +91-9400399999</text>
 </svg>

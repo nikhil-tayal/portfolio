@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1654 1169" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif">
+<defs>
+  <marker id="ah-g"  viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#666666"/></marker>
+  <marker id="ah-b"  viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#6c8ebf"/></marker>
+  <marker id="ah-gr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#82b366"/></marker>
+  <marker id="ah-r"  viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#b85450"/></marker>
+</defs>
+<rect width="1654" height="1169" fill="white"/>
+<line x1="40" y1="488" x2="1614" y2="488" stroke="#ccc" stroke-width="1" stroke-dasharray="6 4"/>
+<text x="40" y="34" font-size="13" font-weight="bold" fill="#333">SYSTEM ARCHITECTURE</text>
+<text x="40" y="516" font-size="13" font-weight="bold" fill="#333">USER JOURNEY — EMPLOYEE LEAVE REQUEST</text>
+<text x="40" y="65" font-size="9" font-style="italic" fill="#aaa">Client</text>
+<text x="40" y="225" font-size="9" font-style="italic" fill="#aaa">API Layer</text>
+<text x="40" y="372" font-size="9" font-style="italic" fill="#aaa">Services</text>
+<rect x="130" y="55" width="190" height="65" rx="6" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+<text x="225" y="82.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">HRMS Mobile App</text>
+<text x="225" y="97.5" text-anchor="middle" font-size="10" fill="#555">React Native · iOS &amp; Android · 50+ staff</text>
+<rect x="362" y="72" width="88" height="28" rx="4" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.2"/>
+<text x="406" y="90" text-anchor="middle" font-size="9" fill="#333">Attendance</text>
+<rect x="454" y="72" width="88" height="28" rx="4" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.2"/>
+<text x="498" y="90" text-anchor="middle" font-size="9" fill="#333">Leave Mgmt</text>
+<rect x="546" y="72" width="88" height="28" rx="4" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.2"/>
+<text x="590" y="90" text-anchor="middle" font-size="9" fill="#333">Payroll</text>
+<rect x="638" y="72" width="88" height="28" rx="4" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.2"/>
+<text x="682" y="90" text-anchor="middle" font-size="9" fill="#333">Push Notif.</text>
+<rect x="362" y="104" width="88" height="28" rx="4" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.2"/>
+<text x="406" y="122" text-anchor="middle" font-size="9" fill="#333">Clock-in</text>
+<rect x="454" y="104" width="88" height="28" rx="4" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.2"/>
+<text x="498" y="122" text-anchor="middle" font-size="9" fill="#333">Approvals</text>
+<rect x="546" y="104" width="88" height="28" rx="4" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.2"/>
+<text x="590" y="122" text-anchor="middle" font-size="9" fill="#333">Payslips</text>
+<rect x="638" y="104" width="88" height="28" rx="4" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.2"/>
+<text x="682" y="122" text-anchor="middle" font-size="9" fill="#333">Alerts</text>
+<rect x="748" y="55" width="150" height="65" rx="6" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+<text x="823" y="82.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Biometric Auth</text>
+<text x="823" y="97.5" text-anchor="middle" font-size="10" fill="#555">Face ID · Fingerprint</text>
+<rect x="275" y="215" width="280" height="55" rx="6" fill="#fff2cc" stroke="#d6b656" stroke-width="1.5"/>
+<text x="415" y="237.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">REST API</text>
+<text x="415" y="252.5" text-anchor="middle" font-size="10" fill="#555">Auth · Employee management · Leave workflows</text>
+<rect x="165" y="371" width="155" height="47" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+<ellipse cx="242.5" cy="371" rx="76.5" ry="9" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+<ellipse cx="242.5" cy="418" rx="76.5" ry="9" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+<text x="242.5" y="389.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">MongoDB</text>
+<text x="242.5" y="404.5" text-anchor="middle" font-size="10" fill="#555">Employees · Attendance · Payroll</text>
+<rect x="360" y="362" width="130" height="65" rx="6" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+<text x="425" y="389.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">FCM</text>
+<text x="425" y="404.5" text-anchor="middle" font-size="10" fill="#555">Push notifications</text>
+<rect x="530" y="362" width="140" height="65" rx="6" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+<text x="600" y="389.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Biometric SDK</text>
+<text x="600" y="404.5" text-anchor="middle" font-size="10" fill="#555">Native auth module</text>
+<line x1="225" y1="120" x2="415" y2="215" stroke="#6c8ebf" stroke-width="1.5" marker-end="url(#ah-b)"/>
+<line x1="548" y1="120" x2="415" y2="215" stroke="#6c8ebf" stroke-width="1.5" marker-end="url(#ah-b)"/>
+<line x1="823" y1="120" x2="415" y2="215" stroke="#6c8ebf" stroke-width="1.5" marker-end="url(#ah-b)"/>
+<path d="M415,270 L415,316 L242,316 L242,362" fill="none" stroke="#82b366" stroke-width="1.5" marker-end="url(#ah-gr)"/>
+<path d="M415,270 L415,316 L425,316 L425,362" fill="none" stroke="#82b366" stroke-width="1.5" marker-end="url(#ah-gr)"/>
+<path d="M415,270 L415,316 L600,316 L600,362" fill="none" stroke="#82b366" stroke-width="1.5" marker-end="url(#ah-gr)"/>
+<ellipse cx="100" cy="585.5" rx="60" ry="27.5" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+<text x="100" y="580.5" text-anchor="middle" font-size="10" fill="#333">Employee opens</text>
+<text x="100" y="595.5" text-anchor="middle" font-size="10" fill="#333">HRMS app</text>
+<rect x="200" y="558" width="120" height="55" rx="6" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+<text x="260" y="580.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Biometric</text>
+<text x="260" y="595.5" text-anchor="middle" font-size="10" fill="#555">auth</text>
+<rect x="360" y="558" width="135" height="55" rx="6" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+<text x="427.5" y="580.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">View dashboard</text>
+<text x="427.5" y="595.5" text-anchor="middle" font-size="10" fill="#555">attendance · leave</text>
+<rect x="545" y="558" width="120" height="55" rx="6" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+<text x="605" y="580.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Apply for</text>
+<text x="605" y="595.5" text-anchor="middle" font-size="10" fill="#555">leave</text>
+<rect x="715" y="558" width="135" height="55" rx="6" fill="#fff2cc" stroke="#d6b656" stroke-width="1.5"/>
+<text x="782.5" y="580.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Manager notified</text>
+<text x="782.5" y="595.5" text-anchor="middle" font-size="10" fill="#555">via FCM push</text>
+<polygon points="963,548 1018,585.5 963,623 908,585.5" fill="#fff2cc" stroke="#d6b656" stroke-width="1.5"/>
+<text x="963" y="580.5" text-anchor="middle" font-size="10" fill="#333">Leave</text>
+<text x="963" y="595.5" text-anchor="middle" font-size="10" fill="#333">approved?</text>
+<rect x="902" y="668" width="125" height="50" rx="6" fill="#f8cecc" stroke="#b85450" stroke-width="1.5"/>
+<text x="964.5" y="688" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Denied push</text>
+<text x="964.5" y="703" text-anchor="middle" font-size="10" fill="#555">notification</text>
+<rect x="1078" y="558" width="135" height="55" rx="6" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+<text x="1145.5" y="580.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Leave recorded</text>
+<text x="1145.5" y="595.5" text-anchor="middle" font-size="10" fill="#555">balance updated</text>
+<rect x="1263" y="558" width="130" height="55" rx="6" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+<text x="1328" y="580.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Employee views</text>
+<text x="1328" y="595.5" text-anchor="middle" font-size="10" fill="#555">monthly payslip</text>
+<ellipse cx="1518" cy="585.5" rx="65" ry="27.5" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+<text x="1518" y="580.5" text-anchor="middle" font-size="10" fill="#333">Records updated</text>
+<text x="1518" y="595.5" text-anchor="middle" font-size="10" fill="#333">✓ 50+ employees</text>
+<line x1="160" y1="585.5" x2="200" y2="585.5" stroke="#666666" stroke-width="1.5" marker-end="url(#ah-g)"/>
+<line x1="320" y1="585.5" x2="360" y2="585.5" stroke="#666666" stroke-width="1.5" marker-end="url(#ah-g)"/>
+<line x1="495" y1="585.5" x2="545" y2="585.5" stroke="#666666" stroke-width="1.5" marker-end="url(#ah-g)"/>
+<line x1="665" y1="585.5" x2="715" y2="585.5" stroke="#666666" stroke-width="1.5" marker-end="url(#ah-g)"/>
+<line x1="850" y1="585.5" x2="908" y2="585.5" stroke="#666666" stroke-width="1.5" marker-end="url(#ah-g)"/>
+<line x1="963" y1="623" x2="963" y2="668" stroke="#b85450" stroke-width="1.5" marker-end="url(#ah-r)"/>
+<text x="968" y="649.5" font-size="9" fill="#b85450">No</text>
+<line x1="1018" y1="585.5" x2="1078" y2="585.5" stroke="#82b366" stroke-width="1.5" marker-end="url(#ah-gr)"/>
+<text x="1048" y="580.5" text-anchor="middle" font-size="9" fill="#82b366">Yes</text>
+<line x1="1213" y1="585.5" x2="1263" y2="585.5" stroke="#666666" stroke-width="1.5" marker-end="url(#ah-g)"/>
+<line x1="1393" y1="585.5" x2="1453" y2="585.5" stroke="#82b366" stroke-width="1.5" marker-end="url(#ah-gr)"/>
+</svg>

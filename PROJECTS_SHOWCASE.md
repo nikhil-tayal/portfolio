@@ -481,5 +481,5 @@ Repos referenced (for my own bookkeeping):
 | `anchor-buyer-hub` | ❌ | optional |
 | `hrms-mobile-app` | ✅ (stub) | flesh out |
 
-### Next step — feeding this into a draw.io generator
-Each project's **Components + Connections** block can be passed to an LLM with the style rules in `helitaxii-architecture-prompt.md` to produce `public/showcases/<slug>/workflow.svg`. Keep one `.drawio` per slug so they render individually on the detail page; don't try to stuff multiple projects into one diagram.
+### Next step — workflow SVG generation
+Each project's **Components + Connections** block is rendered as an SVG at `public/showcases/<slug>/workflow.svg` by `scripts/generate-workflow-svgs.js`. Run `node scripts/generate-workflow-svgs.js` to regenerate after editing the script.

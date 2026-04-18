@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1654 1169" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif">
+<defs>
+  <marker id="ah-g"  viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#555"/></marker>
+  <marker id="ah-p"  viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#7C3AED"/></marker>
+  <marker id="ah-gr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#16A34A"/></marker>
+  <marker id="ah-r"  viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#DC2626"/></marker>
+</defs>
+<rect width="1654" height="1169" fill="#FAFAFA"/>
+<line x1="40" y1="488" x2="1614" y2="488" stroke="#E5E7EB" stroke-width="1" stroke-dasharray="6 4"/>
+<text x="40" y="34" font-size="13" font-weight="bold" fill="#111">SYSTEM ARCHITECTURE</text>
+<text x="40" y="516" font-size="13" font-weight="bold" fill="#111">USER JOURNEY — ENGINEER TECH LOG CREATION</text>
+
+<!-- Role labels -->
+<text x="40" y="60" font-size="9" font-style="italic" fill="#9CA3AF">Roles</text>
+<text x="40" y="160" font-size="9" font-style="italic" fill="#9CA3AF">Web App (winglet.app)</text>
+<text x="40" y="258" font-size="9" font-style="italic" fill="#9CA3AF">API Layer</text>
+<text x="40" y="380" font-size="9" font-style="italic" fill="#9CA3AF">Services &amp; Data</text>
+
+<!-- Roles -->
+<rect x="130" y="50" width="155" height="58" rx="6" fill="#EDE9FE" stroke="#7C3AED" stroke-width="1.5"/>
+<text x="207" y="74" text-anchor="middle" font-size="10" font-weight="bold" fill="#4C1D95">Pilot / Engineer</text>
+<text x="207" y="89" text-anchor="middle" font-size="10" fill="#6D28D9">Creates tech logs</text>
+
+<rect x="315" y="50" width="155" height="58" rx="6" fill="#EDE9FE" stroke="#7C3AED" stroke-width="1.5"/>
+<text x="392" y="74" text-anchor="middle" font-size="10" font-weight="bold" fill="#4C1D95">CAMO Manager</text>
+<text x="392" y="89" text-anchor="middle" font-size="10" fill="#6D28D9">Reviews &amp; signs off</text>
+
+<rect x="500" y="50" width="155" height="58" rx="6" fill="#EDE9FE" stroke="#7C3AED" stroke-width="1.5"/>
+<text x="577" y="74" text-anchor="middle" font-size="10" font-weight="bold" fill="#4C1D95">Admin</text>
+<text x="577" y="89" text-anchor="middle" font-size="10" fill="#6D28D9">Fleet &amp; model setup</text>
+
+<!-- Web App -->
+<rect x="220" y="148" width="340" height="68" rx="6" fill="#EDE9FE" stroke="#7C3AED" stroke-width="1.5"/>
+<text x="390" y="174" text-anchor="middle" font-size="10" font-weight="bold" fill="#4C1D95">CAMO Winglet (React Router v7 SSR)</text>
+<text x="390" y="190" text-anchor="middle" font-size="10" fill="#6D28D9">Aircraft · Components · Tech Logs · Inspections · Models · Parts</text>
+
+<!-- API Layer -->
+<rect x="220" y="248" width="340" height="60" rx="6" fill="#FEF9C3" stroke="#CA8A04" stroke-width="1.5"/>
+<text x="390" y="273" text-anchor="middle" font-size="10" font-weight="bold" fill="#713F12">React Router Actions / Loaders</text>
+<text x="390" y="289" text-anchor="middle" font-size="10" fill="#854D0E">Server-side data mutations · JWT session · Role guards</text>
+
+<!-- Data stores -->
+<rect x="120" y="368" width="140" height="56" fill="#DCFCE7" stroke="#16A34A" stroke-width="1.5"/>
+<ellipse cx="190" cy="368" rx="70" ry="10" fill="#DCFCE7" stroke="#16A34A" stroke-width="1.5"/>
+<ellipse cx="190" cy="424" rx="70" ry="10" fill="#DCFCE7" stroke="#16A34A" stroke-width="1.5"/>
+<text x="190" y="390" text-anchor="middle" font-size="10" font-weight="bold" fill="#14532D">MongoDB</text>
+<text x="190" y="407" text-anchor="middle" font-size="10" fill="#166534">Aircraft · Logs · Components</text>
+
+<rect x="290" y="360" width="145" height="72" rx="6" fill="#DCFCE7" stroke="#16A34A" stroke-width="1.5"/>
+<text x="362" y="390" text-anchor="middle" font-size="10" font-weight="bold" fill="#14532D">EC2 + PM2</text>
+<text x="362" y="406" text-anchor="middle" font-size="10" fill="#166534">ap-south-1</text>
+<text x="362" y="422" text-anchor="middle" font-size="10" fill="#166534">rsync deploy</text>
+
+<rect x="455" y="360" width="145" height="72" rx="6" fill="#DCFCE7" stroke="#16A34A" stroke-width="1.5"/>
+<text x="527" y="390" text-anchor="middle" font-size="10" font-weight="bold" fill="#14532D">CSV Bulk Import</text>
+<text x="527" y="406" text-anchor="middle" font-size="10" fill="#166534">multer · exceljs</text>
+<text x="527" y="422" text-anchor="middle" font-size="10" fill="#166534">Historical migration</text>
+
+<rect x="620" y="360" width="155" height="72" rx="6" fill="#FEE2E2" stroke="#DC2626" stroke-width="1.5"/>
+<text x="697" y="390" text-anchor="middle" font-size="10" font-weight="bold" fill="#7F1D1D">DGCA Compliance</text>
+<text x="697" y="406" text-anchor="middle" font-size="10" fill="#991B1B">Audit-ready logbook</text>
+<text x="697" y="422" text-anchor="middle" font-size="10" fill="#991B1B">Immutable signed entries</text>
+
+<!-- Arrows: Roles → Web App -->
+<line x1="207" y1="108" x2="340" y2="148" stroke="#7C3AED" stroke-width="1.5" marker-end="url(#ah-p)"/>
+<line x1="392" y1="108" x2="390" y2="148" stroke="#7C3AED" stroke-width="1.5" marker-end="url(#ah-p)"/>
+<line x1="577" y1="108" x2="450" y2="148" stroke="#7C3AED" stroke-width="1.5" marker-end="url(#ah-p)"/>
+
+<!-- Web App → API -->
+<line x1="390" y1="216" x2="390" y2="248" stroke="#7C3AED" stroke-width="1.5" marker-end="url(#ah-p)"/>
+
+<!-- API → Data stores -->
+<path d="M390,308 L390,338 L190,338 L190,358" fill="none" stroke="#16A34A" stroke-width="1.5" marker-end="url(#ah-gr)"/>
+<path d="M390,308 L390,338 L362,338 L362,360" fill="none" stroke="#16A34A" stroke-width="1.5" marker-end="url(#ah-gr)"/>
+<path d="M390,308 L390,338 L527,338 L527,360" fill="none" stroke="#16A34A" stroke-width="1.5" marker-end="url(#ah-gr)"/>
+<path d="M390,308 L390,338 L697,338 L697,360" fill="none" stroke="#DC2626" stroke-width="1.5" stroke-dasharray="4 2" marker-end="url(#ah-r)"/>
+
+<!-- User Journey -->
+<ellipse cx="100" cy="600" rx="55" ry="28" fill="#DCFCE7" stroke="#16A34A" stroke-width="1.5"/>
+<text x="100" y="595" text-anchor="middle" font-size="10" fill="#14532D">Engineer</text>
+<text x="100" y="610" text-anchor="middle" font-size="10" fill="#14532D">logs in</text>
+
+<rect x="193" y="572" width="138" height="56" rx="6" fill="#EDE9FE" stroke="#7C3AED" stroke-width="1.5"/>
+<text x="262" y="597" text-anchor="middle" font-size="10" font-weight="bold" fill="#4C1D95">Select aircraft</text>
+<text x="262" y="613" text-anchor="middle" font-size="10" fill="#6D28D9">Fleet list</text>
+
+<rect x="369" y="572" width="138" height="56" rx="6" fill="#EDE9FE" stroke="#7C3AED" stroke-width="1.5"/>
+<text x="438" y="597" text-anchor="middle" font-size="10" font-weight="bold" fill="#4C1D95">Create Tech Log</text>
+<text x="438" y="613" text-anchor="middle" font-size="10" fill="#6D28D9">DGCA form fields</text>
+
+<rect x="545" y="572" width="148" height="56" rx="6" fill="#EDE9FE" stroke="#7C3AED" stroke-width="1.5"/>
+<text x="619" y="590" text-anchor="middle" font-size="10" font-weight="bold" fill="#4C1D95">Airframe hrs</text>
+<text x="619" y="606" text-anchor="middle" font-size="10" fill="#6D28D9">Landings · Sector</text>
+<text x="619" y="621" text-anchor="middle" font-size="10" fill="#6D28D9">details · Fuel · Oil</text>
+
+<polygon points="790,562 848,600 790,638 732,600" fill="#FEF9C3" stroke="#CA8A04" stroke-width="1.5"/>
+<text x="790" y="595" text-anchor="middle" font-size="10" fill="#713F12">All fields</text>
+<text x="790" y="611" text-anchor="middle" font-size="10" fill="#713F12">complete?</text>
+
+<rect x="729" y="685" width="122" height="50" rx="6" fill="#FEE2E2" stroke="#DC2626" stroke-width="1.5"/>
+<text x="790" y="706" text-anchor="middle" font-size="10" font-weight="bold" fill="#7F1D1D">Validation</text>
+<text x="790" y="721" text-anchor="middle" font-size="10" fill="#991B1B">errors shown</text>
+
+<rect x="896" y="572" width="138" height="56" rx="6" fill="#FEF9C3" stroke="#CA8A04" stroke-width="1.5"/>
+<text x="965" y="597" text-anchor="middle" font-size="10" font-weight="bold" fill="#713F12">Submit for</text>
+<text x="965" y="613" text-anchor="middle" font-size="10" fill="#854D0E">Manager review</text>
+
+<rect x="1082" y="572" width="138" height="56" rx="6" fill="#EDE9FE" stroke="#7C3AED" stroke-width="1.5"/>
+<text x="1151" y="597" text-anchor="middle" font-size="10" font-weight="bold" fill="#4C1D95">Manager</text>
+<text x="1151" y="613" text-anchor="middle" font-size="10" fill="#6D28D9">signs off</text>
+
+<polygon points="1320,562 1378,600 1320,638 1262,600" fill="#FEF9C3" stroke="#CA8A04" stroke-width="1.5"/>
+<text x="1320" y="595" text-anchor="middle" font-size="10" fill="#713F12">Approved?</text>
+
+<rect x="1259" y="685" width="122" height="50" rx="6" fill="#FEE2E2" stroke="#DC2626" stroke-width="1.5"/>
+<text x="1320" y="706" text-anchor="middle" font-size="10" font-weight="bold" fill="#7F1D1D">Revision</text>
+<text x="1320" y="721" text-anchor="middle" font-size="10" fill="#991B1B">requested</text>
+
+<rect x="1432" y="572" width="142" height="56" rx="6" fill="#DCFCE7" stroke="#16A34A" stroke-width="1.5"/>
+<text x="1503" y="597" text-anchor="middle" font-size="10" font-weight="bold" fill="#14532D">Entry locked</text>
+<text x="1503" y="613" text-anchor="middle" font-size="10" fill="#166534">immutable for DGCA</text>
+
+<ellipse cx="1503" cy="708" rx="70" ry="28" fill="#DCFCE7" stroke="#16A34A" stroke-width="1.5"/>
+<text x="1503" y="703" text-anchor="middle" font-size="10" fill="#14532D">DGCA record</text>
+<text x="1503" y="719" text-anchor="middle" font-size="10" fill="#14532D">stored ✓</text>
+
+<!-- Journey arrows -->
+<line x1="155" y1="600" x2="193" y2="600" stroke="#555" stroke-width="1.5" marker-end="url(#ah-g)"/>
+<line x1="331" y1="600" x2="369" y2="600" stroke="#555" stroke-width="1.5" marker-end="url(#ah-g)"/>
+<line x1="507" y1="600" x2="545" y2="600" stroke="#555" stroke-width="1.5" marker-end="url(#ah-g)"/>
+<line x1="693" y1="600" x2="732" y2="600" stroke="#555" stroke-width="1.5" marker-end="url(#ah-g)"/>
+<line x1="790" y1="638" x2="790" y2="685" stroke="#DC2626" stroke-width="1.5" marker-end="url(#ah-r)"/>
+<text x="795" y="666" font-size="9" fill="#DC2626">No</text>
+<line x1="848" y1="600" x2="896" y2="600" stroke="#16A34A" stroke-width="1.5" marker-end="url(#ah-gr)"/>
+<text x="872" y="595" text-anchor="middle" font-size="9" fill="#16A34A">Yes</text>
+<line x1="1034" y1="600" x2="1082" y2="600" stroke="#555" stroke-width="1.5" marker-end="url(#ah-g)"/>
+<line x1="1220" y1="600" x2="1262" y2="600" stroke="#555" stroke-width="1.5" marker-end="url(#ah-g)"/>
+<line x1="1320" y1="638" x2="1320" y2="685" stroke="#DC2626" stroke-width="1.5" marker-end="url(#ah-r)"/>
+<text x="1325" y="666" font-size="9" fill="#DC2626">No</text>
+<line x1="1378" y1="600" x2="1432" y2="600" stroke="#16A34A" stroke-width="1.5" marker-end="url(#ah-gr)"/>
+<text x="1405" y="595" text-anchor="middle" font-size="9" fill="#16A34A">Yes</text>
+<line x1="1503" y1="628" x2="1503" y2="680" stroke="#16A34A" stroke-width="1.5" marker-end="url(#ah-gr)"/>
+<path d="M790,735 L790,758 L619,758 L619,628" fill="none" stroke="#DC2626" stroke-width="1.5" stroke-dasharray="4 2" marker-end="url(#ah-r)"/>
+<text x="705" y="770" text-anchor="middle" font-size="9" fill="#DC2626">fix &amp; resubmit</text>
+</svg>

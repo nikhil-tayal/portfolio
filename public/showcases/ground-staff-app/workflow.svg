@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1654 1169" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif">
+<defs>
+  <marker id="ah-g"  viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#666666"/></marker>
+  <marker id="ah-b"  viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#6c8ebf"/></marker>
+  <marker id="ah-gr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#82b366"/></marker>
+  <marker id="ah-r"  viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#b85450"/></marker>
+</defs>
+<rect width="1654" height="1169" fill="white"/>
+<line x1="40" y1="488" x2="1614" y2="488" stroke="#ccc" stroke-width="1" stroke-dasharray="6 4"/>
+<text x="40" y="34" font-size="13" font-weight="bold" fill="#333">SYSTEM ARCHITECTURE</text>
+<text x="40" y="516" font-size="13" font-weight="bold" fill="#333">USER JOURNEY — GROUND STAFF QR CHECK-IN</text>
+<text x="40" y="65" font-size="9" font-style="italic" fill="#aaa">Client</text>
+<text x="40" y="222" font-size="9" font-style="italic" fill="#aaa">API Layer</text>
+<text x="40" y="372" font-size="9" font-style="italic" fill="#aaa">Services</text>
+<rect x="130" y="55" width="190" height="65" rx="6" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+<text x="225" y="82.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Ground Staff App</text>
+<text x="225" y="97.5" text-anchor="middle" font-size="10" fill="#555">React Native · 15 staff · 5 helipads</text>
+<rect x="360" y="55" width="160" height="65" rx="6" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+<text x="440" y="82.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">QR Scanner</text>
+<text x="440" y="97.5" text-anchor="middle" font-size="10" fill="#555">Camera · Decode booking ID</text>
+<rect x="560" y="55" width="170" height="65" rx="6" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+<text x="645" y="82.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Push Notifications</text>
+<text x="645" y="97.5" text-anchor="middle" font-size="10" fill="#555">FCM · New bookings &amp; alerts</text>
+<rect x="315" y="214" width="250" height="55" rx="6" fill="#fff2cc" stroke="#d6b656" stroke-width="1.5"/>
+<text x="440" y="236.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">NestJS API</text>
+<text x="440" y="251.5" text-anchor="middle" font-size="10" fill="#555">REST · JWT Mobile Auth · CRS Integration</text>
+<rect x="195" y="371" width="130" height="47" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+<ellipse cx="260" cy="371" rx="64" ry="9" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+<ellipse cx="260" cy="418" rx="64" ry="9" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+<text x="260" y="389.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">MongoDB</text>
+<text x="260" y="404.5" text-anchor="middle" font-size="10" fill="#555">Bookings · Check-ins</text>
+<rect x="365" y="362" width="140" height="65" rx="6" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+<text x="435" y="389.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">CRS (Helitaxii)</text>
+<text x="435" y="404.5" text-anchor="middle" font-size="10" fill="#555">Live inventory sync</text>
+<rect x="545" y="362" width="120" height="65" rx="6" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+<text x="605" y="389.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">FCM</text>
+<text x="605" y="404.5" text-anchor="middle" font-size="10" fill="#555">Push delivery</text>
+<line x1="225" y1="120" x2="440" y2="214" stroke="#6c8ebf" stroke-width="1.5" marker-end="url(#ah-b)"/>
+<line x1="440" y1="120" x2="440" y2="214" stroke="#6c8ebf" stroke-width="1.5" marker-end="url(#ah-b)"/>
+<line x1="645" y1="120" x2="440" y2="214" stroke="#6c8ebf" stroke-width="1.5" marker-end="url(#ah-b)"/>
+<path d="M440,269 L440,316 L260,316 L260,362" fill="none" stroke="#82b366" stroke-width="1.5" marker-end="url(#ah-gr)"/>
+<path d="M440,269 L440,316 L435,316 L435,362" fill="none" stroke="#82b366" stroke-width="1.5" marker-end="url(#ah-gr)"/>
+<path d="M440,269 L440,316 L605,316 L605,362" fill="none" stroke="#82b366" stroke-width="1.5" marker-end="url(#ah-gr)"/>
+<ellipse cx="100" cy="585.5" rx="60" ry="27.5" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+<text x="100" y="580.5" text-anchor="middle" font-size="10" fill="#333">Staff opens</text>
+<text x="100" y="595.5" text-anchor="middle" font-size="10" fill="#333">app (PIN/bio)</text>
+<rect x="200" y="558" width="130" height="55" rx="6" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+<text x="265" y="580.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">View pending</text>
+<text x="265" y="595.5" text-anchor="middle" font-size="10" fill="#555">check-in list</text>
+<rect x="370" y="558" width="130" height="55" rx="6" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+<text x="435" y="580.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Tap Scan QR</text>
+<text x="435" y="595.5" text-anchor="middle" font-size="10" fill="#555">camera opens</text>
+<rect x="540" y="558" width="130" height="55" rx="6" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+<text x="605" y="580.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Scan passenger</text>
+<text x="605" y="595.5" text-anchor="middle" font-size="10" fill="#555">QR code</text>
+<polygon points="775,548 830,585.5 775,623 720,585.5" fill="#fff2cc" stroke="#d6b656" stroke-width="1.5"/>
+<text x="775" y="580.5" text-anchor="middle" font-size="10" fill="#333">Valid</text>
+<text x="775" y="595.5" text-anchor="middle" font-size="10" fill="#333">booking?</text>
+<rect x="712" y="668" width="130" height="50" rx="6" fill="#f8cecc" stroke="#b85450" stroke-width="1.5"/>
+<text x="777" y="688" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Show error</text>
+<text x="777" y="703" text-anchor="middle" font-size="10" fill="#555">not found / checked</text>
+<rect x="885" y="558" width="130" height="55" rx="6" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+<text x="950" y="580.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Show passenger</text>
+<text x="950" y="595.5" text-anchor="middle" font-size="10" fill="#555">&amp; flight details</text>
+<rect x="1060" y="558" width="130" height="55" rx="6" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+<text x="1125" y="580.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Confirm</text>
+<text x="1125" y="595.5" text-anchor="middle" font-size="10" fill="#555">check-in</text>
+<rect x="1240" y="558" width="145" height="55" rx="6" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+<text x="1312.5" y="580.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">CRS booking</text>
+<text x="1312.5" y="595.5" text-anchor="middle" font-size="10" fill="#555">updated ✓</text>
+<ellipse cx="1500" cy="585.5" rx="60" ry="27.5" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+<text x="1500" y="580.5" text-anchor="middle" font-size="10" fill="#333">All aboard</text>
+<text x="1500" y="595.5" text-anchor="middle" font-size="10" fill="#333">confirmed ✓</text>
+<line x1="160" y1="585.5" x2="200" y2="585.5" stroke="#666666" stroke-width="1.5" marker-end="url(#ah-g)"/>
+<line x1="330" y1="585.5" x2="370" y2="585.5" stroke="#666666" stroke-width="1.5" marker-end="url(#ah-g)"/>
+<line x1="500" y1="585.5" x2="540" y2="585.5" stroke="#666666" stroke-width="1.5" marker-end="url(#ah-g)"/>
+<line x1="670" y1="585.5" x2="720" y2="585.5" stroke="#666666" stroke-width="1.5" marker-end="url(#ah-g)"/>
+<line x1="775" y1="623" x2="775" y2="668" stroke="#b85450" stroke-width="1.5" marker-end="url(#ah-r)"/>
+<text x="780" y="649.5" font-size="9" fill="#b85450">No</text>
+<line x1="830" y1="585.5" x2="885" y2="585.5" stroke="#82b366" stroke-width="1.5" marker-end="url(#ah-gr)"/>
+<text x="857.5" y="580.5" text-anchor="middle" font-size="9" fill="#82b366">Yes</text>
+<line x1="1015" y1="585.5" x2="1060" y2="585.5" stroke="#666666" stroke-width="1.5" marker-end="url(#ah-g)"/>
+<line x1="1190" y1="585.5" x2="1240" y2="585.5" stroke="#666666" stroke-width="1.5" marker-end="url(#ah-g)"/>
+<line x1="1385" y1="585.5" x2="1440" y2="585.5" stroke="#82b366" stroke-width="1.5" marker-end="url(#ah-gr)"/>
+<path d="M777,718 L777,742 L435,742 L435,613" fill="none" stroke="#b85450" stroke-width="1.5" stroke-dasharray="4 2" marker-end="url(#ah-r)"/>
+<text x="606" y="754" text-anchor="middle" font-size="9" fill="#b85450">scan next</text>
+</svg>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1654 1169" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif">
+<defs>
+  <marker id="ah-g"  viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#666666"/></marker>
+  <marker id="ah-b"  viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#6c8ebf"/></marker>
+  <marker id="ah-gr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#82b366"/></marker>
+  <marker id="ah-r"  viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#b85450"/></marker>
+</defs>
+<rect width="1654" height="1169" fill="white"/>
+<line x1="40" y1="488" x2="1614" y2="488" stroke="#ccc" stroke-width="1" stroke-dasharray="6 4"/>
+<text x="40" y="34" font-size="13" font-weight="bold" fill="#333">SYSTEM ARCHITECTURE</text>
+<text x="40" y="516" font-size="13" font-weight="bold" fill="#333">SYSTEM FLOW — EVENT TO DELIVERY</text>
+<text x="40" y="55" font-size="9" font-style="italic" fill="#aaa">Producer Services</text>
+<text x="40" y="155" font-size="9" font-style="italic" fill="#aaa">Queue</text>
+<text x="40" y="255" font-size="9" font-style="italic" fill="#aaa">Microservice</text>
+<text x="40" y="370" font-size="9" font-style="italic" fill="#aaa">Delivery Channels</text>
+<rect x="130" y="48" width="145" height="55" rx="6" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+<text x="202.5" y="70.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">User Service</text>
+<text x="202.5" y="85.5" text-anchor="middle" font-size="10" fill="#555">Reg · Auth events</text>
+<rect x="315" y="48" width="145" height="55" rx="6" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+<text x="387.5" y="70.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Course Service</text>
+<text x="387.5" y="85.5" text-anchor="middle" font-size="10" fill="#555">Enrol · Progress events</text>
+<rect x="500" y="48" width="145" height="55" rx="6" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+<text x="572.5" y="70.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Payment Service</text>
+<text x="572.5" y="85.5" text-anchor="middle" font-size="10" fill="#555">Success · Failure events</text>
+<rect x="290" y="148" width="200" height="55" rx="6" fill="#fff2cc" stroke="#d6b656" stroke-width="1.5"/>
+<text x="390" y="170.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Redis Queue (Bull)</text>
+<text x="390" y="185.5" text-anchor="middle" font-size="10" fill="#555">Event bus · Priority queues</text>
+<rect x="225" y="248" width="330" height="55" rx="6" fill="#fff2cc" stroke="#d6b656" stroke-width="1.5"/>
+<text x="390" y="270.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">NestJS Notification Microservice</text>
+<text x="390" y="285.5" text-anchor="middle" font-size="10" fill="#555">Consumer · Template resolver · Channel router</text>
+<rect x="165" y="362" width="90" height="55" rx="6" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+<text x="210" y="384.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">FCM</text>
+<text x="210" y="399.5" text-anchor="middle" font-size="10" fill="#555">Push</text>
+<rect x="270" y="362" width="90" height="55" rx="6" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+<text x="315" y="384.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">AWS SES</text>
+<text x="315" y="399.5" text-anchor="middle" font-size="10" fill="#555">Email</text>
+<rect x="375" y="362" width="90" height="55" rx="6" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+<text x="420" y="384.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">SMS</text>
+<text x="420" y="399.5" text-anchor="middle" font-size="10" fill="#555">Twilio</text>
+<rect x="480" y="362" width="90" height="55" rx="6" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+<text x="525" y="384.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">In-App</text>
+<text x="525" y="399.5" text-anchor="middle" font-size="10" fill="#555">WebSocket</text>
+<rect x="620" y="371" width="120" height="47" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+<ellipse cx="680" cy="371" rx="59" ry="9" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+<ellipse cx="680" cy="418" rx="59" ry="9" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+<text x="680" y="389.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">MongoDB</text>
+<text x="680" y="404.5" text-anchor="middle" font-size="10" fill="#555">Delivery logs</text>
+<line x1="202" y1="103" x2="390" y2="148" stroke="#6c8ebf" stroke-width="1.5" marker-end="url(#ah-b)"/>
+<line x1="387" y1="103" x2="390" y2="148" stroke="#6c8ebf" stroke-width="1.5" marker-end="url(#ah-b)"/>
+<line x1="572" y1="103" x2="390" y2="148" stroke="#6c8ebf" stroke-width="1.5" marker-end="url(#ah-b)"/>
+<line x1="390" y1="203" x2="390" y2="248" stroke="undefined" stroke-width="1.5" marker-end="url(#ah-undefined)"/>
+<path d="M390,303 L390,333 L210,333 L210,362" fill="none" stroke="#82b366" stroke-width="1.5" marker-end="url(#ah-gr)"/>
+<path d="M390,303 L390,333 L315,333 L315,362" fill="none" stroke="#82b366" stroke-width="1.5" marker-end="url(#ah-gr)"/>
+<path d="M390,303 L390,333 L420,333 L420,362" fill="none" stroke="#82b366" stroke-width="1.5" marker-end="url(#ah-gr)"/>
+<path d="M390,303 L390,333 L525,333 L525,362" fill="none" stroke="#82b366" stroke-width="1.5" marker-end="url(#ah-gr)"/>
+<path d="M390,303 L390,333 L680,333 L680,362" fill="none" stroke="#82b366" stroke-width="1.5" marker-end="url(#ah-gr)"/>
+<ellipse cx="110" cy="585" rx="70" ry="30" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+<text x="110" y="580" text-anchor="middle" font-size="10" fill="#333">Event triggered</text>
+<text x="110" y="595" text-anchor="middle" font-size="10" fill="#333">e.g. payment_success</text>
+<rect x="220" y="558" width="130" height="55" rx="6" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+<text x="285" y="580.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Producer publishes</text>
+<text x="285" y="595.5" text-anchor="middle" font-size="10" fill="#555">event to queue</text>
+<rect x="390" y="558" width="130" height="55" rx="6" fill="#fff2cc" stroke="#d6b656" stroke-width="1.5"/>
+<text x="455" y="580.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Microservice</text>
+<text x="455" y="595.5" text-anchor="middle" font-size="10" fill="#555">consumes event</text>
+<rect x="560" y="558" width="130" height="55" rx="6" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+<text x="625" y="580.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Resolve template</text>
+<text x="625" y="595.5" text-anchor="middle" font-size="10" fill="#555">&amp; user prefs</text>
+<polygon points="793,548 848,585.5 793,623 738,585.5" fill="#fff2cc" stroke="#d6b656" stroke-width="1.5"/>
+<text x="793" y="580.5" text-anchor="middle" font-size="10" fill="#333">Multiple</text>
+<text x="793" y="595.5" text-anchor="middle" font-size="10" fill="#333">channels?</text>
+<rect x="738" y="668" width="115" height="50" rx="6" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+<text x="795.5" y="688" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Fan out to</text>
+<text x="795.5" y="703" text-anchor="middle" font-size="10" fill="#555">all channels</text>
+<rect x="900" y="558" width="130" height="55" rx="6" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+<text x="965" y="580.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Send via</text>
+<text x="965" y="595.5" text-anchor="middle" font-size="10" fill="#555">channel worker</text>
+<polygon points="1140,548 1195,585.5 1140,623 1085,585.5" fill="#fff2cc" stroke="#d6b656" stroke-width="1.5"/>
+<text x="1140" y="580.5" text-anchor="middle" font-size="10" fill="#333">Delivery</text>
+<text x="1140" y="595.5" text-anchor="middle" font-size="10" fill="#333">success?</text>
+<rect x="1079" y="668" width="125" height="50" rx="6" fill="#f8cecc" stroke="#b85450" stroke-width="1.5"/>
+<text x="1141.5" y="688" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Retry (exp. backoff</text>
+<text x="1141.5" y="703" text-anchor="middle" font-size="10" fill="#555">max 3×)</text>
+<rect x="1250" y="558" width="130" height="55" rx="6" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+<text x="1315" y="580.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Log delivered</text>
+<text x="1315" y="595.5" text-anchor="middle" font-size="10" fill="#555">to MongoDB</text>
+<ellipse cx="1500" cy="585.5" rx="60" ry="27.5" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+<text x="1500" y="580.5" text-anchor="middle" font-size="10" fill="#333">Delivery -30%</text>
+<text x="1500" y="595.5" text-anchor="middle" font-size="10" fill="#333">latency ✓</text>
+<line x1="180" y1="585.5" x2="220" y2="585.5" stroke="#666666" stroke-width="1.5" marker-end="url(#ah-g)"/>
+<line x1="350" y1="585.5" x2="390" y2="585.5" stroke="#666666" stroke-width="1.5" marker-end="url(#ah-g)"/>
+<line x1="520" y1="585.5" x2="560" y2="585.5" stroke="#666666" stroke-width="1.5" marker-end="url(#ah-g)"/>
+<line x1="690" y1="585.5" x2="738" y2="585.5" stroke="#666666" stroke-width="1.5" marker-end="url(#ah-g)"/>
+<line x1="793" y1="623" x2="793" y2="668" stroke="#6c8ebf" stroke-width="1.5" marker-end="url(#ah-b)"/>
+<text x="798" y="649.5" font-size="9" fill="#6c8ebf">Yes</text>
+<line x1="853" y1="585.5" x2="900" y2="585.5" stroke="#666666" stroke-width="1.5" marker-end="url(#ah-g)"/>
+<text x="876.5" y="580.5" text-anchor="middle" font-size="9" fill="#666666">No</text>
+<path d="M853,693 L853,585.5 L900,585.5 L900,585.5" fill="none" stroke="#666666" stroke-width="1.5" marker-end="url(#ah-g)"/>
+<line x1="1030" y1="585.5" x2="1085" y2="585.5" stroke="#666666" stroke-width="1.5" marker-end="url(#ah-g)"/>
+<line x1="1140" y1="623" x2="1140" y2="668" stroke="#b85450" stroke-width="1.5" marker-end="url(#ah-r)"/>
+<text x="1145" y="649.5" font-size="9" fill="#b85450">No</text>
+<line x1="1195" y1="585.5" x2="1250" y2="585.5" stroke="#82b366" stroke-width="1.5" marker-end="url(#ah-gr)"/>
+<text x="1222.5" y="580.5" text-anchor="middle" font-size="9" fill="#82b366">Yes</text>
+<line x1="1380" y1="585.5" x2="1440" y2="585.5" stroke="#82b366" stroke-width="1.5" marker-end="url(#ah-gr)"/>
+<path d="M1141,718 L1141,742 L965,742 L965,613" fill="none" stroke="#b85450" stroke-width="1.5" stroke-dasharray="4 2" marker-end="url(#ah-r)"/>
+<text x="1053" y="754" text-anchor="middle" font-size="9" fill="#b85450">retry</text>
+</svg>

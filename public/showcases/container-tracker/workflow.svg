@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1654 1169" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif">
+<defs>
+  <marker id="ah-g"  viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#666666"/></marker>
+  <marker id="ah-b"  viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#6c8ebf"/></marker>
+  <marker id="ah-gr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#82b366"/></marker>
+  <marker id="ah-r"  viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#b85450"/></marker>
+</defs>
+<rect width="1654" height="1169" fill="white"/>
+<line x1="40" y1="488" x2="1614" y2="488" stroke="#ccc" stroke-width="1" stroke-dasharray="6 4"/>
+<text x="40" y="34" font-size="13" font-weight="bold" fill="#333">SYSTEM ARCHITECTURE</text>
+<text x="40" y="516" font-size="13" font-weight="bold" fill="#333">USER JOURNEY — TRACKING A CONTAINER</text>
+<text x="40" y="65" font-size="9" font-style="italic" fill="#aaa">Client</text>
+<text x="40" y="212" font-size="9" font-style="italic" fill="#aaa">API Layer</text>
+<text x="40" y="295" font-size="9" font-style="italic" fill="#aaa">Shipping Carrier APIs</text>
+<text x="40" y="400" font-size="9" font-style="italic" fill="#aaa">Storage</text>
+<rect x="130" y="55" width="200" height="65" rx="6" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+<text x="230" y="82.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Container Tracker App</text>
+<text x="230" y="97.5" text-anchor="middle" font-size="10" fill="#555">React.js · 10,000+ req/mo</text>
+<rect x="195" y="203" width="170" height="55" rx="6" fill="#fff2cc" stroke="#d6b656" stroke-width="1.5"/>
+<text x="280" y="225.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">REST API</text>
+<text x="280" y="240.5" text-anchor="middle" font-size="10" fill="#555">Container lookup · Auth</text>
+<rect x="400" y="203" width="170" height="55" rx="6" fill="#fff2cc" stroke="#d6b656" stroke-width="1.5"/>
+<text x="485" y="225.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">WebSocket Server</text>
+<text x="485" y="240.5" text-anchor="middle" font-size="10" fill="#555">Real-time status push</text>
+<rect x="165" y="288" width="120" height="55" rx="6" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+<text x="225" y="310.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Carrier 1</text>
+<text x="225" y="325.5" text-anchor="middle" font-size="10" fill="#555">Corridor A</text>
+<rect x="315" y="288" width="120" height="55" rx="6" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+<text x="375" y="310.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Carrier 2</text>
+<text x="375" y="325.5" text-anchor="middle" font-size="10" fill="#555">Corridor B</text>
+<rect x="465" y="288" width="120" height="55" rx="6" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+<text x="525" y="310.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Carrier 3</text>
+<text x="525" y="325.5" text-anchor="middle" font-size="10" fill="#555">Corridor C</text>
+<rect x="285" y="401" width="150" height="47" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+<ellipse cx="360" cy="401" rx="74" ry="9" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+<ellipse cx="360" cy="448" rx="74" ry="9" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+<text x="360" y="419.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">MongoDB</text>
+<text x="360" y="434.5" text-anchor="middle" font-size="10" fill="#555">Tracking cache · History</text>
+<line x1="230" y1="120" x2="280" y2="203" stroke="#6c8ebf" stroke-width="1.5" marker-end="url(#ah-b)"/>
+<line x1="485" y1="230" x2="230" y2="230.5" stroke="undefined" stroke-width="1.5" marker-end="url(#ah-undefined)"/>
+<path d="M280,258 L280,273 L225,273 L225,288" fill="none" stroke="#82b366" stroke-width="1.5" marker-end="url(#ah-gr)"/>
+<path d="M280,258 L280,273 L375,273 L375,288" fill="none" stroke="#82b366" stroke-width="1.5" marker-end="url(#ah-gr)"/>
+<path d="M280,258 L280,273 L525,273 L525,288" fill="none" stroke="#82b366" stroke-width="1.5" marker-end="url(#ah-gr)"/>
+<path d="M280,258 L280,318 L360,318 L360,392" fill="none" stroke="#82b366" stroke-width="1.5" marker-end="url(#ah-gr)"/>
+<ellipse cx="100" cy="585.5" rx="60" ry="27.5" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+<text x="100" y="580.5" text-anchor="middle" font-size="10" fill="#333">User enters</text>
+<text x="100" y="595.5" text-anchor="middle" font-size="10" fill="#333">container ID</text>
+<rect x="200" y="558" width="120" height="55" rx="6" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+<text x="260" y="580.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">API queries</text>
+<text x="260" y="595.5" text-anchor="middle" font-size="10" fill="#555">Carrier 1</text>
+<polygon points="427,548 482,585.5 427,623 372,585.5" fill="#fff2cc" stroke="#d6b656" stroke-width="1.5"/>
+<text x="427" y="580.5" text-anchor="middle" font-size="10" fill="#333">Found on</text>
+<text x="427" y="595.5" text-anchor="middle" font-size="10" fill="#333">carrier?</text>
+<rect x="366" y="668" width="125" height="50" rx="6" fill="#f8cecc" stroke="#b85450" stroke-width="1.5"/>
+<text x="428.5" y="688" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Try Carrier 2</text>
+<text x="428.5" y="703" text-anchor="middle" font-size="10" fill="#555">then Carrier 3</text>
+<rect x="538" y="558" width="130" height="55" rx="6" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+<text x="603" y="580.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Return tracking</text>
+<text x="603" y="595.5" text-anchor="middle" font-size="10" fill="#555">data &amp; route</text>
+<rect x="718" y="558" width="130" height="55" rx="6" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+<text x="783" y="580.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Display timeline</text>
+<text x="783" y="595.5" text-anchor="middle" font-size="10" fill="#555">&amp; location</text>
+<rect x="898" y="558" width="130" height="55" rx="6" fill="#fff2cc" stroke="#d6b656" stroke-width="1.5"/>
+<text x="963" y="580.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Real-time updates</text>
+<text x="963" y="595.5" text-anchor="middle" font-size="10" fill="#555">via WebSocket</text>
+<polygon points="1137,548 1192,585.5 1137,623 1082,585.5" fill="#fff2cc" stroke="#d6b656" stroke-width="1.5"/>
+<text x="1137" y="580.5" text-anchor="middle" font-size="10" fill="#333">Status</text>
+<text x="1137" y="595.5" text-anchor="middle" font-size="10" fill="#333">change?</text>
+<rect x="1076" y="668" width="125" height="50" rx="6" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+<text x="1138.5" y="688" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Push alert</text>
+<text x="1138.5" y="703" text-anchor="middle" font-size="10" fill="#555">to user</text>
+<ellipse cx="1327.5" cy="585.5" rx="72.5" ry="27.5" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+<text x="1327.5" y="580.5" text-anchor="middle" font-size="10" fill="#333">Container delivered</text>
+<text x="1327.5" y="595.5" text-anchor="middle" font-size="10" fill="#333">✓ 10k+ req/mo</text>
+<line x1="160" y1="585.5" x2="200" y2="585.5" stroke="#666666" stroke-width="1.5" marker-end="url(#ah-g)"/>
+<line x1="320" y1="585.5" x2="372" y2="585.5" stroke="#666666" stroke-width="1.5" marker-end="url(#ah-g)"/>
+<line x1="427" y1="623" x2="427" y2="668" stroke="#b85450" stroke-width="1.5" marker-end="url(#ah-r)"/>
+<text x="432" y="649.5" font-size="9" fill="#b85450">No</text>
+<line x1="482" y1="585.5" x2="538" y2="585.5" stroke="#82b366" stroke-width="1.5" marker-end="url(#ah-gr)"/>
+<text x="510" y="580.5" text-anchor="middle" font-size="9" fill="#82b366">Yes</text>
+<line x1="668" y1="585.5" x2="718" y2="585.5" stroke="#666666" stroke-width="1.5" marker-end="url(#ah-g)"/>
+<line x1="848" y1="585.5" x2="898" y2="585.5" stroke="#666666" stroke-width="1.5" marker-end="url(#ah-g)"/>
+<line x1="1028" y1="585.5" x2="1082" y2="585.5" stroke="#666666" stroke-width="1.5" marker-end="url(#ah-g)"/>
+<line x1="1137" y1="623" x2="1137" y2="668" stroke="#82b366" stroke-width="1.5" marker-end="url(#ah-gr)"/>
+<text x="1142" y="649.5" font-size="9" fill="#82b366">Yes</text>
+<line x1="1192" y1="585.5" x2="1255" y2="585.5" stroke="#666666" stroke-width="1.5" marker-end="url(#ah-g)"/>
+<text x="1223.5" y="580.5" text-anchor="middle" font-size="9" fill="#666666">No (polling)</text>
+<path d="M491,718 L491,742 L603,742 L603,613" fill="none" stroke="#b85450" stroke-width="1.5" stroke-dasharray="4 2" marker-end="url(#ah-r)"/>
+<text x="547" y="754" text-anchor="middle" font-size="9" fill="#b85450">found on carrier</text>
+</svg>
