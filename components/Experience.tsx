@@ -35,6 +35,7 @@ export function Experience() {
           {experience.map((job) => (
             <motion.article
               key={job.company}
+              id={`company-${job.company.toLowerCase().replace(/\s+/g, "-")}`}
               variants={fadeChild}
               className="grid grid-cols-12 gap-6 py-10"
             >

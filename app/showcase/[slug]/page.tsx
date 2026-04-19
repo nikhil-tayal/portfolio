@@ -5,6 +5,7 @@ import {
   getShowcaseBySlug,
 } from "@/lib/data";
 import { ShowcaseDetail } from "@/components/ShowcaseDetail";
+import { SITE_URL } from "@/app/layout";
 
 export function generateStaticParams() {
   return getAllShowcases().map(({ item }) => ({ slug: item.slug }));
@@ -17,9 +18,29 @@ export async function generateMetadata(
   const found = getShowcaseBySlug(slug);
   if (!found) return { title: "Showcase not found" };
   const { item, company } = found;
+  const title = `${item.name} — ${company} · Nikhil Tayal`;
+  const url = `${SITE_URL}/showcase/${slug}`;
+  const ogImage = item.screenshot
+    ? { url: item.screenshot, width: 1200, height: 630, alt: item.name }
+    : { url: "/og-image.png", width: 1200, height: 630, alt: item.name };
   return {
-    title: `${item.name} — ${company} · Nikhil Tayal`,
+    title,
     description: item.brief,
+    alternates: { canonical: url },
+    openGraph: {
+      type: "website",
+      url,
+      title,
+      description: item.brief,
+      siteName: "Nikhil Tayal",
+      images: [ogImage],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description: item.brief,
+      images: [ogImage.url],
+    },
   };
 }
 

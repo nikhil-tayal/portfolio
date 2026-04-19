@@ -35,7 +35,8 @@ export type ShowcaseMedia = {
   width?: number;
   height?: number;
   frame?: DeviceFrame;
-  span?: "full";
+  // "full" = spans both columns; "third" = 1/3 of a 3-up row (use 3 consecutive items)
+  span?: "full" | "third";
 };
 
 export type ShowcaseItem = {
@@ -62,6 +63,127 @@ export type Experience = {
 };
 
 export const experience: Experience[] = [
+  {
+    company: "Lookify",
+    role: "Founder & Full-Stack Developer",
+    period: "2024 — Present",
+    location: "Delhi, India · Personal SaaS",
+    subtitle: "AI Virtual Try-On for Shopify — Shopify App & Super-Admin",
+    bullets: [
+      "Built an AI virtual try-on SaaS used by 20+ Shopify merchants, handling 1,000+ monthly sessions with 95%+ uptime.",
+      "Dockerized ComfyUI on RunPod serverless GPUs, processing 500+ images/month through a custom Python handler with queuing and watermarking.",
+      "Shipped a 4-step merchant onboarding flow and a full-featured admin app (product management, daily look limits, theme embed) embedded in Shopify admin.",
+      "Implemented Razorpay subscription billing with HMAC webhook verification for automated plan gating.",
+      "Built a super-admin dashboard to monitor all merchant stores, user activity, and try-on logs across the platform.",
+    ],
+    tech: ["Next.js", "NestJS", "TypeScript", "ComfyUI", "RunPod", "Docker", "MongoDB", "Shopify API", "Razorpay"],
+    showcase: [
+      {
+        slug: "lookify-shopify-app",
+        name: "Lookify — Shopify App",
+        brief: "AI virtual try-on embedded app for Shopify merchants — onboarding, product management, theme extension, and Razorpay billing.",
+        overview:
+          "Lookify's Shopify embedded app is a Next.js 15 app (Pages Router) that lives inside the Shopify admin iframe. Merchants go through a 4-step onboarding: Welcome → Choose Category → Choose Package (Razorpay billing) → Theme Setup. Once live, the Dashboard shows KPI cards (total looks, conversion, top products), analytics charts, and a filterable results table. The Settings page lets merchants toggle products on/off, assign garment types (full/upper/lower body), mark mannequin products, and bulk-edit via filters. A Preact-based theme extension injects a try-on button on storefront product pages and opens a full-screen modal where shoppers upload a photo and get an AI-generated try-on result in seconds — powered by ComfyUI on RunPod serverless GPUs.",
+        screenshot: "/showcases/lookify-shopify-app/shopify-admin.png",
+        screenshots: [
+          {
+            src: "/showcases/lookify-shopify-app/shopify-admin.png",
+            caption: "Merchant dashboard",
+            alt: "Lookify Shopify admin — dashboard with KPI cards (total looks, conversion rate, top products), analytics charts and recent try-on results table",
+            width: 1440,
+            height: 900,
+            frame: "browser",
+          },
+          {
+            src: "/showcases/lookify-shopify-app/shopify-app-embed.png",
+            caption: "Storefront try-on embed",
+            alt: "Lookify theme extension — Try On button embedded on a Shopify product page, opening a full-screen modal for shoppers to upload a photo",
+            width: 1440,
+            height: 900,
+            frame: "browser",
+          },
+          {
+            src: "/showcases/lookify-shopify-app/runpod-model-run.png",
+            caption: "RunPod GPU processing",
+            alt: "Lookify — RunPod serverless GPU job executing the ComfyUI workflow; custom Python handler manages queuing, watermarking and result delivery",
+            width: 1440,
+            height: 800,
+            frame: "browser",
+          },
+          {
+            src: "/showcases/lookify-shopify-app/shopify-chatbot.png",
+            caption: "AI chatbot assistant",
+            alt: "Lookify — in-app AI chatbot helping merchants configure their try-on settings and troubleshoot issues",
+            width: 1440,
+            height: 900,
+            frame: "browser",
+          },
+          // "third" span — these three sit side-by-side in one row (input → input → output); keep them last
+          {
+            src: "/showcases/lookify-shopify-app/input-garment.webp",
+            caption: "Garment input",
+            alt: "Lookify — garment product image used as input for the AI virtual try-on model",
+            width: 800,
+            height: 1000,
+            frame: "none",
+            span: "third",
+          },
+          {
+            src: "/showcases/lookify-shopify-app/input-user.jpg",
+            caption: "User photo input",
+            alt: "Lookify — shopper photo uploaded for virtual try-on; the AI model composites the garment onto the person",
+            width: 800,
+            height: 1000,
+            frame: "none",
+            span: "third",
+          },
+          {
+            src: "/showcases/lookify-shopify-app/output.png",
+            caption: "AI try-on result",
+            alt: "Lookify — AI-generated virtual try-on output showing the shopper wearing the selected garment",
+            width: 800,
+            height: 1000,
+            frame: "none",
+            span: "third",
+          },
+        ],
+      },
+      {
+        slug: "lookify-superadmin",
+        name: "Lookify — Super-Admin",
+        brief: "Internal ops dashboard to monitor all merchant stores, user activity, and try-on logs across the platform.",
+        overview:
+          "The Lookify super-admin is a Next.js 15 (App Router) dashboard with a custom dark-themed design system. It gives the Lookify team full visibility across the entire merchant base: the Dashboard page shows aggregate metrics (total stores, active users, try-on volume, revenue); the Stores page lists every connected Shopify store with engagement metrics and a drill-down detail view; the Users page tracks individual shopper accounts and try-on history; the Try-On Logs and User Logs pages surface per-request AI job data for debugging and quality monitoring. All data is fetched from the vton-backend REST API with JWT auth.",
+        screenshot: "/showcases/lookify-superadmin/dashboard.png",
+        screenshots: [
+          {
+            src: "/showcases/lookify-superadmin/dashboard.png",
+            caption: "Platform overview",
+            alt: "Lookify super-admin dashboard — aggregate metrics: total stores, active users, try-on volume and revenue with top-stores table",
+            width: 1440,
+            height: 900,
+            frame: "browser",
+          },
+          {
+            src: "/showcases/lookify-superadmin/stores.png",
+            caption: "All stores",
+            alt: "Lookify super-admin stores page — list of all connected Shopify merchant stores with engagement metrics, plan type and last-active date",
+            width: 1440,
+            height: 900,
+            frame: "browser",
+          },
+          {
+            src: "/showcases/lookify-superadmin/users.png",
+            caption: "Users",
+            alt: "Lookify super-admin users page — shopper accounts with try-on count, last activity and store association",
+            width: 1440,
+            height: 900,
+            frame: "browser",
+          },
+        ],
+      },
+    ],
+  },
   {
     company: "Thumby Aviation",
     role: "Senior Full-Stack Developer",
@@ -420,7 +542,7 @@ export const experience: Experience[] = [
         brief: "Cross-border collaboration platform for 200+ exporters and importers with 15+ API integrations.",
         overview:
           "Trade360 is Drip Capital's collaboration portal for global trade — a Next.js 12 app connecting exporters, importers and Drip ops through a shared workspace. Auth0 SSO guards access. Exporters upload shipment documents, track containers in real time, and monitor financing status; importers confirm receipts and view network connections. The internal `@dripcapital/dripui` MUI 5 component library (Rollup-bundled, Storybook-documented) kept the UI consistent across 4 internal teams.",
-        screenshot: "/showcases/trade360/landing-page.png",
+        screenshot: "/showcases/trade360/network.png",
         workflow: {
           src: "/showcases/trade360/workflow.svg",
           caption: "Dual portals, REST API and 15+ logistics, banking and compliance integrations",
@@ -428,37 +550,106 @@ export const experience: Experience[] = [
         },
         screenshots: [
           {
-            src: "/showcases/trade360/landing-page.png",
-            caption: "Marketing landing page",
-            alt: "Trade360 public landing page — 'Making growth simpler for global trade businesses' with shipment tracking, digital presence and trade finance features",
-            width: 1440,
-            height: 5520,
-            frame: "browser",
-            span: "full",
-          },
-          {
-            src: "/showcases/trade360/auth-login.png",
+            src: "/showcases/trade360/00-auth-login.png",
             caption: "Auth0 login",
-            alt: "Trade360 login screen — email / phone Auth0 SSO flow with 'Global Trade Simplified' branding",
-            width: 1440,
-            height: 820,
+            alt: "Trade360 login screen — email / phone auth flow with 'Global Trade Simplified' branding",
+            width: 960,
+            height: 620,
             frame: "browser",
           },
           {
             src: "/showcases/trade360/company-profile.png",
             caption: "Company profile",
-            alt: "Trade360 company profile feature — create profile, feature credentials and promote business to global buyers with search engine discoverability",
+            alt: "Trade360 company profile — create and edit company info, locations served, industries, contact details with visibility controls",
+            width: 960,
+            height: 1020,
+            frame: "browser",
+          },
+          {
+            src: "/showcases/trade360/network.png",
+            caption: "Buyer discovery network",
+            alt: "Trade360 network — discover 8 matching businesses with connect / approve actions, connection request states and company profile completion nudge",
+            width: 960,
+            height: 900,
+            frame: "browser",
+          },
+          {
+            src: "/showcases/trade360/connections.png",
+            caption: "Your connections",
+            alt: "Trade360 connections — pending connection request from Euro Commerce GmbH with approve / ignore actions, 2 existing company connections",
+            width: 960,
+            height: 620,
+            frame: "browser",
+          },
+          {
+            src: "/showcases/trade360/personal-profile.png",
+            caption: "Personal profile",
+            alt: "Trade360 personal profile — name, email, phone and communication preferences with notification channel toggles",
+            width: 960,
+            height: 600,
+            frame: "browser",
+          },
+          {
+            src: "/showcases/trade360/admin-settings.png",
+            caption: "Admin settings",
+            alt: "Trade360 admin settings — list of members and roles with invite member action and withdraw invite controls",
             width: 1440,
-            height: 5360,
+            height: 580,
+            frame: "browser",
+          },
+        ],
+      },
+      {
+        slug: "drip-website",
+        name: "Drip Capital — Website",
+        brief: "Marketing site for a global trade finance platform — landing pages serving 2M+ monthly visitors.",
+        overview:
+          "Built and maintained the public-facing marketing site for Drip Capital (dripcapital.com) — a trade finance company providing non-recourse export financing to SME exporters globally. Pages include the main conversion landing page ('Fuel Your Exports with Fast Non-Recourse Financing'), an About page with leadership profiles, a How We Work investor page, a utility HSN Code Finder with SEO-optimised content, and a Blogs hub. The stack is Next.js with SSR/SSG for SEO performance — a 40% organic traffic lift came largely from the Next.js modernisation and structured content strategy.",
+        liveUrl: "https://dripcapital.com",
+        screenshot: "/showcases/drip-website/landing.png",
+        screenshots: [
+          {
+            src: "/showcases/drip-website/landing.png",
+            caption: "Main landing page",
+            alt: "Drip Capital landing page — 'Fuel Your Exports with Fast Non-Recourse Financing', product highlights ($3M finance, competitive pricing, no collateral), 4-step application flow, client testimonials, partner logos and certifications",
+            width: 1440,
+            height: 6200,
             frame: "browser",
             span: "full",
           },
           {
-            src: "/showcases/trade360/container-tracking.png",
-            caption: "Container tracking",
-            alt: "Trade360 container tracking — 'Track and Manage your Shipments in Real-Time' with real-time updates, share status and limitless tracking across 3 shipping corridors",
+            src: "/showcases/drip-website/about-company.png",
+            caption: "About — leadership",
+            alt: "Drip Capital about page — mission 'to make global trade easy and accessible for small businesses', full leadership team grid with bios and world map showing global reach",
             width: 1440,
-            height: 4200,
+            height: 5800,
+            frame: "browser",
+            span: "full",
+          },
+          {
+            src: "/showcases/drip-website/how-we-work.png",
+            caption: "How we work — investor page",
+            alt: "Drip Capital how we work — institutional-grade trade finance investments page: $3B+ facilitated, $350M assets, fixed income / short tenure / low volatility value props, resilient asset class explainer and equity investor logos",
+            width: 1440,
+            height: 5600,
+            frame: "browser",
+            span: "full",
+          },
+          {
+            src: "/showcases/drip-website/hsn-finder.png",
+            caption: "HSN Code Finder tool",
+            alt: "Drip Capital HSN Code Finder — SEO-optimised utility page explaining what HSN codes are, how to find them, structure breakdown and embedded video guide",
+            width: 1440,
+            height: 7000,
+            frame: "browser",
+            span: "full",
+          },
+          {
+            src: "/showcases/drip-website/blogs-page.png",
+            caption: "Blog hub",
+            alt: "Drip Capital blogs — trade finance articles, export guides and market insights with category filters",
+            width: 1440,
+            height: 3200,
             frame: "browser",
             span: "full",
           },
@@ -502,12 +693,41 @@ export const experience: Experience[] = [
       {
         slug: "container-tracker",
         name: "Container Tracker",
-        brief: "Real-time tracking app handling 10,000+ monthly API requests across 3 shipping corridors.",
+        brief: "Real-time tracking backend handling 10,000+ monthly API requests across 3 shipping corridors.",
+        overview:
+          "The container tracking service is the backend engine powering Trade360's shipments module. A Node.js REST API fans out to 3 carrier APIs (MSC, CMA CGM, Hapag-Lloyd) on each tracking request, normalises heterogeneous vessel-event formats into a single schema, and caches results in Redis to absorb the 10,000+ monthly calls without hammering upstream rate limits. A WebSocket layer pushes live status deltas to connected Trade360 clients — no polling. Users can subscribe team members to a shipment and toggle email notifications per container, all stored in MongoDB.",
+        screenshot: "/showcases/container-tracker/tracking-list.png",
         workflow: {
           src: "/showcases/container-tracker/workflow.svg",
-          caption: "REST API querying 3 carrier APIs, WebSocket server for real-time push",
-          alt: "Container Tracker architecture — React app backed by REST API querying 3 shipping carrier APIs with WebSocket server for real-time status updates",
+          caption: "REST API querying 3 carrier APIs, Redis cache and WebSocket server for real-time push",
+          alt: "Container Tracker architecture — Node.js REST API fanning out to MSC, CMA CGM and Hapag-Lloyd carrier APIs, Redis cache and WebSocket server pushing status deltas to the Trade360 React frontend",
         },
+        screenshots: [
+          {
+            src: "/showcases/container-tracker/container-tracking.png",
+            caption: "Home dashboard",
+            alt: "Trade360 home — recent shipments widget with container numbers, destinations and notification toggles; network discovery panel showing matched businesses",
+            width: 960,
+            height: 680,
+            frame: "browser",
+          },
+          {
+            src: "/showcases/container-tracker/tracking-list.png",
+            caption: "Tracked shipments list",
+            alt: "Trade360 shipments — list of tracked containers with tracking number, destination, expected arrival, shipment status, shared-with count and per-container notification toggle",
+            width: 960,
+            height: 500,
+            frame: "browser",
+          },
+          {
+            src: "/showcases/container-tracker/tracking-info.png",
+            caption: "Real-time shipment detail",
+            alt: "Trade360 shipment detail — MSCU7654321 port-by-port timeline: Mumbai Port India → Port Said Egypt → Rotterdam Netherlands with arrival and departure timestamps; shared notification recipients list",
+            width: 960,
+            height: 580,
+            frame: "browser",
+          },
+        ],
       },
     ],
   },
@@ -609,7 +829,7 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    name: "Growify",
+    name: "Lookify",
     tagline: "AI virtual try-on for Shopify",
     period: "2024 — Present",
     description:

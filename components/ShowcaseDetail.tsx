@@ -172,20 +172,36 @@ export function ShowcaseDetail({ showcase, prev, next }: Props) {
                 <SectionHeading label="Screenshots" />
               </Reveal>
 
+              {/*
+                Grid uses 6 virtual columns so all three span values map cleanly:
+                  default → md:col-span-3  (2-up, same as the old grid-cols-2)
+                  "full"  → md:col-span-6  (full width)
+                  "third" → md:col-span-2  (3-up — three consecutive items share one row)
+                Do NOT change this grid or the col-span mapping without also updating
+                every "third"-span screenshot group in data.ts.
+              */}
               <StaggerGroup
                 amount={0.05}
-                className="mt-8 grid grid-cols-1 gap-5 md:grid-cols-2"
+                className="mt-8 grid grid-cols-1 gap-5 md:grid-cols-6"
               >
-                {item.screenshots.map((shot, i) => (
-                  <motion.div key={i} variants={fadeChild} className={shot.span === "full" ? "md:col-span-2" : ""}>
-                    <ScreenshotCard
-                      shot={shot}
-                      index={i}
-                      itemName={item.name}
-                      onOpen={() => openLightbox(screenshotsOffset + i)}
-                    />
-                  </motion.div>
-                ))}
+                {item.screenshots.map((shot, i) => {
+                  const colClass =
+                    shot.span === "full"
+                      ? "md:col-span-6"
+                      : shot.span === "third"
+                        ? "md:col-span-2"
+                        : "md:col-span-3";
+                  return (
+                    <motion.div key={i} variants={fadeChild} className={colClass}>
+                      <ScreenshotCard
+                        shot={shot}
+                        index={i}
+                        itemName={item.name}
+                        onOpen={() => openLightbox(screenshotsOffset + i)}
+                      />
+                    </motion.div>
+                  );
+                })}
               </StaggerGroup>
             </section>
           )}
