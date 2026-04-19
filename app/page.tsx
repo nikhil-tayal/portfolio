@@ -3,7 +3,7 @@ import { ScrollProgress } from "@/components/ScrollProgress";
 import { SkySweep } from "@/components/SkySweep";
 import { Hero } from "@/components/Hero";
 import { About } from "@/components/About";
-import { SelectedWork } from "@/components/SelectedWork";
+import { SelectedWorkD } from "@/components/SelectedWork";
 import { Experience } from "@/components/Experience";
 import { Projects } from "@/components/Projects";
 import { Skills } from "@/components/Skills";
@@ -18,7 +18,7 @@ export default function Home() {
       <Nav />
       <Hero />
       <About />
-      <SelectedWork />
+      <SelectedWorkD />
       <Experience />
       <Projects />
       <Skills />
