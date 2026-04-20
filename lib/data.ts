@@ -82,6 +82,11 @@ export const experience: Experience[] = [
         slug: "lookify-shopify-app",
         name: "Lookify — Shopify App",
         brief: "AI virtual try-on embedded app for Shopify merchants — onboarding, product management, theme extension, and Razorpay billing.",
+        workflow: {
+          src: "/showcases/lookify-shopify-app/workflow.svg",
+          caption: "Shopify app, BFF proxy, NestJS API, and RunPod GPU inference pipeline",
+          alt: "Lookify Shopify App architecture — admin app and Preact storefront extension backed by Next.js BFF proxy and NestJS API, with RunPod ComfyUI GPU inference, Razorpay subscription billing, and DigitalOcean Spaces image storage",
+        },
         overview:
           "Lookify's Shopify embedded app is a Next.js 15 app (Pages Router) that lives inside the Shopify admin iframe. Merchants go through a 4-step onboarding: Welcome → Choose Category → Choose Package (Razorpay billing) → Theme Setup. Once live, the Dashboard shows KPI cards (total looks, conversion, top products), analytics charts, and a filterable results table. The Settings page lets merchants toggle products on/off, assign garment types (full/upper/lower body), mark mannequin products, and bulk-edit via filters. A Preact-based theme extension injects a try-on button on storefront product pages and opens a full-screen modal where shoppers upload a photo and get an AI-generated try-on result in seconds — powered by ComfyUI on RunPod serverless GPUs.",
         screenshot: "/showcases/lookify-shopify-app/shopify-admin.png",
@@ -152,6 +157,11 @@ export const experience: Experience[] = [
         slug: "lookify-superadmin",
         name: "Lookify — Super-Admin",
         brief: "Internal ops dashboard to monitor all merchant stores, user activity, and try-on logs across the platform.",
+        workflow: {
+          src: "/showcases/lookify-superadmin/workflow.svg",
+          caption: "Next.js 16 super-admin app with cookie auth, NestJS REST API, and MongoDB",
+          alt: "Lookify Super-Admin architecture — Next.js 16 App Router with cookie-based auth connecting directly to NestJS REST API for platform-wide monitoring, store credit management, and try-on log inspection across 9 pages",
+        },
         overview:
           "The Lookify super-admin is a Next.js 15 (App Router) dashboard with a custom dark-themed design system. It gives the Lookify team full visibility across the entire merchant base: the Dashboard page shows aggregate metrics (total stores, active users, try-on volume, revenue); the Stores page lists every connected Shopify store with engagement metrics and a drill-down detail view; the Users page tracks individual shopper accounts and try-on history; the Try-On Logs and User Logs pages surface per-request AI job data for debugging and quality monitoring. All data is fetched from the vton-backend REST API with JWT auth.",
         screenshot: "/showcases/lookify-superadmin/dashboard.png",

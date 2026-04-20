@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1654 900" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1654 1000" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif">
 <defs>
   <marker id="ah-g"  viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#666666"/></marker>
   <marker id="ah-b"  viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#6c8ebf"/></marker>
@@ -7,169 +7,200 @@
   <marker id="ah-r"  viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#b85450"/></marker>
   <marker id="ah-y"  viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#d6b656"/></marker>
 </defs>
-<rect width="1654" height="900" fill="white"/>
+<rect width="1654" height="1000" fill="white"/>
 
 <!-- Section dividers -->
-<line x1="40" y1="488" x2="1614" y2="488" stroke="#ccc" stroke-width="1" stroke-dasharray="6 4"/>
-<line x1="40" y1="643" x2="1614" y2="643" stroke="#eeeeee" stroke-width="1" stroke-dasharray="4 4"/>
+<line x1="40" y1="490" x2="1614" y2="490" stroke="#ccc" stroke-width="1" stroke-dasharray="6 4"/>
+<line x1="40" y1="726" x2="1614" y2="726" stroke="#eeeeee" stroke-width="1" stroke-dasharray="4 4"/>
 
-<!-- ===== TOP: SYSTEM ARCHITECTURE ===== -->
-<text x="40" y="34" font-size="13" font-weight="bold" fill="#333">SYSTEM ARCHITECTURE</text>
-<text x="40" y="65" font-size="9" font-style="italic" fill="#aaa">Client Layer</text>
-<text x="40" y="215" font-size="9" font-style="italic" fill="#aaa">BFF / API Layer</text>
-<text x="40" y="368" font-size="9" font-style="italic" fill="#aaa">Services &amp; Storage</text>
+<!-- ===== SECTION 1: SYSTEM ARCHITECTURE ===== -->
+<text x="40" y="28" font-size="13" font-weight="bold" fill="#333">SYSTEM ARCHITECTURE</text>
+<text x="40" y="58" font-size="9" font-style="italic" fill="#aaa">Client Layer</text>
+<text x="40" y="218" font-size="9" font-style="italic" fill="#aaa">API / Proxy Layer</text>
+<text x="40" y="362" font-size="9" font-style="italic" fill="#aaa">Services &amp; Storage</text>
 
 <!-- Client: Shopify Admin App -->
-<rect x="100" y="78" width="175" height="55" rx="6" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
-<text x="187.5" y="100.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Shopify Admin App</text>
-<text x="187.5" y="115.5" text-anchor="middle" font-size="10" fill="#555">Next.js · Embedded</text>
+<rect x="100" y="70" width="178" height="55" rx="6" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+<text x="189" y="92.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Shopify Admin App</text>
+<text x="189" y="107.5" text-anchor="middle" font-size="10" fill="#555">Next.js 15 · Embedded</text>
 
 <!-- Client: Theme Extension -->
-<rect x="310" y="78" width="175" height="55" rx="6" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
-<text x="397.5" y="100.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Theme Extension</text>
-<text x="397.5" y="115.5" text-anchor="middle" font-size="10" fill="#555">Preact · Storefront embed</text>
+<rect x="312" y="70" width="178" height="55" rx="6" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+<text x="401" y="92.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Theme Extension</text>
+<text x="401" y="107.5" text-anchor="middle" font-size="10" fill="#555">Preact · Storefront widget</text>
 
 <!-- Client: Super Admin -->
-<rect x="520" y="78" width="175" height="55" rx="6" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
-<text x="607.5" y="100.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Super Admin</text>
-<text x="607.5" y="115.5" text-anchor="middle" font-size="10" fill="#555">Next.js · Internal ops</text>
+<rect x="524" y="70" width="178" height="55" rx="6" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+<text x="613" y="92.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Super Admin</text>
+<text x="613" y="107.5" text-anchor="middle" font-size="10" fill="#555">Next.js 16 · Internal ops</text>
 
 <!-- API: Next.js BFF Proxy -->
-<rect x="185" y="225" width="220" height="55" rx="6" fill="#fff2cc" stroke="#d6b656" stroke-width="1.5"/>
-<text x="295" y="247.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Next.js BFF Proxy</text>
-<text x="295" y="262.5" text-anchor="middle" font-size="10" fill="#555">Shopify JWT · session auth</text>
+<rect x="168" y="228" width="225" height="55" rx="6" fill="#fff2cc" stroke="#d6b656" stroke-width="1.5"/>
+<text x="280.5" y="250.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Next.js BFF Proxy</text>
+<text x="280.5" y="265.5" text-anchor="middle" font-size="10" fill="#555">Shopify session · CORS guard</text>
 
 <!-- API: NestJS Backend -->
-<rect x="460" y="225" width="230" height="55" rx="6" fill="#fff2cc" stroke="#d6b656" stroke-width="1.5"/>
-<text x="575" y="247.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">NestJS Backend</text>
-<text x="575" y="262.5" text-anchor="middle" font-size="10" fill="#555">REST · Auth · Job queue</text>
+<rect x="453" y="228" width="235" height="55" rx="6" fill="#fff2cc" stroke="#d6b656" stroke-width="1.5"/>
+<text x="570.5" y="250.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">NestJS Backend API</text>
+<text x="570.5" y="265.5" text-anchor="middle" font-size="10" fill="#555">REST · JWT · Guards · Modules</text>
 
-<!-- Service: MongoDB (cylinder) -->
-<rect x="71" y="378" width="118" height="47" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
-<ellipse cx="130" cy="378" rx="59" ry="9" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
-<ellipse cx="130" cy="425" rx="59" ry="9" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
-<text x="130" y="397" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">MongoDB</text>
-<text x="130" y="412" text-anchor="middle" font-size="10" fill="#555">Primary DB</text>
+<!-- Service: MongoDB cylinder -->
+<rect x="71" y="372" width="118" height="47" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+<ellipse cx="130" cy="372" rx="59" ry="9" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+<ellipse cx="130" cy="419" rx="59" ry="9" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+<text x="130" y="391" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">MongoDB</text>
+<text x="130" y="406" text-anchor="middle" font-size="10" fill="#555">Primary DB</text>
 
 <!-- Service: RunPod / ComfyUI -->
-<rect x="225" y="370" width="155" height="65" rx="6" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
-<text x="302.5" y="397" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">RunPod / ComfyUI</text>
-<text x="302.5" y="412" text-anchor="middle" font-size="10" fill="#555">GPU · 500+ images/mo</text>
+<rect x="220" y="372" width="152" height="65" rx="6" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+<text x="296" y="399" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">RunPod / ComfyUI</text>
+<text x="296" y="414" text-anchor="middle" font-size="10" fill="#555">GPU · 500+ imgs/mo</text>
 
 <!-- Service: Razorpay -->
-<rect x="400" y="370" width="145" height="65" rx="6" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
-<text x="472.5" y="397" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Razorpay</text>
-<text x="472.5" y="412" text-anchor="middle" font-size="10" fill="#555">Subscriptions · HMAC</text>
+<rect x="392" y="372" width="132" height="65" rx="6" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+<text x="458" y="399" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Razorpay</text>
+<text x="458" y="414" text-anchor="middle" font-size="10" fill="#555">Subscription billing</text>
 
-<!-- Service: AWS S3 -->
-<rect x="568" y="370" width="130" height="65" rx="6" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
-<text x="633" y="397" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">AWS S3</text>
-<text x="633" y="412" text-anchor="middle" font-size="10" fill="#555">Image storage</text>
+<!-- Service: DO Spaces -->
+<rect x="544" y="372" width="148" height="65" rx="6" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+<text x="618" y="399" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">DO Spaces (S3)</text>
+<text x="618" y="414" text-anchor="middle" font-size="10" fill="#555">Images · outputs</text>
 
-<!-- Service: Redis (cylinder) -->
-<rect x="726" y="378" width="118" height="47" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
-<ellipse cx="785" cy="378" rx="59" ry="9" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
-<ellipse cx="785" cy="425" rx="59" ry="9" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
-<text x="785" y="397" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Redis</text>
-<text x="785" y="412" text-anchor="middle" font-size="10" fill="#555">Cache · sessions</text>
+<!-- Service: Shopify Admin API -->
+<rect x="712" y="372" width="158" height="65" rx="6" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+<text x="791" y="399" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Shopify Admin API</text>
+<text x="791" y="414" text-anchor="middle" font-size="10" fill="#555">Products · Webhooks</text>
 
-<!-- Arrows: Client → BFF / NestJS -->
-<line x1="187.5" y1="133" x2="295" y2="225" stroke="#6c8ebf" stroke-width="1.5" marker-end="url(#ah-b)"/>
-<line x1="397.5" y1="133" x2="295" y2="225" stroke="#6c8ebf" stroke-width="1.5" marker-end="url(#ah-b)"/>
-<line x1="607.5" y1="133" x2="575" y2="225" stroke="#6c8ebf" stroke-width="1.5" marker-end="url(#ah-b)"/>
+<!-- Arrows: clients → BFF / NestJS -->
+<line x1="189" y1="125" x2="280.5" y2="228" stroke="#6c8ebf" stroke-width="1.5" marker-end="url(#ah-b)"/>
+<line x1="401" y1="125" x2="280.5" y2="228" stroke="#6c8ebf" stroke-width="1.5" marker-end="url(#ah-b)"/>
+<line x1="613" y1="125" x2="570.5" y2="228" stroke="#6c8ebf" stroke-width="1.5" marker-end="url(#ah-b)"/>
 
 <!-- BFF → NestJS -->
-<line x1="405" y1="252.5" x2="460" y2="252.5" stroke="#d6b656" stroke-width="1.5" marker-end="url(#ah-y)"/>
+<line x1="393" y1="255.5" x2="453" y2="255.5" stroke="#d6b656" stroke-width="1.5" marker-end="url(#ah-y)"/>
 
-<!-- NestJS → Services (fan out through y=330) -->
-<path d="M575,280 L575,330 L130,330 L130,369" fill="none" stroke="#82b366" stroke-width="1.5" marker-end="url(#ah-gr)"/>
-<path d="M575,280 L575,330 L302.5,330 L302.5,370" fill="none" stroke="#82b366" stroke-width="1.5" marker-end="url(#ah-gr)"/>
-<path d="M575,280 L575,330 L472.5,330 L472.5,370" fill="none" stroke="#82b366" stroke-width="1.5" marker-end="url(#ah-gr)"/>
-<path d="M575,280 L575,330 L633,330 L633,370" fill="none" stroke="#82b366" stroke-width="1.5" marker-end="url(#ah-gr)"/>
-<path d="M575,280 L575,330 L785,330 L785,369" fill="none" stroke="#82b366" stroke-width="1.5" marker-end="url(#ah-gr)"/>
+<!-- NestJS → services fan out via y=325 -->
+<path d="M570.5,283 L570.5,325 L130,325 L130,363" fill="none" stroke="#82b366" stroke-width="1.5" marker-end="url(#ah-gr)"/>
+<path d="M570.5,283 L570.5,325 L296,325 L296,372" fill="none" stroke="#82b366" stroke-width="1.5" marker-end="url(#ah-gr)"/>
+<path d="M570.5,283 L570.5,325 L458,325 L458,372" fill="none" stroke="#82b366" stroke-width="1.5" marker-end="url(#ah-gr)"/>
+<path d="M570.5,283 L570.5,325 L618,325 L618,372" fill="none" stroke="#82b366" stroke-width="1.5" marker-end="url(#ah-gr)"/>
+<path d="M570.5,283 L570.5,325 L791,325 L791,372" fill="none" stroke="#82b366" stroke-width="1.5" marker-end="url(#ah-gr)"/>
 
-<!-- Razorpay webhook callback -->
-<rect x="400" y="448" width="145" height="26" rx="4" fill="#f8cecc" stroke="#b85450" stroke-width="1"/>
-<text x="472.5" y="465" text-anchor="middle" font-size="9" fill="#666">Webhook · HMAC verify</text>
-<line x1="472.5" y1="435" x2="472.5" y2="448" stroke="#b85450" stroke-width="1.5" marker-end="url(#ah-r)"/>
+<!-- Razorpay HMAC webhook note -->
+<rect x="392" y="450" width="132" height="26" rx="4" fill="#f8cecc" stroke="#b85450" stroke-width="1"/>
+<text x="458" y="467" text-anchor="middle" font-size="9" fill="#666">Webhook · HMAC verify</text>
+<line x1="458" y1="437" x2="458" y2="450" stroke="#b85450" stroke-width="1.5" marker-end="url(#ah-r)"/>
 
-<!-- ===== BOTTOM: SHOPPER TRY-ON ===== -->
-<text x="40" y="516" font-size="13" font-weight="bold" fill="#333">USER JOURNEY — SHOPPER TRY-ON</text>
+<!-- ===== SECTION 2: SHOPPER TRY-ON FLOW ===== -->
+<text x="40" y="514" font-size="13" font-weight="bold" fill="#333">USER JOURNEY — SHOPPER TRY-ON</text>
 
-<!-- Shopper nodes (y-center = 580) -->
-<ellipse cx="90" cy="580" rx="70" ry="27.5" fill="#f5f5f5" stroke="#666666" stroke-width="1.5"/>
-<text x="90" y="575" text-anchor="middle" font-size="10" fill="#333">Visits product</text>
-<text x="90" y="590" text-anchor="middle" font-size="10" fill="#333">page</text>
+<!-- Nodes y-center=610 -->
+<ellipse cx="90" cy="610" rx="68" ry="27.5" fill="#f5f5f5" stroke="#666666" stroke-width="1.5"/>
+<text x="90" y="605" text-anchor="middle" font-size="10" fill="#333">Visits</text>
+<text x="90" y="620" text-anchor="middle" font-size="10" fill="#333">product page</text>
 
-<rect x="183" y="552.5" width="145" height="55" rx="6" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
-<text x="255.5" y="575" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Clicks Try On</text>
-<text x="255.5" y="590" text-anchor="middle" font-size="10" fill="#555">button</text>
+<rect x="172" y="582.5" width="130" height="55" rx="6" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+<text x="237" y="605" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Clicks</text>
+<text x="237" y="620" text-anchor="middle" font-size="10" fill="#555">Try On button</text>
 
-<rect x="363" y="552.5" width="155" height="55" rx="6" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
-<text x="440.5" y="575" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Uploads photo</text>
-<text x="440.5" y="590" text-anchor="middle" font-size="10" fill="#555">+ garment</text>
+<rect x="325" y="582.5" width="148" height="55" rx="6" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+<text x="399" y="605" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Auth</text>
+<text x="399" y="620" text-anchor="middle" font-size="10" fill="#555">Email / Google OAuth</text>
 
-<rect x="553" y="552.5" width="145" height="55" rx="6" fill="#fff2cc" stroke="#d6b656" stroke-width="1.5"/>
-<text x="625.5" y="575" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">BFF validates</text>
-<text x="625.5" y="590" text-anchor="middle" font-size="10" fill="#555">session · proxy</text>
+<rect x="491" y="582.5" width="135" height="55" rx="6" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+<text x="558.5" y="605" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Uploads photo</text>
+<text x="558.5" y="620" text-anchor="middle" font-size="10" fill="#555">→ DO Spaces</text>
 
-<rect x="733" y="552.5" width="155" height="55" rx="6" fill="#fff2cc" stroke="#d6b656" stroke-width="1.5"/>
-<text x="810.5" y="575" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">NestJS queues</text>
-<text x="810.5" y="590" text-anchor="middle" font-size="10" fill="#555">GPU job</text>
+<rect x="649" y="582.5" width="145" height="55" rx="6" fill="#fff2cc" stroke="#d6b656" stroke-width="1.5"/>
+<text x="721.5" y="605" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">BFF proxies</text>
+<text x="721.5" y="620" text-anchor="middle" font-size="10" fill="#555">to NestJS</text>
 
-<polygon points="975,552.5 1030,580 975,607.5 920,580" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
-<text x="975" y="575" text-anchor="middle" font-size="10" fill="#333">ComfyUI</text>
-<text x="975" y="590" text-anchor="middle" font-size="10" fill="#333">runs on GPU</text>
+<rect x="817" y="582.5" width="155" height="55" rx="6" fill="#fff2cc" stroke="#d6b656" stroke-width="1.5"/>
+<text x="894.5" y="605" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Credits checked</text>
+<text x="894.5" y="620" text-anchor="middle" font-size="10" fill="#555">job queued</text>
 
-<rect x="1063" y="552.5" width="155" height="55" rx="6" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
-<text x="1140.5" y="575" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Result returned</text>
-<text x="1140.5" y="590" text-anchor="middle" font-size="10" fill="#555">+ watermarked</text>
+<!-- RunPod diamond -->
+<polygon points="1045,582.5 1103,610 1045,637.5 987,610" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+<text x="1045" y="605" text-anchor="middle" font-size="10" fill="#333">RunPod</text>
+<text x="1045" y="620" text-anchor="middle" font-size="10" fill="#333">GPU job</text>
 
-<ellipse cx="1330" cy="580" rx="85" ry="27.5" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
-<text x="1330" y="575" text-anchor="middle" font-size="10" fill="#333">Try-on shown</text>
-<text x="1330" y="590" text-anchor="middle" font-size="10" fill="#333">to shopper ✓</text>
+<rect x="1118" y="582.5" width="148" height="55" rx="6" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+<text x="1192" y="605" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Result returned</text>
+<text x="1192" y="620" text-anchor="middle" font-size="10" fill="#555">+ watermarked</text>
 
-<!-- Shopper arrows -->
-<line x1="160" y1="580" x2="183" y2="580" stroke="#666666" stroke-width="1.5" marker-end="url(#ah-g)"/>
-<line x1="328" y1="580" x2="363" y2="580" stroke="#666666" stroke-width="1.5" marker-end="url(#ah-g)"/>
-<line x1="518" y1="580" x2="553" y2="580" stroke="#666666" stroke-width="1.5" marker-end="url(#ah-g)"/>
-<line x1="698" y1="580" x2="733" y2="580" stroke="#666666" stroke-width="1.5" marker-end="url(#ah-g)"/>
-<line x1="888" y1="580" x2="920" y2="580" stroke="#666666" stroke-width="1.5" marker-end="url(#ah-g)"/>
-<line x1="1030" y1="580" x2="1063" y2="580" stroke="#82b366" stroke-width="1.5" marker-end="url(#ah-gr)"/>
-<line x1="1218" y1="580" x2="1245" y2="580" stroke="#82b366" stroke-width="1.5" marker-end="url(#ah-gr)"/>
+<ellipse cx="1380" cy="610" rx="88" ry="27.5" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+<text x="1380" y="605" text-anchor="middle" font-size="10" fill="#333">Try-on shown</text>
+<text x="1380" y="620" text-anchor="middle" font-size="10" fill="#333">to shopper ✓</text>
 
-<!-- ===== MERCHANT SETUP FLOW ===== -->
-<text x="40" y="668" font-size="13" font-weight="bold" fill="#333">MERCHANT SETUP FLOW</text>
+<!-- Shopper flow arrows -->
+<line x1="158" y1="610" x2="172" y2="610" stroke="#666666" stroke-width="1.5" marker-end="url(#ah-g)"/>
+<line x1="302" y1="610" x2="325" y2="610" stroke="#666666" stroke-width="1.5" marker-end="url(#ah-g)"/>
+<line x1="473" y1="610" x2="491" y2="610" stroke="#666666" stroke-width="1.5" marker-end="url(#ah-g)"/>
+<line x1="626" y1="610" x2="649" y2="610" stroke="#666666" stroke-width="1.5" marker-end="url(#ah-g)"/>
+<line x1="794" y1="610" x2="817" y2="610" stroke="#666666" stroke-width="1.5" marker-end="url(#ah-g)"/>
+<line x1="972" y1="610" x2="987" y2="610" stroke="#666666" stroke-width="1.5" marker-end="url(#ah-g)"/>
+<line x1="1103" y1="610" x2="1118" y2="610" stroke="#82b366" stroke-width="1.5" marker-end="url(#ah-gr)"/>
+<line x1="1266" y1="610" x2="1292" y2="610" stroke="#82b366" stroke-width="1.5" marker-end="url(#ah-gr)"/>
 
-<!-- Merchant nodes (y-center = 730) -->
-<ellipse cx="90" cy="730" rx="70" ry="27.5" fill="#f5f5f5" stroke="#666666" stroke-width="1.5"/>
-<text x="90" y="725" text-anchor="middle" font-size="10" fill="#333">Installs app</text>
-<text x="90" y="740" text-anchor="middle" font-size="10" fill="#333">from Shopify</text>
+<!-- Insufficient credits branch -->
+<line x1="894.5" y1="637.5" x2="894.5" y2="668" stroke="#b85450" stroke-width="1.5" marker-end="url(#ah-r)"/>
+<rect x="826" y="668" width="137" height="26" rx="4" fill="#f8cecc" stroke="#b85450" stroke-width="1"/>
+<text x="894.5" y="685" text-anchor="middle" font-size="9" fill="#666">Insufficient credits</text>
 
-<rect x="183" y="702.5" width="165" height="55" rx="6" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
-<text x="265.5" y="725" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Onboarding</text>
-<text x="265.5" y="740" text-anchor="middle" font-size="10" fill="#555">4-step wizard</text>
+<!-- Events note -->
+<text x="1380" y="658" text-anchor="middle" font-size="8.5" fill="#999">Events: share · add-to-cart · WhatsApp click</text>
 
-<rect x="383" y="702.5" width="155" height="55" rx="6" fill="#fff2cc" stroke="#d6b656" stroke-width="1.5"/>
-<text x="460.5" y="725" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Chooses plan</text>
-<text x="460.5" y="740" text-anchor="middle" font-size="10" fill="#555">Razorpay billing</text>
+<!-- ===== SECTION 3: MERCHANT SETUP FLOW ===== -->
+<text x="40" y="752" font-size="13" font-weight="bold" fill="#333">MERCHANT SETUP FLOW</text>
 
-<rect x="573" y="702.5" width="165" height="55" rx="6" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
-<text x="655.5" y="725" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Activates embed</text>
-<text x="655.5" y="740" text-anchor="middle" font-size="10" fill="#555">theme extension</text>
+<!-- Nodes y-center=845 -->
+<ellipse cx="90" cy="845" rx="68" ry="27.5" fill="#f5f5f5" stroke="#666666" stroke-width="1.5"/>
+<text x="90" y="840" text-anchor="middle" font-size="10" fill="#333">Installs from</text>
+<text x="90" y="855" text-anchor="middle" font-size="10" fill="#333">Shopify</text>
 
-<rect x="773" y="702.5" width="165" height="55" rx="6" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
-<text x="855.5" y="725" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Configures products</text>
-<text x="855.5" y="740" text-anchor="middle" font-size="10" fill="#555">garment types</text>
+<rect x="173" y="817.5" width="145" height="55" rx="6" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+<text x="245.5" y="840" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">OAuth + Session</text>
+<text x="245.5" y="855" text-anchor="middle" font-size="10" fill="#555">token exchange</text>
 
-<ellipse cx="1055" cy="730" rx="85" ry="27.5" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
-<text x="1055" y="725" text-anchor="middle" font-size="10" fill="#333">Dashboard live</text>
-<text x="1055" y="740" text-anchor="middle" font-size="10" fill="#333">analytics ✓</text>
+<rect x="338" y="817.5" width="158" height="55" rx="6" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+<text x="417" y="840" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Store created</text>
+<text x="417" y="855" text-anchor="middle" font-size="10" fill="#555">200 credits</text>
 
-<!-- Merchant arrows -->
-<line x1="160" y1="730" x2="183" y2="730" stroke="#666666" stroke-width="1.5" marker-end="url(#ah-g)"/>
-<line x1="348" y1="730" x2="383" y2="730" stroke="#666666" stroke-width="1.5" marker-end="url(#ah-g)"/>
-<line x1="538" y1="730" x2="573" y2="730" stroke="#666666" stroke-width="1.5" marker-end="url(#ah-g)"/>
-<line x1="738" y1="730" x2="773" y2="730" stroke="#666666" stroke-width="1.5" marker-end="url(#ah-g)"/>
-<line x1="938" y1="730" x2="970" y2="730" stroke="#82b366" stroke-width="1.5" marker-end="url(#ah-gr)"/>
+<!-- Onboarding compound box -->
+<rect x="518" y="807.5" width="280" height="75" rx="6" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+<text x="658" y="827.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">4-Step Onboarding</text>
+<line x1="533" y1="834" x2="782" y2="834" stroke="#6c8ebf" stroke-width="0.75" stroke-opacity="0.4"/>
+<rect x="533" y="840" width="56" height="22" rx="4" fill="#c7dff7" stroke="#6c8ebf" stroke-width="1"/>
+<text x="561" y="855" text-anchor="middle" font-size="8" fill="#333">Welcome</text>
+<rect x="597" y="840" width="60" height="22" rx="4" fill="#c7dff7" stroke="#6c8ebf" stroke-width="1"/>
+<text x="627" y="855" text-anchor="middle" font-size="8" fill="#333">Category</text>
+<rect x="665" y="840" width="60" height="22" rx="4" fill="#c7dff7" stroke="#6c8ebf" stroke-width="1"/>
+<text x="695" y="855" text-anchor="middle" font-size="8" fill="#333">Package</text>
+<rect x="733" y="840" width="55" height="22" rx="4" fill="#c7dff7" stroke="#6c8ebf" stroke-width="1"/>
+<text x="760.5" y="855" text-anchor="middle" font-size="8" fill="#333">Theme</text>
+
+<rect x="822" y="817.5" width="148" height="55" rx="6" fill="#fff2cc" stroke="#d6b656" stroke-width="1.5"/>
+<text x="896" y="840" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Razorpay</text>
+<text x="896" y="855" text-anchor="middle" font-size="10" fill="#555">Plan billing</text>
+
+<rect x="994" y="817.5" width="162" height="55" rx="6" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+<text x="1075" y="840" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Configure products</text>
+<text x="1075" y="855" text-anchor="middle" font-size="10" fill="#555">garment types</text>
+
+<ellipse cx="1270" cy="845" rx="88" ry="27.5" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+<text x="1270" y="840" text-anchor="middle" font-size="10" fill="#333">Dashboard live</text>
+<text x="1270" y="855" text-anchor="middle" font-size="10" fill="#333">analytics ✓</text>
+
+<!-- Merchant setup arrows -->
+<line x1="158" y1="845" x2="173" y2="845" stroke="#666666" stroke-width="1.5" marker-end="url(#ah-g)"/>
+<line x1="318" y1="845" x2="338" y2="845" stroke="#666666" stroke-width="1.5" marker-end="url(#ah-g)"/>
+<line x1="496" y1="845" x2="518" y2="845" stroke="#666666" stroke-width="1.5" marker-end="url(#ah-g)"/>
+<line x1="798" y1="845" x2="822" y2="845" stroke="#666666" stroke-width="1.5" marker-end="url(#ah-g)"/>
+<line x1="970" y1="845" x2="994" y2="845" stroke="#666666" stroke-width="1.5" marker-end="url(#ah-g)"/>
+<line x1="1156" y1="845" x2="1182" y2="845" stroke="#82b366" stroke-width="1.5" marker-end="url(#ah-gr)"/>
+
+<!-- Razorpay HMAC note below -->
+<rect x="827" y="885" width="138" height="26" rx="4" fill="#f8cecc" stroke="#b85450" stroke-width="1"/>
+<text x="896" y="902" text-anchor="middle" font-size="9" fill="#666">HMAC verify · credits set</text>
+<line x1="896" y1="872.5" x2="896" y2="885" stroke="#b85450" stroke-width="1.5" marker-end="url(#ah-r)"/>
 </svg>

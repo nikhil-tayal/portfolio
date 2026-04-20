@@ -1,86 +1,131 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1654 660" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1654 760" font-family="system-ui,-apple-system,BlinkMacSystemFont,sans-serif">
 <defs>
   <marker id="ah-g"  viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#666666"/></marker>
   <marker id="ah-b"  viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#6c8ebf"/></marker>
   <marker id="ah-gr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#82b366"/></marker>
+  <marker id="ah-r"  viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 Z" fill="#b85450"/></marker>
 </defs>
-<rect width="1654" height="660" fill="white"/>
+<rect width="1654" height="760" fill="white"/>
 
 <!-- Section divider -->
-<line x1="40" y1="390" x2="1614" y2="390" stroke="#ccc" stroke-width="1" stroke-dasharray="6 4"/>
+<line x1="40" y1="440" x2="1614" y2="440" stroke="#ccc" stroke-width="1" stroke-dasharray="6 4"/>
 
-<!-- ===== TOP: SYSTEM ARCHITECTURE ===== -->
-<text x="40" y="34" font-size="13" font-weight="bold" fill="#333">SYSTEM ARCHITECTURE</text>
-<text x="40" y="65" font-size="9" font-style="italic" fill="#aaa">Client Layer</text>
-<text x="40" y="230" font-size="9" font-style="italic" fill="#aaa">API Layer</text>
-<text x="40" y="345" font-size="9" font-style="italic" fill="#aaa">Database</text>
+<!-- ===== SECTION 1: SYSTEM ARCHITECTURE ===== -->
+<text x="40" y="28" font-size="13" font-weight="bold" fill="#333">SYSTEM ARCHITECTURE</text>
+<text x="40" y="58" font-size="9" font-style="italic" fill="#aaa">Client Layer</text>
+<text x="40" y="268" font-size="9" font-style="italic" fill="#aaa">API Layer</text>
+<text x="40" y="368" font-size="9" font-style="italic" fill="#aaa">Database</text>
 
-<!-- Client: Super Admin App (wide box containing 5 page chips) -->
-<rect x="100" y="78" width="480" height="110" rx="6" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
-<text x="340" y="100.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Super Admin App</text>
-<text x="340" y="115.5" text-anchor="middle" font-size="10" fill="#555">Next.js 15 App Router · JWT auth</text>
-<line x1="115" y1="125" x2="565" y2="125" stroke="#6c8ebf" stroke-width="0.75" stroke-opacity="0.4"/>
-<!-- Page chips -->
-<rect x="115" y="132" width="82" height="24" rx="4" fill="#c7dff7" stroke="#6c8ebf" stroke-width="1"/>
-<text x="156" y="148.5" text-anchor="middle" font-size="9" fill="#333">Dashboard</text>
-<rect x="208" y="132" width="68" height="24" rx="4" fill="#c7dff7" stroke="#6c8ebf" stroke-width="1"/>
-<text x="242" y="148.5" text-anchor="middle" font-size="9" fill="#333">Stores</text>
-<rect x="287" y="132" width="62" height="24" rx="4" fill="#c7dff7" stroke="#6c8ebf" stroke-width="1"/>
-<text x="318" y="148.5" text-anchor="middle" font-size="9" fill="#333">Users</text>
-<rect x="360" y="132" width="100" height="24" rx="4" fill="#c7dff7" stroke="#6c8ebf" stroke-width="1"/>
-<text x="410" y="148.5" text-anchor="middle" font-size="9" fill="#333">Try-On Logs</text>
-<rect x="471" y="132" width="88" height="24" rx="4" fill="#c7dff7" stroke="#6c8ebf" stroke-width="1"/>
-<text x="515" y="148.5" text-anchor="middle" font-size="9" fill="#333">User Logs</text>
+<!-- Super Admin App compound box -->
+<rect x="80" y="70" width="590" height="145" rx="6" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+<text x="375" y="96" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Super Admin App</text>
+<text x="375" y="111" text-anchor="middle" font-size="10" fill="#555">Next.js 16 App Router · Cookie auth · Tailwind 4 · Port 3100</text>
+<line x1="96" y1="120" x2="654" y2="120" stroke="#6c8ebf" stroke-width="0.75" stroke-opacity="0.4"/>
 
-<!-- API: NestJS Backend -->
-<rect x="155" y="240" width="370" height="55" rx="6" fill="#fff2cc" stroke="#d6b656" stroke-width="1.5"/>
-<text x="340" y="262.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">NestJS Backend (vton-backend)</text>
-<text x="340" y="277.5" text-anchor="middle" font-size="10" fill="#555">REST · Auth guards · Admin-only routes</text>
+<!-- Page chips — row 1 (y=127) -->
+<rect x="96" y="127" width="82" height="24" rx="4" fill="#c7dff7" stroke="#6c8ebf" stroke-width="1"/>
+<text x="137" y="143.5" text-anchor="middle" font-size="9" fill="#333">Dashboard</text>
+<rect x="188" y="127" width="60" height="24" rx="4" fill="#c7dff7" stroke="#6c8ebf" stroke-width="1"/>
+<text x="218" y="143.5" text-anchor="middle" font-size="9" fill="#333">Stores</text>
+<rect x="258" y="127" width="78" height="24" rx="4" fill="#c7dff7" stroke="#6c8ebf" stroke-width="1"/>
+<text x="297" y="143.5" text-anchor="middle" font-size="9" fill="#333">Stores / :id</text>
+<rect x="346" y="127" width="60" height="24" rx="4" fill="#c7dff7" stroke="#6c8ebf" stroke-width="1"/>
+<text x="376" y="143.5" text-anchor="middle" font-size="9" fill="#333">Users</text>
+<rect x="416" y="127" width="72" height="24" rx="4" fill="#c7dff7" stroke="#6c8ebf" stroke-width="1"/>
+<text x="452" y="143.5" text-anchor="middle" font-size="9" fill="#333">Users / :id</text>
 
-<!-- Database: MongoDB (cylinder) -->
-<rect x="281" y="355" width="118" height="47" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
-<ellipse cx="340" cy="355" rx="59" ry="9" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
-<ellipse cx="340" cy="402" rx="59" ry="9" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
-<text x="340" y="374" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">MongoDB</text>
-<text x="340" y="389" text-anchor="middle" font-size="10" fill="#555">Stores · Users · Sessions</text>
+<!-- Page chips — row 2 (y=158) -->
+<rect x="96" y="158" width="90" height="24" rx="4" fill="#c7dff7" stroke="#6c8ebf" stroke-width="1"/>
+<text x="141" y="174.5" text-anchor="middle" font-size="9" fill="#333">Try-On Logs</text>
+<rect x="196" y="158" width="82" height="24" rx="4" fill="#c7dff7" stroke="#6c8ebf" stroke-width="1"/>
+<text x="237" y="174.5" text-anchor="middle" font-size="9" fill="#333">User Logs</text>
+<rect x="288" y="158" width="110" height="24" rx="4" fill="#c7dff7" stroke="#6c8ebf" stroke-width="1"/>
+<text x="343" y="174.5" text-anchor="middle" font-size="9" fill="#333">Connected Shop</text>
+<rect x="408" y="158" width="70" height="24" rx="4" fill="#c7dff7" stroke="#6c8ebf" stroke-width="1"/>
+<text x="443" y="174.5" text-anchor="middle" font-size="9" fill="#333">Products</text>
 
-<!-- Arrows: Client → API → DB -->
-<line x1="340" y1="188" x2="340" y2="240" stroke="#6c8ebf" stroke-width="1.5" marker-end="url(#ah-b)"/>
-<line x1="340" y1="295" x2="340" y2="346" stroke="#82b366" stroke-width="1.5" marker-end="url(#ah-gr)"/>
+<!-- Cookie auth note (right of app box) -->
+<rect x="700" y="98" width="210" height="55" rx="6" fill="#f8cecc" stroke="#b85450" stroke-width="1.5"/>
+<text x="805" y="120.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Cookie Auth</text>
+<text x="805" y="135.5" text-anchor="middle" font-size="9" fill="#555">Middleware checks admin_token</text>
+<text x="805" y="148.5" text-anchor="middle" font-size="9" fill="#555">vs ADMIN_SESSION_SECRET env var</text>
+<line x1="670" y1="140" x2="700" y2="140" stroke="#b85450" stroke-width="1.5" marker-end="url(#ah-r)"/>
 
-<!-- ===== BOTTOM: OPERATOR JOURNEY ===== -->
-<text x="40" y="415" font-size="13" font-weight="bold" fill="#333">OPERATOR JOURNEY</text>
+<!-- NestJS Backend API -->
+<rect x="215" y="278" width="320" height="55" rx="6" fill="#fff2cc" stroke="#d6b656" stroke-width="1.5"/>
+<text x="375" y="300.5" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">NestJS Backend (vton-backend)</text>
+<text x="375" y="315.5" text-anchor="middle" font-size="10" fill="#555">REST · /super-admin/* routes · Admin guards</text>
 
-<!-- Journey nodes (y-center = 500) -->
-<ellipse cx="90" cy="500" rx="70" ry="27.5" fill="#f5f5f5" stroke="#666666" stroke-width="1.5"/>
-<text x="90" y="495" text-anchor="middle" font-size="10" fill="#333">Operator</text>
-<text x="90" y="510" text-anchor="middle" font-size="10" fill="#333">logs in</text>
+<!-- MongoDB cylinder -->
+<rect x="316" y="378" width="118" height="47" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+<ellipse cx="375" cy="378" rx="59" ry="9" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+<ellipse cx="375" cy="425" rx="59" ry="9" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+<text x="375" y="397" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">MongoDB</text>
+<text x="375" y="412" text-anchor="middle" font-size="10" fill="#555">Stores · Users · Sessions</text>
 
-<rect x="188" y="472.5" width="165" height="55" rx="6" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
-<text x="270.5" y="495" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Views platform</text>
-<text x="270.5" y="510" text-anchor="middle" font-size="10" fill="#555">metrics dashboard</text>
+<!-- Arrows: App → API → DB -->
+<line x1="375" y1="215" x2="375" y2="278" stroke="#6c8ebf" stroke-width="1.5" marker-end="url(#ah-b)"/>
+<line x1="375" y1="333" x2="375" y2="369" stroke="#82b366" stroke-width="1.5" marker-end="url(#ah-gr)"/>
 
-<rect x="390" y="472.5" width="165" height="55" rx="6" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
-<text x="472.5" y="495" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Monitors stores</text>
-<text x="472.5" y="510" text-anchor="middle" font-size="10" fill="#555">engagement metrics</text>
+<!-- Direct API call annotation -->
+<text x="385" y="255" font-size="8.5" fill="#888">Direct fetch · no BFF proxy</text>
 
-<rect x="592" y="472.5" width="165" height="55" rx="6" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
-<text x="674.5" y="495" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Reviews users</text>
-<text x="674.5" y="510" text-anchor="middle" font-size="10" fill="#555">try-on activity</text>
+<!-- ===== SECTION 2: ADMIN OPERATIONS JOURNEY ===== -->
+<text x="40" y="466" font-size="13" font-weight="bold" fill="#333">ADMIN OPERATIONS JOURNEY</text>
 
-<rect x="794" y="472.5" width="155" height="55" rx="6" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
-<text x="871.5" y="495" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Checks try-on</text>
-<text x="871.5" y="510" text-anchor="middle" font-size="10" fill="#555">+ user logs</text>
+<!-- Nodes y-center=560 -->
+<ellipse cx="85" cy="560" rx="68" ry="27.5" fill="#f5f5f5" stroke="#666666" stroke-width="1.5"/>
+<text x="85" y="555" text-anchor="middle" font-size="10" fill="#333">Operator</text>
+<text x="85" y="570" text-anchor="middle" font-size="10" fill="#333">logs in</text>
 
-<ellipse cx="1055" cy="500" rx="85" ry="27.5" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
-<text x="1055" y="495" text-anchor="middle" font-size="10" fill="#333">Platform health</text>
-<text x="1055" y="510" text-anchor="middle" font-size="10" fill="#333">confirmed ✓</text>
+<rect x="172" y="532.5" width="148" height="55" rx="6" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+<text x="246" y="555" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Platform KPIs</text>
+<text x="246" y="570" text-anchor="middle" font-size="10" fill="#555">Dashboard overview</text>
+
+<rect x="343" y="532.5" width="155" height="55" rx="6" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+<text x="420.5" y="555" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Browse stores</text>
+<text x="420.5" y="570" text-anchor="middle" font-size="10" fill="#555">search + filter</text>
+
+<rect x="521" y="532.5" width="162" height="55" rx="6" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+<text x="602" y="555" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Store detail</text>
+<text x="602" y="570" text-anchor="middle" font-size="10" fill="#555">users · tries · products</text>
+
+<rect x="707" y="532.5" width="155" height="55" rx="6" fill="#fff2cc" stroke="#d6b656" stroke-width="1.5"/>
+<text x="784.5" y="555" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Adjust credits</text>
+<text x="784.5" y="570" text-anchor="middle" font-size="10" fill="#555">PATCH /stores/:id</text>
+
+<rect x="886" y="532.5" width="155" height="55" rx="6" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+<text x="963.5" y="555" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Browse users</text>
+<text x="963.5" y="570" text-anchor="middle" font-size="10" fill="#555">try-on + upload history</text>
+
+<rect x="1066" y="532.5" width="155" height="55" rx="6" fill="#dae8fc" stroke="#6c8ebf" stroke-width="1.5"/>
+<text x="1143.5" y="555" text-anchor="middle" font-size="10" font-weight="bold" fill="#333">Review logs</text>
+<text x="1143.5" y="570" text-anchor="middle" font-size="10" fill="#555">try-on · user events</text>
+
+<ellipse cx="1340" cy="560" rx="88" ry="27.5" fill="#d5e8d4" stroke="#82b366" stroke-width="1.5"/>
+<text x="1340" y="555" text-anchor="middle" font-size="10" fill="#333">Platform health</text>
+<text x="1340" y="570" text-anchor="middle" font-size="10" fill="#333">confirmed ✓</text>
 
 <!-- Journey arrows -->
-<line x1="160" y1="500" x2="188" y2="500" stroke="#666666" stroke-width="1.5" marker-end="url(#ah-g)"/>
-<line x1="353" y1="500" x2="390" y2="500" stroke="#666666" stroke-width="1.5" marker-end="url(#ah-g)"/>
-<line x1="555" y1="500" x2="592" y2="500" stroke="#666666" stroke-width="1.5" marker-end="url(#ah-g)"/>
-<line x1="757" y1="500" x2="794" y2="500" stroke="#666666" stroke-width="1.5" marker-end="url(#ah-g)"/>
-<line x1="949" y1="500" x2="970" y2="500" stroke="#82b366" stroke-width="1.5" marker-end="url(#ah-gr)"/>
+<line x1="153" y1="560" x2="172" y2="560" stroke="#666666" stroke-width="1.5" marker-end="url(#ah-g)"/>
+<line x1="320" y1="560" x2="343" y2="560" stroke="#666666" stroke-width="1.5" marker-end="url(#ah-g)"/>
+<line x1="498" y1="560" x2="521" y2="560" stroke="#666666" stroke-width="1.5" marker-end="url(#ah-g)"/>
+<line x1="683" y1="560" x2="707" y2="560" stroke="#666666" stroke-width="1.5" marker-end="url(#ah-g)"/>
+<line x1="862" y1="560" x2="886" y2="560" stroke="#666666" stroke-width="1.5" marker-end="url(#ah-g)"/>
+<line x1="1041" y1="560" x2="1066" y2="560" stroke="#666666" stroke-width="1.5" marker-end="url(#ah-g)"/>
+<line x1="1221" y1="560" x2="1252" y2="560" stroke="#82b366" stroke-width="1.5" marker-end="url(#ah-gr)"/>
+
+<!-- Credits management detail below -->
+<rect x="712" y="600" width="145" height="26" rx="4" fill="#fff2cc" stroke="#d6b656" stroke-width="1"/>
+<text x="784.5" y="617" text-anchor="middle" font-size="9" fill="#555">Credit balance override</text>
+<line x1="784.5" y1="587.5" x2="784.5" y2="600" stroke="#d6b656" stroke-width="1.5" marker-end="url(#ah-y)"/>
+
+<!-- Login detail below -->
+<rect x="178" y="600" width="136" height="26" rx="4" fill="#f8cecc" stroke="#b85450" stroke-width="1"/>
+<text x="246" y="617" text-anchor="middle" font-size="9" fill="#555">Sets admin_token cookie</text>
+<line x1="246" y1="587.5" x2="246" y2="600" stroke="#b85450" stroke-width="1.5" marker-end="url(#ah-r)"/>
+
+<!-- KPI metrics detail -->
+<text x="246" y="645" text-anchor="middle" font-size="8.5" fill="#999">Stores · Tries · Uploads · Signups · Products</text>
 </svg>
