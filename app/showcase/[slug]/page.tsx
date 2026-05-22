@@ -19,27 +19,32 @@ export async function generateMetadata(
   if (!found) return { title: "Showcase not found" };
   const { item, company } = found;
   const title = `${item.name} — ${company} · Nikhil Tayal`;
+  const description = `${item.brief} Built by Nikhil Tayal at ${company}.`;
   const url = `${SITE_URL}/showcase/${slug}`;
   const ogImage = item.screenshot
-    ? { url: item.screenshot, width: 1200, height: 630, alt: item.name }
-    : { url: "/og-image.png", width: 1200, height: 630, alt: item.name };
+    ? { url: item.screenshot, width: 1200, height: 630, alt: `${item.name} by Nikhil Tayal` }
+    : { url: "/opengraph-image", width: 1200, height: 630, alt: `${item.name} by Nikhil Tayal` };
   return {
     title,
-    description: item.brief,
+    description,
+    authors: [{ name: "Nikhil Tayal", url: SITE_URL }],
+    creator: "Nikhil Tayal",
     alternates: { canonical: url },
     openGraph: {
-      type: "website",
+      type: "article",
       url,
       title,
-      description: item.brief,
+      description,
       siteName: "Nikhil Tayal",
       images: [ogImage],
+      authors: ["Nikhil Tayal"],
     },
     twitter: {
       card: "summary_large_image",
       title,
-      description: item.brief,
+      description,
       images: [ogImage.url],
+      creator: "@nikhiltayal",
     },
   };
 }
@@ -56,11 +61,36 @@ export default async function ShowcaseDetailPage(
   const prev = idx > 0 ? all[idx - 1] : null;
   const next = idx < all.length - 1 ? all[idx + 1] : null;
 
+  const { item, company, role } = found;
+  const url = `${SITE_URL}/showcase/${slug}`;
+  const creativeWorkJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    name: item.name,
+    headline: `${item.name} — ${company}`,
+    description: item.brief,
+    url,
+    author: {
+      "@type": "Person",
+      "@id": `${SITE_URL}/#person`,
+      name: "Nikhil Tayal",
+      url: SITE_URL,
+      jobTitle: role,
+    },
+    creator: { "@id": `${SITE_URL}/#person` },
+    publisher: { "@id": `${SITE_URL}/#person` },
+    isPartOf: { "@id": `${SITE_URL}/#website` },
+    ...(item.screenshot ? { image: `${SITE_URL}${item.screenshot}` } : {}),
+    ...(item.liveUrl ? { sameAs: item.liveUrl } : {}),
+  };
+
   return (
-    <ShowcaseDetail
-      showcase={found}
-      prev={prev}
-      next={next}
-    />
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(creativeWorkJsonLd) }}
+      />
+      <ShowcaseDetail showcase={found} prev={prev} next={next} />
+    </>
   );
 }

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { profile, education } from "@/lib/data";
 import { Reveal, StaggerGroup, fadeChild, motion } from "./motion-primitives";
 
@@ -13,19 +14,41 @@ export function About() {
           </p>
         </Reveal>
 
-        <Reveal>
-          <p className="mt-6 max-w-2xl text-[clamp(1.4rem,2.4vw,2rem)] font-light leading-[1.3] tracking-[-0.01em] text-ink">
-            Full-stack by trade, systems-minded by instinct. I treat
-            interfaces and infrastructure as one problem, and spend most
-            of my time in the seams.
-          </p>
-        </Reveal>
+        <div className="mt-6 grid grid-cols-1 gap-10 md:grid-cols-[auto,1fr] md:items-start md:gap-14">
+          <Reveal>
+            <figure className="relative w-40 shrink-0 sm:w-48 md:w-56">
+              <Image
+                src="/nikhil-tayal.png"
+                alt="Nikhil Tayal — Senior Full-Stack Developer based in Delhi, India"
+                title="Nikhil Tayal"
+                width={512}
+                height={512}
+                priority
+                className="rounded-full border border-rule object-cover"
+              />
+              <figcaption className="sr-only">
+                Portrait of Nikhil Tayal, Senior Full-Stack Developer.
+              </figcaption>
+            </figure>
+          </Reveal>
 
-        <Reveal>
-          <p className="mt-8 max-w-xl text-[15px] leading-relaxed text-ink-soft">
-            {profile.longSummary}
-          </p>
-        </Reveal>
+          <div>
+            <Reveal>
+              <p className="max-w-2xl text-[clamp(1.4rem,2.4vw,2rem)] font-light leading-[1.3] tracking-[-0.01em] text-ink">
+                Hi, I&rsquo;m <strong className="font-medium">Nikhil Tayal</strong> —
+                full-stack by trade, systems-minded by instinct. I treat interfaces
+                and infrastructure as one problem, and spend most of my time in
+                the seams.
+              </p>
+            </Reveal>
+
+            <Reveal>
+              <p className="mt-8 max-w-xl text-[15px] leading-relaxed text-ink-soft">
+                {profile.longSummary}
+              </p>
+            </Reveal>
+          </div>
+        </div>
 
         <StaggerGroup className="mt-14 grid grid-cols-1 gap-8 border-t border-rule pt-10 md:grid-cols-2 lg:grid-cols-4">
           <motion.div variants={fadeChild}>

@@ -39,14 +39,20 @@ export function Hero() {
         variants={container}
         className="mx-auto w-full max-w-[1320px]"
       >
-        {/* Name */}
-        <h1 className="text-[clamp(3.8rem,12vw,10.5rem)] font-light leading-[0.92] tracking-[-0.03em] text-ink">
-          <span className="block">
+        {/* Name — visible glyph uses dotless ı for the animated owl perch;
+            an sr-only span plus aria-label keep the H1 indexable as
+            "Nikhil Tayal" for search engines and assistive tech. */}
+        <h1
+          aria-label="Nikhil Tayal"
+          className="text-[clamp(3.8rem,12vw,10.5rem)] font-light leading-[0.92] tracking-[-0.03em] text-ink"
+        >
+          <span className="sr-only">Nikhil Tayal</span>
+          <span aria-hidden="true" className="block">
             <motion.span variants={titleLine} className="inline-block">
               <AnimatedName />
             </motion.span>
           </span>
-          <span className="block overflow-hidden pb-[0.15em]">
+          <span aria-hidden="true" className="block overflow-hidden pb-[0.15em]">
             <motion.span
               variants={titleLine}
               className="inline-block text-ink-soft"
